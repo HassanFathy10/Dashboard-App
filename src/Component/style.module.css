@@ -1,0 +1,18 @@
+:root {
+    --font1-color: #0d57e0;
+    --font2-color: #629ffa;
+}
+.link:hover {
+    background-color: aqua;
+    border-radius: 10px;
+}
+.link:active {
+    background-color: aqua;
+    border-radius: 10px;
+}
+.color{
+    color: var(--font2-color);
+}
+.font {
+    color: var(--font1-color);
+}
