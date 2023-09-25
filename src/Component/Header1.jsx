@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Nav, Navbar } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -8,6 +8,10 @@ import Styles from './style.module.css';
 
 
 export default function Header1() {
+    const [selectedItem, setSelectedItem] = useState('Opportunity Browsing'); // Here i Initialize with the default text i want
+    const handleSelect = (eventKey) => {
+        setSelectedItem(eventKey);
+    }; 
     return (
         <Navbar expand="lg" className="mx-4 mt-4 pt-3 pb-5 sticky-top">
             <article className='d-flex flex-column'>
@@ -19,20 +23,21 @@ export default function Header1() {
             <Navbar.Toggle className='m-1' aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className='mb-4 ms-auto'>
-                    <Dropdown>
+                    {/* Handle selected value in drop down */}
+                    <Dropdown onSelect={handleSelect}>
                         <Dropdown.Toggle variant="white" className={`fw-bolder ${Styles.font}`} id="dropdown-basic">
-                            Opportunity Browsing
+                            {selectedItem}
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-1">Applied</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-2">Shortlisted</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-3">Technical Interview</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-3">Opportunity Browsing</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-3">Video Interview I</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-3">Video Interview II</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-3">Video Interview III</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-3">Offer</Dropdown.Item>
-                            <Dropdown.Item className='p-3 fw-bolder' href="#/action-3">Withdrawn</Dropdown.Item>
+                            <Dropdown.Item eventKey="Applied" className='p-3 fw-bolder' href="#/action-1">Applied</Dropdown.Item>
+                            <Dropdown.Item eventKey="Shortlisted" className='p-3 fw-bolder' href="#/action-2">Shortlisted</Dropdown.Item>
+                            <Dropdown.Item eventKey="Technical Interview" className='p-3 fw-bolder' href="#/action-3">Technical Interview</Dropdown.Item>
+                            <Dropdown.Item eventKey="Opportunity Browsing" className='p-3 fw-bolder' href="#/action-3">Opportunity Browsing</Dropdown.Item>
+                            <Dropdown.Item eventKey="Video Interview I" className='p-3 fw-bolder' href="#/action-3">Video Interview I</Dropdown.Item>
+                            <Dropdown.Item eventKey="Video Interview II" className='p-3 fw-bolder' href="#/action-3">Video Interview II</Dropdown.Item>
+                            <Dropdown.Item eventKey="Video Interview III" className='p-3 fw-bolder' href="#/action-3">Video Interview III</Dropdown.Item>
+                            <Dropdown.Item eventKey="Offer" className='p-3 fw-bolder' href="#/action-3">Offer</Dropdown.Item>
+                            <Dropdown.Item eventKey="Withdrawn" className='p-3 fw-bolder' href="#/action-3">Withdrawn</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Nav>

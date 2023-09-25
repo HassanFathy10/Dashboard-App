@@ -8,9 +8,11 @@ export default function Option1() {
         <article className={Styles.cover}>
             <Header1 />
             <article className='col-lg-4'>
-                <input class="form-control form-control-lg" type="text"
-                    placeholder={<span><Unicons.UilSearch /></span>}
-                    aria-label=".form-control-lg example" />
+                <input
+                    className="form-control form-control-lg"
+                    type="text"
+                    placeholder="🔍 Search by name, edu, exp, or #tag"
+                />
             </article>
         </article>
     );
