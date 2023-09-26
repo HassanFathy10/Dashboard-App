@@ -81,9 +81,9 @@ export default function Option1() {
                             </article>
                             <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                                 <article className='d-flex mt-5'>
-                                    <Form.Check className='p-2' aria-label="option 1" />
-                                    <article>
-                                        <span className={`p-2 ${Styles.user}`}>AS</span>
+                                    <Form.Check className=' mt-3' aria-label="option 1" />
+                                    <article className='mt-3 mx-3'>
+                                        <span className={`p-3 ${Styles.user}`}>AS</span>
                                     </article>
                                 </article>
                                 <ul className='list-unstyled lh-lg'>
