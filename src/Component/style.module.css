@@ -1,6 +1,6 @@
 :root {
     --font1-color: #0d57e0;
-    --font2-color: #629ffa;
+    --cover-color: #629ffa;
 }
 .link:hover {
     background-color: aqua;

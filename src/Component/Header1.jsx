@@ -20,7 +20,7 @@ export default function Header1() {
                 </span>
                 <span className='fw-light'>Londan</span>
             </article>
-            <Navbar.Toggle className='m-1' aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle className='m-4' aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className='mb-4 ms-auto'>
                     {/* Handle selected value in drop down */}
@@ -41,7 +41,7 @@ export default function Header1() {
                         </Dropdown.Menu>
                     </Dropdown>
                 </Nav>
-                <article className='d-flex ms-auto  mb-4'>
+                <article className='d-flex ms-auto mb-4'>
                     <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilTagAlt /></Nav.Link>
                     <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilUserTimes /></Nav.Link>
                     <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilUserCheck /></Nav.Link>
