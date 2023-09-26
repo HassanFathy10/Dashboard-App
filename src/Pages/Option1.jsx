@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import * as Unicons from '@iconscout/react-unicons';
@@ -19,7 +19,7 @@ export default function Option1() {
             {/* Section1 */}
             <article className='col-lg-4 col-md-10 col-sm-10 pb-5'>
                 {/* head section 1 */}
-                <article expand="lg" className="pt-5 mb-5">
+                <article className="pt-5 mb-5">
                     <article className='d-flex flex-column p-3'>
                         <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
                             London Internship Program
@@ -32,19 +32,19 @@ export default function Option1() {
                 <article className='p-1'>
                     <article className='p-1'>
                         <input
-                            className="form-control form-control-lg"
+                            className="form-control form-control-lg border-0"
                             type="text"
                             placeholder="🔍 Search by name, edu, exp, or #tag"
                         />
                     </article>
                     <ListGroup className='mt-2 p-1'>
-                        <ListGroup.Item action>
+                        <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'>Filters</li>
                                 <li className=''>0 Selected</li>
                             </article>
                         </ListGroup.Item>
-                        <ListGroup.Item action>
+                        <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
                                     <span className='mx-2 pt-4' >Personal Information</span>
@@ -52,7 +52,7 @@ export default function Option1() {
                                 <li className=''><Unicons.UilAngleDown /></li>
                             </article>
                         </ListGroup.Item>
-                        <ListGroup.Item action>
+                        <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
                                     <span className='mx-2 pt-4' >Education</span>
@@ -60,7 +60,7 @@ export default function Option1() {
                                 <li className=''><Unicons.UilAngleDown /></li>
                             </article>
                         </ListGroup.Item>
-                        <ListGroup.Item action>
+                        <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
                                     <span className='mx-2 pt-4' >Work Experience</span>
@@ -68,7 +68,7 @@ export default function Option1() {
                                 <li className=''><Unicons.UilAngleDown /></li>
                             </article>
                         </ListGroup.Item>
-                        <ListGroup.Item action>
+                        <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
                                     <span className='mx-2 pt-4' >Activity Filter</span>
@@ -76,7 +76,7 @@ export default function Option1() {
                                 <li className=''><Unicons.UilAngleDown /></li>
                             </article>
                         </ListGroup.Item>
-                        <ListGroup.Item action>
+                        <ListGroup.Item action className='border-0'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
                                     <span className='mx-2 pt-4' >Advanced Filter</span>
@@ -95,7 +95,7 @@ export default function Option1() {
                 <article className='d-flex mt-5 pt-3 pb-2 flex-wrap'>
                     {/* Handle selected value in drop down */}
                     <Dropdown onSelect={handleSelect}>
-                        <Dropdown.Toggle variant="white" className={`fw-bolder ${Styles.font}`} id="dropdown-basic">
+                        <Dropdown.Toggle variant="white" className={`fw-bolder bg-white rounded-5 ${Styles.font}`} id="dropdown-basic">
                             {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
@@ -176,7 +176,7 @@ export default function Option1() {
 
                 {/* body section 2 */}
                 <article className='p-3 mt-5'>
-                    <article className='card '>
+                    <article className='card border-0'>
                         <article className={`d-flex p-3 flex-wrap ${Styles.line}`}>
                             <Form.Check className='m-2' aria-label="option 1" />
                             <span className='text-primary fw-bold m-2'>247 candidates</span>

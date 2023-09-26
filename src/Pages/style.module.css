@@ -1,10 +1,13 @@
+/* error page */
 .image {
     background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
     height: 500px;
     width: 100%;
 }
-.cover {
-    background-color: rgba(0, 255, 255, 0.048);
+
+/* option page*/
+:root {
+    --font1-color: #2262da;
 }
 .line {
     border-bottom: 1px solid rgba(0, 0, 0, 0.082);
@@ -16,7 +19,7 @@
     color: rgb(20, 118, 209);
 }
 .span {
-    border-right: 2px solid rgba(181, 226, 213, 0.726);
+    border-right: 1px solid rgba(181, 226, 213, 0.349);
 }
 .info {
     border-radius: 2rem;
@@ -27,9 +30,7 @@
     color: rgba(72, 155, 161, 0.438);
     background-color: rgba(0, 255, 255, 0.116);
 }
-:root {
-    --font1-color: #2262da;
-}
+
 .link:hover {
     background-color: aqua;
     border-radius: 10px;
