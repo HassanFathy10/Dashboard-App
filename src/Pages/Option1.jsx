@@ -27,7 +27,6 @@ export default function Option1() {
                         <span className='fw-light'>Londan</span>
                     </article>
                 </article>
-
                 {/* body section 1 */}
                 <article>
                     <article className='p-1'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend} from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -51,25 +51,28 @@ export const data = {
 };
 
 export default function Option2() {
-
-
+  const [selectedItem, setSelectedItem] = useState('London Internship Program'); // Here i Initialize with the default text i want
+  const handleSelect = (eventKey) => {
+      setSelectedItem(eventKey);
+  }
 
   return (
-    <article className='d-flex flex-wrap mx-4 position-absolute flex-wrap'>
-      {/* head section 1 */}
+    <article className='d-flex flex-wrap mx-3 position-absolute flex-wrap'>
       <article className='col-lg-5 col-md-10 col-sm-10 pb-5'>
+        {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5">
           <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
             Opportunity Overview
           </span>
         </article>
+        {/* body section 1 */}
         <article className='d-flex'>
           <article className='p-1'>
-            <article className='card  border-0 rounded-4' style={{ width: '13rem' }}>
+            <article className='card  border-0 rounded-4' style={{ width: '11rem' }}>
               <article className=' card-body d-flex flex-column pb-4'>
                 <span className='fw-bold fs-6 pb-4'>Applied</span>
                 <span className='fw-bold fs-5'>3,122</span>
-                <span className='fw-bold fs-5'>Previous Period</span>
+                <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>1590 &nbsp;</span>
                   <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
@@ -78,26 +81,26 @@ export default function Option2() {
             </article>
           </article>
           <article className='p-1'>
-            <article className='card border-0 rounded-4' style={{ width: '13rem' }}>
+            <article className='card border-0 rounded-4' style={{ width: '11rem' }}>
               <article className='card-body d-flex flex-column pb-4 '>
-                <span className='fw-bold fs-6 pb-4'>Applied</span>
-                <span className='fw-bold fs-5'>3,122</span>
-                <span className='fw-bold fs-5'>Previous Period</span>
+                <span className='fw-bold fs-6 pb-4'>Offer</span>
+                <span className='fw-bold fs-5'>183</span>
+                <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
-                  <span>1590 &nbsp;</span>
+                  <span>71 &nbsp;</span>
                   <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
           </article>
           <article className='p-1'>
-            <article className='card  border-0 rounded-4' style={{ width: '13rem' }}>
+            <article className='card  border-0 rounded-4' style={{ width: '11rem' }}>
               <article className=' card-body d-flex flex-column pb-4'>
-                <span className='fw-bold fs-6 pb-4'>Applied</span>
-                <span className='fw-bold fs-5'>3,122</span>
-                <span className='fw-bold fs-5'>Previous Period</span>
+                <span className='fw-bold fs-6 pb-4'>Hired</span>
+                <span className='fw-bold fs-5'>98</span>
+                <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
-                  <span>1590 &nbsp;</span>
+                  <span>167 &nbsp;</span>
                   <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
                 </article>
               </article>
@@ -106,7 +109,7 @@ export default function Option2() {
         </article>
         {/* chart */}
         <article className='mt-3'>
-          <article className='card border-0 rounded-4' style={{ width: '40rem' }}>
+          <article className='card border-0 rounded-4' style={{ width: '34.5rem' }}>
             <article className=' card-body d-flex flex-column pb-4'>
               <NavDropdown id="nav-dropdown-dark-example" className='fw-bold fs-6 pb-4' title="Recommended">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -119,15 +122,106 @@ export default function Option2() {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-              <article style={{ width: '600px' }}>
+              <article style={{ width: '500px' }}>
                 <Line options={options} data={data} />
               </article>
             </article>
           </article>
         </article>
       </article>
-      <article className='col-lg-5'>
-        
+      {/* section 2 */}
+      <article className='col-lg-5 col-md-10 col-sm-10' >
+        {/* head section 1 */}
+        <article className="mt-3 pt-5 pb-5 d-flex gap-2">
+          <Dropdown onSelect={handleSelect}>
+            <Dropdown.Toggle variant="white" className='fw-bolder rounded-5' id="dropdown-basic">
+              {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
+                London Internship Program
+              </Dropdown.Item>
+              <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
+                Opportunity Overview
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          <Dropdown>
+            <Dropdown.Toggle variant="white" className='fw-bolder bg-white rounded-5' id="dropdown-basic">
+              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;01 Jan 2023 - 31 July 2023 &nbsp; &nbsp; &nbsp; &nbsp;
+            </Dropdown.Toggle>
+          </Dropdown>
+        </article>
+        {/* body section 1 */}
+        <article className='mx-0 w-100 pb-5'>
+          <article className='card border-0 rounded-4 m-2'>
+            <article className='p-3 d-flex flex-column'>
+              <span className='fw-bold mb-4'>Total Candidate Flow</span>
+              <span className='fw-bold fs-5'>4,567</span>
+            </article>
+            <article className='d-flex'>
+              <ul className='list-unstyled p-3 lh-lg'>
+                <li className='fw-bold'>Stage</li>
+                <li>Applied</li>
+                <li>Recommended</li>
+                <li>Interview</li>
+                <li>Offer</li>
+                <li>Hired</li>
+              </ul>
+              <article className='ms-auto d-flex '>
+                <ul className='list-unstyled text-end p-3 lh-lg'>
+                  <li className='fw-bold'>Qualified</li>
+                  <li>3,122</li>
+                  <li>2,164</li>
+                  <li>443</li>
+                  <li>183</li>
+                  <li>118</li>
+                </ul>
+                <ul className='list-unstyled text-end p-3 lh-lg'>
+                  <li className='fw-bold'>Disqualified</li>
+                  <li>1,445</li>
+                  <li>958</li>
+                  <li>1721</li>
+                  <li>260</li>
+                  <li>65</li>
+                </ul>
+              </article>
+            </article>
+          </article>
+          {/* body section 2 */}
+          <article className='d-flex pt-2 pb-5 gap-5 '>
+            <article className='p-2'>
+              <article className='card  border-0 rounded-4' style={{ width: '15rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <article className='d-flex'>
+                    <span className='fw-bold fs-6 pb-4'>Recommended</span>
+                    <span className='fw-bold ms-auto fs-6 pb-4'>2,164</span>
+                  </article>
+                  <span className='fw-normal fs-6'>Previous Period</span>
+                  <article className='fw-light mt-2'>
+                    <span>1590 &nbsp;</span>
+                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  </article>
+                </article>
+              </article>
+            </article>
+            <article className='p-1 ms-auto'>
+              <article className='card  border-0 rounded-4' style={{ width: '16rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                <article className='d-flex'>
+                    <span className='fw-bold fs-6 pb-4'>Interview</span>
+                    <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
+                  </article>
+                  <span className='fw-normal fs-6'>Previous Period</span>
+                  <article className='fw-light mt-2'>
+                    <span>1590 &nbsp;</span>
+                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  </article>
+                </article>
+              </article>
+            </article>
+          </article>
+        </article>
       </article>
     </article>
   );
