@@ -65,7 +65,7 @@ export default function Option1() {
                         </ListGroup.Item>
                     </ListGroup>
                 </article>
-                <article className='col-6'>
+                <article className='col-6 pb-5'>
                     <article className='row' >
                         <article className='card'>
                             <article className={`d-flex p-3 ${Styles.line}`}>
@@ -89,6 +89,101 @@ export default function Option1() {
                                 <ul className='list-unstyled lh-lg'>
                                     <li className='fw-bold'>Aaliyah Sanderson</li>
                                     <li className='fw-normal'>Riyadh, Saudi Arabia</li>
+                                    <li className='fw-light'>Bachelor - Cambridge University (2023 - 2023)</li>
+                                    <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
+                                    <li className='fw-medium text-info'>
+                                        <span className={Styles.info}>New York</span> &nbsp;
+                                        <span className={Styles.info}>Marketing</span> &nbsp;
+                                        <span className={Styles.info}>Londan</span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
+                                <article className='d-flex mt-5'>
+                                    <Form.Check className=' mt-3' aria-label="option 1" />
+                                    <article className='mt-3 mx-3'>
+                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                    </article>
+                                </article>
+                                <ul className='list-unstyled lh-lg'>
+                                    <li className='fw-bold'>John Doe</li>
+                                    <li className='fw-normal'>Bostom, USA</li>
+                                    <li className='fw-light'>Bachelor - MIT (2023 - 2023)</li>
+                                    <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
+                                    <li className='fw-medium text-info'>
+                                        <span className={Styles.info}>New York</span> &nbsp;
+                                        <span className={Styles.info}>Marketing</span> &nbsp;
+                                        <span className={Styles.info}>Londan</span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
+                                <article className='d-flex mt-5'>
+                                    <Form.Check className=' mt-3' aria-label="option 1" />
+                                    <article className='mt-3 mx-3'>
+                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                    </article>
+                                </article>
+                                <ul className='list-unstyled lh-lg'>
+                                    <li className='fw-bold'>Thomas Matt</li>
+                                    <li className='fw-normal'>Edinburgh, UK</li>
+                                    <li className='fw-light'>Bachelor - Harvard University (2023 - 2023)</li>
+                                    <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
+                                    <li className='fw-medium text-info'>
+                                        <span className={Styles.info}>New York</span> &nbsp;
+                                        <span className={Styles.info}>Marketing</span> &nbsp;
+                                        <span className={Styles.info}>Londan</span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
+                                <article className='d-flex mt-5'>
+                                    <Form.Check className=' mt-3' aria-label="option 1" />
+                                    <article className='mt-3 mx-3'>
+                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                    </article>
+                                </article>
+                                <ul className='list-unstyled lh-lg'>
+                                    <li className='fw-bold'>Kamilia Smith</li>
+                                    <li className='fw-normal'>London, UK</li>
+                                    <li className='fw-light'>Bachelor - Boston University (2023 - 2023)</li>
+                                    <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
+                                    <li className='fw-medium text-info'>
+                                        <span className={Styles.info}>New York</span> &nbsp;
+                                        <span className={Styles.info}>Marketing</span> &nbsp;
+                                        <span className={Styles.info}>Londan</span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
+                                <article className='d-flex mt-5'>
+                                    <Form.Check className=' mt-3' aria-label="option 1" />
+                                    <article className='mt-3 mx-3'>
+                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                    </article>
+                                </article>
+                                <ul className='list-unstyled lh-lg'>
+                                    <li className='fw-bold'>Roy Jade</li>
+                                    <li className='fw-normal'>Cambridge,  UK</li>
+                                    <li className='fw-light'>Bachelor - Yale (2023 - 2023)</li>
+                                    <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
+                                    <li className='fw-medium text-info'>
+                                        <span className={Styles.info}>New York</span> &nbsp;
+                                        <span className={Styles.info}>Marketing</span> &nbsp;
+                                        <span className={Styles.info}>Londan</span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
+                                <article className='d-flex mt-5'>
+                                    <Form.Check className=' mt-3' aria-label="option 1" />
+                                    <article className='mt-3 mx-3'>
+                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                    </article>
+                                </article>
+                                <ul className='list-unstyled lh-lg'>
+                                    <li className='fw-bold'>Ahmed Salman</li>
+                                    <li className='fw-normal'>New York, USA</li>
                                     <li className='fw-light'>Bachelor - Cambridge University (2023 - 2023)</li>
                                     <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
                                     <li className='fw-medium text-info'>
