@@ -6,3 +6,23 @@
 .cover {
     background-color: rgba(0, 255, 255, 0.048);
 }
+.line {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.082);
+}
+.number {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 247, 255, 0.171);
+    color: rgb(20, 118, 209);
+}
+.span {
+    border-right: 2px solid rgba(181, 226, 213, 0.726);
+}
+.info {
+    border-radius: 2rem;
+    background-color: rgba(0, 255, 255, 0.062);
+}
+.user {
+    border-radius: 50px;
+    background-color: rgba(0, 255, 255, 0.24);
+}
