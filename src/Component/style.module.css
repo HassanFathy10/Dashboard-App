@@ -1,6 +1,5 @@
 :root {
-    --font1-color: #0d57e0;
-    --cover-color: #629ffa;
+    --font1-color: #2262da;
 }
 .link:hover {
     background-color: aqua;
@@ -10,11 +9,8 @@
     background-color: aqua;
     border-radius: 10px;
 }
-.color{
-    color: var(--font2-color);
-}
 .font {
-    color: var(--font1-color);
+    color: rgb(132, 60, 214) !important;
 }
 .number {
     padding: 0.2rem;

@@ -13,7 +13,7 @@ export default function Header1() {
         setSelectedItem(eventKey);
     }; 
     return (
-        <Navbar expand="lg" className="mx-4 mt-4 pt-3 pb-5">
+        <Navbar expand="lg" className="co-lg-10 mt-4 pt-3 pb-5 ">
             <article className='d-flex flex-column'>
                 <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
                     London Internship Program
@@ -24,7 +24,7 @@ export default function Header1() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className='mb-4 ms-auto'>
                     {/* Handle selected value in drop down */}
-                    <Dropdown onSelect={handleSelect}>
+                    <Dropdown onSelect={handleSelect} className='mx-5'>
                         <Dropdown.Toggle variant="white" className={`fw-bolder ${Styles.font}`} id="dropdown-basic">
                             {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         </Dropdown.Toggle>
@@ -86,13 +86,13 @@ export default function Header1() {
                         </Dropdown.Menu>
                     </Dropdown>
                 </Nav>
-                <article className='d-flex ms-auto mb-4'>
+                <article className='d-flex mb-4 mx-5'>
                     <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilTagAlt /></Nav.Link>
                     <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilUserTimes /></Nav.Link>
                     <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilUserCheck /></Nav.Link>
                     <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilEnvelope /></Nav.Link>
                 </article>
-                <Dropdown as={ButtonGroup} className='ms-auto mb-4'>
+                <Dropdown as={ButtonGroup} className='mx-5 mb-4'>
                     <Button variant="primary" className='mx-1'>Move To Video Interview I</Button>
                     <Dropdown.Toggle variant="primary" id="dropdown-split-basic" />
                     <Dropdown.Menu>

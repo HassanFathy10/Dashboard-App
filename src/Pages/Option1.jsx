@@ -7,10 +7,9 @@ import Styles from './style.module.css';
 
 export default function Option1() {
     return (
-        <article className={`min-vh-100  ${Styles.cover}`}>
-            <Header1 />
-            <article className='d-flex mx-4 gap-5'>
-                <article className='col-lg-4'>
+        <article className='d-flex flex-wrap mx-4 position-absolute'>
+                    <Header1 />
+                <article className='col-lg-4 col-md-10 col-sm-10'>
                     <input
                         className="form-control form-control-lg"
                         type="text"
@@ -65,13 +64,12 @@ export default function Option1() {
                         </ListGroup.Item>
                     </ListGroup>
                 </article>
-                <article className='col-6 pb-5 mx-4'>
-                    <article className='row' >
+                    <article className='col-lg-6 col-md-10 col-sm-10  pb-5 mx-5'>
                         <article className='card'>
-                            <article className={`d-flex p-3 ${Styles.line}`}>
+                            <article className={`d-flex p-3 flex-wrap ${Styles.line}`}>
                                 <Form.Check className='m-2' aria-label="option 1" />
                                 <span className='text-primary fw-bold m-2'>247 candidates</span>
-                                <article className='ms-auto'>
+                                <article className='ms-auto d-flex'>
                                     <span className='fw-medium text-primary m-2'>Qualified</span>
                                     <span className={Styles.span}></span>
                                     <span className='text-black fw-medium m-2'>Task <span className={Styles.number}>25</span></span>
@@ -194,9 +192,7 @@ export default function Option1() {
                                 </ul>
                             </article>
                         </article>
-                    </article>
                 </article>
-            </article>
         </article>
     );
 }

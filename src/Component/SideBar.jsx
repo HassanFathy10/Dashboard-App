@@ -6,11 +6,11 @@ import { Nav, Navbar } from 'react-bootstrap';
 
 export default function SideBar() {
     return (
-        <Navbar expand="lg">
-            <Nav>
+        <Navbar expand="lg"  className='bg-white shadow'>
+            <Nav className='col-lg-2 col-md-2 col-sm-2 '>
                 <article className='row'>
-                    <article className='d-flex col-lg-2 col-md-2 col-sm-2  min-vh-100'>
-                        <article className=' p-4 shadow list-group'>
+                    <article className='d-flex min-vh-100'>
+                        <article className=' p-4 list-group'>
                             <Nav.Link className='p-3  mb-5'><Unicons.UilUser /></Nav.Link>
                             <article className='list-group'>
                                 <Nav.Link className={`p-3 mb-2 ${Styles.link}`}><Link to='/'><Unicons.UilUsersAlt /></Link></Nav.Link>
