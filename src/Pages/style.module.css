@@ -48,6 +48,11 @@
     background-color: rgba(44, 59, 59, 0.034);
     color: rgba(5, 5, 5, 0.884);
 }
+.number1 {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    background-color: rgba(44, 59, 59, 0.075);
+}
 .itemdrop {
     background-color: rgba(0, 255, 255, 0.116) !important;
     color: rgb(132, 60, 214) !important;

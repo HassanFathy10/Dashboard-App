@@ -17,7 +17,7 @@ export default function Option1() {
         <article className='d-flex flex-wrap mx-4 position-absolute'>
             
             {/* Section1 */}
-            <article className='col-lg-4 col-md-10 col-sm-10 pb-5'>
+            <article className='col-lg-4 col-md-10 col-sm-10 pb-4'>
                 {/* head section 1 */}
                 <article className="pt-5 mb-5">
                     <article className='d-flex flex-column p-3'>
@@ -29,7 +29,7 @@ export default function Option1() {
                 </article>
 
                 {/* body section 1 */}
-                <article className='p-1'>
+                <article>
                     <article className='p-1'>
                         <input
                             className="form-control form-control-lg border-0"
@@ -92,7 +92,7 @@ export default function Option1() {
             <article className='col-lg-6 col-md-10 col-sm-10 '>
                 
                 {/* head section 2 */}
-                <article className='d-flex mt-5 pt-3 pb-2 flex-wrap'>
+                <article className='d-flex mt-5 pt-3 pb-3 flex-wrap'>
                     {/* Handle selected value in drop down */}
                     <Dropdown onSelect={handleSelect}>
                         <Dropdown.Toggle variant="white" className={`fw-bolder bg-white rounded-5 ${Styles.font}`} id="dropdown-basic">
@@ -163,7 +163,7 @@ export default function Option1() {
                             <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilEnvelope /></Nav.Link>
                         </Nav>
                     </article>
-                    <Dropdown as={ButtonGroup} className='p-2'>
+                    <Dropdown as={ButtonGroup} className='mx-2'>
                         <Button variant="primary" className='mx-1'>Move To Video Interview I</Button>
                         <Dropdown.Toggle variant="primary" id="dropdown-split-basic" />
                         <Dropdown.Menu>
