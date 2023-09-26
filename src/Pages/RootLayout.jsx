@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Container, Row } from "react-bootstrap";
 import SideBar from "../Component/SideBar";
-import Option1 from "./Option1";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <SideBar />
         <Container>
           <Row>
-            <Option1 />
+            <Outlet />
           </Row>
         </Container>
       </article>

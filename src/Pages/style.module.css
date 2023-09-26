@@ -27,3 +27,38 @@
     color: rgba(72, 155, 161, 0.438);
     background-color: rgba(0, 255, 255, 0.116);
 }
+:root {
+    --font1-color: #2262da;
+}
+.link:hover {
+    background-color: aqua;
+    border-radius: 10px;
+}
+.link:active {
+    background-color: aqua;
+    border-radius: 10px;
+}
+.font {
+    color: rgb(132, 60, 214) !important;
+}
+.number {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    background-color: rgba(44, 59, 59, 0.034);
+    color: rgba(5, 5, 5, 0.884);
+}
+.itemdrop {
+    background-color: rgba(0, 255, 255, 0.116) !important;
+    color: rgb(132, 60, 214) !important;
+    .number {
+        padding: 0.2rem;
+        border-radius: 1rem;
+        background-color: rgba(129, 0, 250, 0.123);
+        color: rgba(59, 8, 180, 0.747);
+    }
+}
+.user {
+    border-radius: 50px;
+    color: rgba(72, 155, 161, 0.438);
+    background-color: rgba(0, 255, 255, 0.116);
+}
