@@ -24,5 +24,6 @@
 }
 .user {
     border-radius: 50px;
-    background-color: rgba(0, 255, 255, 0.24);
+    color: rgba(72, 155, 161, 0.438);
+    background-color: rgba(0, 255, 255, 0.116);
 }

@@ -7,9 +7,9 @@ import Styles from './style.module.css';
 
 export default function Option1() {
     return (
-        <article className={`min-vh-100 ${Styles.cover}`}>
+        <article className={`min-vh-100  ${Styles.cover}`}>
             <Header1 />
-            <article className='d-flex gap-5'>
+            <article className='d-flex mx-4 gap-5'>
                 <article className='col-lg-4'>
                     <input
                         className="form-control form-control-lg"
@@ -65,7 +65,7 @@ export default function Option1() {
                         </ListGroup.Item>
                     </ListGroup>
                 </article>
-                <article className='col-6 pb-5'>
+                <article className='col-6 pb-5 mx-4'>
                     <article className='row' >
                         <article className='card'>
                             <article className={`d-flex p-3 ${Styles.line}`}>
@@ -83,7 +83,7 @@ export default function Option1() {
                                 <article className='d-flex mt-5'>
                                     <Form.Check className=' mt-3' aria-label="option 1" />
                                     <article className='mt-3 mx-3'>
-                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                        <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                     </article>
                                 </article>
                                 <ul className='list-unstyled lh-lg'>
@@ -102,7 +102,7 @@ export default function Option1() {
                                 <article className='d-flex mt-5'>
                                     <Form.Check className=' mt-3' aria-label="option 1" />
                                     <article className='mt-3 mx-3'>
-                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                        <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                     </article>
                                 </article>
                                 <ul className='list-unstyled lh-lg'>
@@ -121,7 +121,7 @@ export default function Option1() {
                                 <article className='d-flex mt-5'>
                                     <Form.Check className=' mt-3' aria-label="option 1" />
                                     <article className='mt-3 mx-3'>
-                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                        <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                     </article>
                                 </article>
                                 <ul className='list-unstyled lh-lg'>
@@ -140,7 +140,7 @@ export default function Option1() {
                                 <article className='d-flex mt-5'>
                                     <Form.Check className=' mt-3' aria-label="option 1" />
                                     <article className='mt-3 mx-3'>
-                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                        <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                     </article>
                                 </article>
                                 <ul className='list-unstyled lh-lg'>
@@ -159,7 +159,7 @@ export default function Option1() {
                                 <article className='d-flex mt-5'>
                                     <Form.Check className=' mt-3' aria-label="option 1" />
                                     <article className='mt-3 mx-3'>
-                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                        <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                     </article>
                                 </article>
                                 <ul className='list-unstyled lh-lg'>
@@ -178,7 +178,7 @@ export default function Option1() {
                                 <article className='d-flex mt-5'>
                                     <Form.Check className=' mt-3' aria-label="option 1" />
                                     <article className='mt-3 mx-3'>
-                                        <span className={`p-3 ${Styles.user}`}>AS</span>
+                                        <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                     </article>
                                 </article>
                                 <ul className='list-unstyled lh-lg'>

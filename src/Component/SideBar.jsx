@@ -23,7 +23,7 @@ export default function SideBar() {
                             </article>
                             <article className='mt-auto list-group'>
                                 <Nav.Link className={`p-3 mb-2 ${Styles.link}`}><Unicons.UilSetting /></Nav.Link>
-                                <Nav.Link className='p-3 mb-4'><Unicons.UilUser /></Nav.Link>
+                                <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                             </article>
                         </article>
                     </article>
