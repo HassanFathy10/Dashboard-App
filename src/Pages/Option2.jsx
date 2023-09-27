@@ -279,20 +279,20 @@ export default function Option2() {
                 <span className='fw-bold'>95</span>
               </article>
               <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
+                <span className='mb-2'>Recommended</span>
                 <span className='fw-bold'>57</span>
               </article>
               <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
+                <span className='mb-2'>Interview</span>
                 <span className='fw-bold'>39</span>
               </article>
               <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
+                <span className='mb-2'>Hired</span>
                 <span className='fw-bold'>33</span>
               </article>
               <article className='card text-center p-5 shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>15</span>
+                <span className='mb-2'>Total Rejected</span>
+                <span className='fw-bold'>60</span>
               </article>
             </article>
             {/* table 1 */}
@@ -373,7 +373,7 @@ export default function Option2() {
         <article className='pt-5'>
           <article className='card border-0 rounded-4 pb-5'>
             <article className='d-flex p-4'>
-              <span className='fw-bold'>Google</span>
+              <span className='fw-bold'>Microsoft</span>
               <article className='d-flex ms-auto gap-5'>
                 <span><Unicons.UilChartPie /></span>
                 <span><Link to='/'><Unicons.UilFileDownload /></Link></span>
@@ -383,23 +383,23 @@ export default function Option2() {
             <article className='d-flex justify-content-center p-5 gap-5'>
               <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
                 <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>95</span>
+                <span className='fw-bold'>34</span>
               </article>
               <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>57</span>
+                <span className='mb-2'>Recommended</span>
+                <span className='fw-bold'>42</span>
               </article>
               <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>39</span>
+                <span className='mb-2'>Interview</span>
+                <span className='fw-bold'>22</span>
               </article>
               <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>33</span>
+                <span className='mb-2'>Hired</span>
+                <span className='fw-bold'>4</span>
               </article>
               <article className='card text-center p-5 shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>15</span>
+                <span className='mb-2'>Total Rejected</span>
+                <span className='fw-bold'>19</span>
               </article>
             </article>
             {/* table 1 */}
@@ -447,11 +447,11 @@ export default function Option2() {
                   <tr>
                     <td rowSpan="3">Art Internship</td> {/* This cell spans 3 rows */}
                     <td><span className={Styles.td1}>Active</span></td>
-                    <td>44</td>
-                    <td>32</td>
-                    <td>21</td>
-                    <td>19</td>
-                    <td>10</td>
+                    <td>20</td>
+                    <td>17</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>1</td>
                   </tr>
                   <tr>
                     {/* Empty cells for other columns */}
@@ -465,11 +465,11 @@ export default function Option2() {
                   <tr>
                     {/* Empty cells for other columns */}
                     <td>Sub - Total</td>
-                    <td>68</td>
-                    <td>36</td>
-                    <td>28</td>
                     <td>27</td>
-                    <td>13</td>
+                    <td>21</td>
+                    <td>11</td>
+                    <td>6</td>
+                    <td>2</td>
                   </tr>
                 </tbody>
               </Table>
