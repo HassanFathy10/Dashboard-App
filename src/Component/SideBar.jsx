@@ -17,7 +17,7 @@ export default function SideBar() {
                                 <span className={`p-2 mb-2 ${Styles.link}`}><Link to='/'><Unicons.UilUsersAlt /></Link></span>
                                 <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilCalendarAlt /></span>
                                 <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilShareAlt /></span>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Link to='/Option2'><Unicons.UilFileAlt color='fffff' /></Link></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Link to='/Option2'><Unicons.UilFileAlt /></Link></span>
                                 <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilDiaryAlt /></span>
                                 <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilHeart /></span>
                                 <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilAngleLeft /></span>

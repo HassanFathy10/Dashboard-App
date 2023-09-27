@@ -229,7 +229,7 @@ export default function ProgramOverview() {
           </span>
         </article>
         {/* body section 2 */}
-        <article className='d-flex mt-2'>
+        <article className='d-flex mt-3'>
           <article className='p-1'>
             <article className='card  border-0 rounded-4' style={{ width: '11rem' }}>
               <article className=' card-body d-flex flex-column pb-4'>
