@@ -68,3 +68,13 @@
     color: rgba(72, 155, 161, 0.438);
     background-color: rgba(0, 255, 255, 0.116);
 }
+.td1 {
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    border-radius: 1rem;
+    background-color: #22dab233;
+}
+.td2 {
+    padding: 0.3rem 0.5rem 0.3rem 0.4rem;
+    border-radius: 1rem;
+    background-color: #da9a2233;
+}

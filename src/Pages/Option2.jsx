@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend} from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -268,7 +269,7 @@ export default function Option2() {
               <span className='fw-bold'>Google</span>
               <article className='d-flex ms-auto gap-5'>
                 <span><Unicons.UilChartPie /></span>
-                <span><Unicons.UilFileDownload /></span>
+                <span><Link to='/'><Unicons.UilFileDownload /></Link></span>
               </article>
             </article>
             {/* cards */}
@@ -294,9 +295,9 @@ export default function Option2() {
                 <span className='fw-bold'>15</span>
               </article>
             </article>
-            {/* table */}
+            {/* table 1 */}
             <article className='p-5'>
-              <Table className='border-5' striped bordered hover >
+              <Table className='border-5' striped bordered hover>
                 <thead>
                   <tr>
                     <th>Opportunity Name</th>
@@ -310,28 +311,165 @@ export default function Option2() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>UX Internship</td>
-                    <td>
-                      <ul className='list-unstyled '>
-                        <li>Active</li>
-                        <li>Disqualified</li>
-                        <li>Sub - Total</li>
-                      </ul>
-                    </td>
-                    <td>Mark</td>
-                    <td>Mark</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td rowSpan="3">UX Internship</td> {/* This cell spans 3 rows */}
+                    <td><span className={Styles.td1}>Active</span></td>
+                    <td>20</td>
+                    <td>17</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>1</td>
                   </tr>
                   <tr>
-                    <td>Art Internship</td>
-                    <td>Jacob</td>
-                    <td>Jacob</td>
-                    <td>Jacob</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    {/* Empty cells for other columns */}
+                    <td><span className={Styles.td2}>Disqualified</span></td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    {/* Empty cells for other columns */}
+                    <td>Sub - Total</td>
+                    <td>27</td>
+                    <td>21</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan="3">Art Internship</td> {/* This cell spans 3 rows */}
+                    <td><span className={Styles.td1}>Active</span></td>
+                    <td>44</td>
+                    <td>32</td>
+                    <td>21</td>
+                    <td>19</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    {/* Empty cells for other columns */}
+                    <td><span className={Styles.td2}>Disqualified</span></td>
+                    <td>24</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    {/* Empty cells for other columns */}
+                    <td>Sub - Total</td>
+                    <td>68</td>
+                    <td>36</td>
+                    <td>28</td>
+                    <td>27</td>
+                    <td>13</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </article>
+          </article>
+        </article>
+        {/* card 2 */}
+        <article className='pt-5'>
+          <article className='card border-0 rounded-4 pb-5'>
+            <article className='d-flex p-4'>
+              <span className='fw-bold'>Google</span>
+              <article className='d-flex ms-auto gap-5'>
+                <span><Unicons.UilChartPie /></span>
+                <span><Link to='/'><Unicons.UilFileDownload /></Link></span>
+              </article>
+            </article>
+            {/* cards */}
+            <article className='d-flex justify-content-center p-5 gap-5'>
+              <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>95</span>
+              </article>
+              <article className='card p-5 text-center shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>57</span>
+              </article>
+              <article className='card p-5 text-center shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>39</span>
+              </article>
+              <article className='card p-5 text-center shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>33</span>
+              </article>
+              <article className='card text-center p-5 shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>15</span>
+              </article>
+            </article>
+            {/* table 1 */}
+            <article className='p-5'>
+              <Table className='border-5' striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Opportunity Name</th>
+                    <th>Status</th>
+                    <th>Applied</th>
+                    <th>Recommended</th>
+                    <th>Interview</th>
+                    <th>Offer</th>
+                    <th>Hired</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowSpan="3">UX Internship</td> {/* This cell spans 3 rows */}
+                    <td><span className={Styles.td1}>Active</span></td>
+                    <td>20</td>
+                    <td>17</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    {/* Empty cells for other columns */}
+                    <td><span className={Styles.td2}>Disqualified</span></td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    {/* Empty cells for other columns */}
+                    <td>Sub - Total</td>
+                    <td>27</td>
+                    <td>21</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan="3">Art Internship</td> {/* This cell spans 3 rows */}
+                    <td><span className={Styles.td1}>Active</span></td>
+                    <td>44</td>
+                    <td>32</td>
+                    <td>21</td>
+                    <td>19</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    {/* Empty cells for other columns */}
+                    <td><span className={Styles.td2}>Disqualified</span></td>
+                    <td>24</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    {/* Empty cells for other columns */}
+                    <td>Sub - Total</td>
+                    <td>68</td>
+                    <td>36</td>
+                    <td>28</td>
+                    <td>27</td>
+                    <td>13</td>
                   </tr>
                 </tbody>
               </Table>
