@@ -268,8 +268,9 @@ export default function Option2() {
             <article className='d-flex p-4'>
               <span className='fw-bold'>Google</span>
               <article className='d-flex ms-auto gap-5'>
-                <span><Unicons.UilChartPie /></span>
-                <span><Link to='/'><Unicons.UilFileDownload /></Link></span>
+                {/* page ProgramOverview */}
+                <span><Link to='/ProgramOverview'><Unicons.UilChartPie /></Link></span>
+                <span><Unicons.UilFileDownload /></span>
               </article>
             </article>
             {/* cards */}
@@ -375,8 +376,9 @@ export default function Option2() {
             <article className='d-flex p-4'>
               <span className='fw-bold'>Microsoft</span>
               <article className='d-flex ms-auto gap-5'>
-                <span><Unicons.UilChartPie /></span>
-                <span><Link to='/'><Unicons.UilFileDownload /></Link></span>
+                {/* page ProgramOverview */}
+              <span><Link to='/ProgramOverview'><Unicons.UilChartPie /></Link></span>
+                <span><Unicons.UilFileDownload /></span>
               </article>
             </article>
             {/* cards */}

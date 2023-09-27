@@ -5,6 +5,7 @@ import RootLayout from './Pages/RootLayout';
 import ErrorPage from './Pages/ErrorPage';
 import Option1 from './Pages/Option1';
 import Option2 from './Pages/Option2';
+import ProgramOverview from './Pages/ProgramOverview';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -24,7 +25,10 @@ const router = createBrowserRouter([
           },
           {
             path: '/Option2', element: <Option2 />
-          }
+          },
+          {
+            path: '/ProgramOverview', element: <ProgramOverview />
+          },
         ]
       },
     ]
