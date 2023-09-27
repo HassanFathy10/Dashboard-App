@@ -261,17 +261,34 @@ export default function Option2() {
           </article>
         </article>
         <article className='pt-5'>
-          <article className='card  border-0 rounded-4  pb-5'>
+          <article className='card border-0 rounded-4 pb-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold'>Google</span>
               <article className='d-flex ms-auto gap-5'>
-                <span className=''><Unicons.UilChartPie /></span>
-                <span className=''><Unicons.UilFileDownload /></span>
+                <span><Unicons.UilChartPie /></span>
+                <span><Unicons.UilFileDownload /></span>
               </article>
-              <article className='d-flex'>
-                <article className=''>
-
-                </article>
+            </article>
+            <article className='d-flex justify-content-center p-5 gap-5'>
+              <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>95</span>
+              </article>
+              <article className='card p-5 text-center shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>57</span>
+              </article>
+              <article className='card p-5 text-center shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>39</span>
+              </article>
+              <article className='card p-5 text-center shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>33</span>
+              </article>
+              <article className='card text-center p-5 shadow border-0 rounded-4'>
+                <span className='mb-2'>Applied</span>
+                <span className='fw-bold'>15</span>
               </article>
             </article>
           </article>
