@@ -3,6 +3,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import { Line } from 'react-chartjs-2';
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Button } from 'react-bootstrap';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
 
@@ -66,7 +67,7 @@ export default function Option2() {
           </span>
         </article>
         {/* body section 1 */}
-        <article className='d-flex'>
+        <article className='d-flex mt-2'>
           <article className='p-1'>
             <article className='card  border-0 rounded-4' style={{ width: '11rem' }}>
               <article className=' card-body d-flex flex-column pb-4'>
@@ -131,7 +132,7 @@ export default function Option2() {
       </article>
       {/* section 2 */}
       <article className='col-lg-5 col-md-10 col-sm-10' >
-        {/* head section 1 */}
+        {/* head section 2 */}
         <article className="mt-3 pt-5 pb-5 d-flex gap-2">
           <Dropdown onSelect={handleSelect}>
             <Dropdown.Toggle variant="white" className='fw-bolder rounded-5' id="dropdown-basic">
@@ -152,7 +153,7 @@ export default function Option2() {
             </Dropdown.Toggle>
           </Dropdown>
         </article>
-        {/* body section 1 */}
+        {/* body section 2 */}
         <article className='mx-0 w-100 pb-5'>
           <article className='card border-0 rounded-4 m-2'>
             <article className='p-3 d-flex flex-column'>
@@ -189,7 +190,7 @@ export default function Option2() {
             </article>
           </article>
           {/* body section 2 */}
-          <article className='d-flex pt-2 pb-5 gap-5 '>
+          <article className='d-flex pt-3 gap-5'>
             <article className='p-2'>
               <article className='card  border-0 rounded-4' style={{ width: '15rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
@@ -208,7 +209,7 @@ export default function Option2() {
             <article className='p-1 ms-auto'>
               <article className='card  border-0 rounded-4' style={{ width: '16rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
-                <article className='d-flex'>
+                  <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Interview</span>
                     <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
                   </article>
@@ -217,6 +218,59 @@ export default function Option2() {
                     <span>1590 &nbsp;</span>
                     <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
                   </article>
+                </article>
+              </article>
+            </article>
+          </article>
+        </article>
+      </article>
+
+      {/* body section 3  */}
+      <article className='col-lg-10 pt-5 pb-5'>
+        <article className='d-flex flex-column'>
+          <article className="mb-3">
+            <article className='d-flex flex-column p-3'>
+              <span className='fw-bolder fs-5'>
+                Detailed Opportunity Overview
+              </span>
+            </article>
+          </article>
+        </article>
+        <article className='d-flex'>
+          <input
+            className="form-control form-control-lg border-0 w-50"
+            type="text"
+            placeholder="🔍 Search by employer name"
+          />
+          <article className='d-flex ms-auto gap-5'>
+            <Dropdown>
+              <Dropdown.Toggle variant="white" className='fw-bolder bg-white' id="dropdown-basic">
+                <span className='p-5'>Sort by</span>
+                <Unicons.UilSortAmountUp size='20px' />
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Applied</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Recommended</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Interview</Dropdown.Item>
+                <Dropdown.Item href="#/action-1">Offer</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Hired</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Rejected</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Button className='text-primary fw-bold bg-white border-0'>Export All As CSV</Button>
+          </article>
+        </article>
+        <article className='pt-5'>
+          <article className='card  border-0 rounded-4  pb-5'>
+            <article className='d-flex p-4'>
+              <span className='fw-bold'>Google</span>
+              <article className='d-flex ms-auto gap-5'>
+                <span className=''><Unicons.UilChartPie /></span>
+                <span className=''><Unicons.UilFileDownload /></span>
+              </article>
+              <article className='d-flex'>
+                <article className=''>
+
                 </article>
               </article>
             </article>

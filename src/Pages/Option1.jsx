@@ -21,7 +21,7 @@ export default function Option1() {
                 {/* head section 1 */}
                 <article className="pt-5 mb-5">
                     <article className='d-flex flex-column p-3'>
-                        <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
+                        <span className={`fw-bolder fs-5 ${Styles.font}`}>
                             London Internship Program
                         </span>
                         <span className='fw-light'>Londan</span>
