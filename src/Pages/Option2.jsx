@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend} from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Button } from 'react-bootstrap';
+import Table from 'react-bootstrap/Table';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
 
@@ -260,6 +261,7 @@ export default function Option2() {
             <Button className='text-primary fw-bold bg-white border-0'>Export All As CSV</Button>
           </article>
         </article>
+        {/* card */}
         <article className='pt-5'>
           <article className='card border-0 rounded-4 pb-5'>
             <article className='d-flex p-4'>
@@ -269,6 +271,7 @@ export default function Option2() {
                 <span><Unicons.UilFileDownload /></span>
               </article>
             </article>
+            {/* cards */}
             <article className='d-flex justify-content-center p-5 gap-5'>
               <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
                 <span className='mb-2'>Applied</span>
@@ -290,6 +293,48 @@ export default function Option2() {
                 <span className='mb-2'>Applied</span>
                 <span className='fw-bold'>15</span>
               </article>
+            </article>
+            {/* table */}
+            <article className='p-5'>
+              <Table className='border-5' striped bordered hover >
+                <thead>
+                  <tr>
+                    <th>Opportunity Name</th>
+                    <th>Status</th>
+                    <th>Applied</th>
+                    <th>Recommended</th>
+                    <th>Interview</th>
+                    <th>Offer</th>
+                    <th>Hired</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>UX Internship</td>
+                    <td>
+                      <ul className='list-unstyled '>
+                        <li>Active</li>
+                        <li>Disqualified</li>
+                        <li>Sub - Total</li>
+                      </ul>
+                    </td>
+                    <td>Mark</td>
+                    <td>Mark</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>Art Internship</td>
+                    <td>Jacob</td>
+                    <td>Jacob</td>
+                    <td>Jacob</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                </tbody>
+              </Table>
             </article>
           </article>
         </article>
