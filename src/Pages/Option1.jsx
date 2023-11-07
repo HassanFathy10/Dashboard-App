@@ -100,55 +100,55 @@ export default function Option1() {
                         <Dropdown.Menu>
                             <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
                                 Applied
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>1745</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Shortlisted" className={`d-flex p-3 fw-bolder ${selectedItem === 'Shortlisted' ? Styles.itemdrop : ''}`} href="#/action-2">
                                 Shortlisted
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>453</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Technical Interview" className={`d-flex p-3 fw-bolder ${selectedItem === 'Technical Interview' ? Styles.itemdrop : ''}`} href="#/action-3">
                                 Technical Interview
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>123</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Opportunity Browsing" className={`d-flex p-3 fw-bolder ${selectedItem === 'Opportunity Browsing' ? Styles.itemdrop : ''}`} href="#/action-3">
                                 Opportunity Browsing &nbsp; &nbsp;
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>243</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Video Interview I" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview I' ? Styles.itemdrop : ''}`} href="#/action-3">
                                 Video Interview I
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>25</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Video Interview II" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview II' ? Styles.itemdrop : ''}`} href="#/action-3">
                                 Video Interview II
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>25</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Video Interview III" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview III' ? Styles.itemdrop : ''}`} href="#/action-3">
                                 Video Interview III
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>25</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Offer" className={`d-flex p-3 fw-bolder ${selectedItem === 'Offer' ? Styles.itemdrop : ''}`} href="#/action-3">
                                 Offer
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>25</span>
                                 </article>
                             </Dropdown.Item>
                             <Dropdown.Item eventKey="Withdrawn" className={`d-flex p-3 fw-bolder ${selectedItem === 'Withdrawn' ? Styles.itemdrop : ''}`} href="#/action-3">
                                 Withdrawn
-                                <article>
+                                <article className='ms-auto'>
                                     <span className={`fw-meduim ${Styles.number}`}>25</span>
                                 </article>
                             </Dropdown.Item>

@@ -12,18 +12,18 @@ export default function SideBar() {
                 <article className='row'>
                     <article className='d-flex min-vh-100'>
                         <article className=' p-4 list-group'>
-                            <span className='p-2  mb-5'><Unicons.UilUser /></span>
+                            <span className='p-2  mb-5'><Unicons.UilUser color='#161BD2' /></span>
                             <article className='list-group'>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Link to='/'><Unicons.UilUsersAlt /></Link></span>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilCalendarAlt /></span>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilShareAlt /></span>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Link to='/Option2'><Unicons.UilFileAlt /></Link></span>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilDiaryAlt /></span>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilHeart /></span>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilAngleLeft /></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Link to='/'><Unicons.UilUsersAlt color='#161BD2' /></Link></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilCalendarAlt color='#161BD2' /></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilShareAlt color='#161BD2' /></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Link to='/Option2'><Unicons.UilFileAlt color='#161BD2' /></Link></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilDiaryAlt color='#161BD2' /></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilHeart color='#161BD2' /></span>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilAngleLeft color='#161BD2' /></span>
                             </article>
-                            <article className='mt-auto list-group my-4'>
-                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilSetting /></span>
+                            <article className='mt-auto list-group my-5'>
+                                <span className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilSetting color='#161BD2' /></span>
                                 <span className={`p-2 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                             </article>
                         </article>

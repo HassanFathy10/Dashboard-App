@@ -2,9 +2,8 @@
     background-color: aqua;
     border-radius: 10px;
 }
-.link:active {
-    background-color: aqua;
-    border-radius: 10px;
+.link {
+    cursor: pointer;
 }
 .user {
     border-radius: 50px;
