@@ -6,10 +6,13 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
-import { Checkbox } from 'antd';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { Menu, Checkbox } from 'antd';
 import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
+import type { CheckboxChangeEvent } from 'antd/es/checkbox';
+import type { CheckboxValueType } from 'antd/es/checkbox/Group';
+
+// Ant Design
 type MenuItem = Required<MenuProps>['items'][number];
 function getItem(
     label: React.ReactNode,
@@ -57,16 +60,31 @@ const items: MenuItem[] = [
         getItem('Option 20', '20'),
     ]),
 ];
-const onClick: MenuProps['onClick'] = (e) => {
-    console.log('click', e);
-};
+
+const plainOptions = [''];
+const defaultCheckedList = [''];
+const CheckboxGroup = Checkbox.Group;
+
 
 export default function Option1() {
     const [selectedItem, setSelectedItem] = useState('Opportunity Browsing');
     const handleSelect = (eventKey) => {
         setSelectedItem(eventKey);
     };
+
+    // Ant Design
+    const [checkedList, setCheckedList] = useState<CheckboxValueType[]>(defaultCheckedList);
+
+    const checkAll = plainOptions.length === checkedList.length;
+    const indeterminate = checkedList.length > 0 && checkedList.length < plainOptions.length;
     
+    const onChange = (list: CheckboxValueType[]) => {
+        setCheckedList(list);
+    };
+
+    const onCheckAllChange = (e: CheckboxChangeEvent) => {
+        setCheckedList(e.target.checked ? plainOptions : []);
+    };
 
     return (
         <article className='d-flex flex-wrap mx-4 position-absolute'>
@@ -98,14 +116,13 @@ export default function Option1() {
                                 <li className=''>0 Selected</li>
                             </article>
                         </ListGroup.Item>
-                        <Menu onClick={onClick} className='w-100 fw-medium fs-5' mode="inline" items={items} />
+                        <Menu className='w-100 fw-medium fs-5' mode="inline" items={items} />
                     </ListGroup>
                 </article>
             </article>
 
             {/* Section2 */}
             <article className='col-lg-6 col-md-10 col-sm-10 '>
-                
                 {/* head section 2 */}
                 <article className='d-flex mt-5 pt-3 pb-3 flex-wrap'>
                     {/* Handle selected value in drop down */}
@@ -193,7 +210,7 @@ export default function Option1() {
                 <article className='p-3 mt-5'>
                     <article className='card border-0'>
                         <article className={`d-flex p-3 flex-wrap ${Styles.line}`}>
-                            <Checkbox className='m-2' />
+                            <Checkbox indeterminate={indeterminate} onChange={onCheckAllChange} checked={checkAll} />
                             <span className='text-primary fw-bold m-2'>247 candidates</span>
                             <article className='ms-auto d-flex'>
                                 <span className='fw-medium text-primary m-2'>Qualified</span>
@@ -205,7 +222,7 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Checkbox className='p-2' />
+                                <CheckboxGroup className='mb-5' options={plainOptions} value={checkedList} onChange={onChange} />
                                 <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
@@ -224,7 +241,7 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Checkbox className='mb-5 p-1' />
+                                <CheckboxGroup className='mb-5' options={plainOptions} value={checkedList} onChange={onChange} />
                                 <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
@@ -243,7 +260,7 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Checkbox className='mb-5 p-1' aria-label="option 1" />
+                                <CheckboxGroup className='mb-5' options={plainOptions} value={checkedList} onChange={onChange} />
                                 <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
@@ -262,7 +279,7 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Checkbox className='mb-5 p-1' />
+                                <CheckboxGroup className='mb-5' options={plainOptions} value={checkedList} onChange={onChange} />
                                 <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
@@ -281,7 +298,7 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Checkbox className='mb-5 p-1' />
+                                <CheckboxGroup className='mb-5' options={plainOptions} value={checkedList} onChange={onChange} />
                                 <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
@@ -300,7 +317,7 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Checkbox className='mb-5 p-1' />
+                                <CheckboxGroup className='mb-5' options={plainOptions} value={checkedList} onChange={onChange} />
                                 <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
