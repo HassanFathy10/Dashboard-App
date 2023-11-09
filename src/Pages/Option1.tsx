@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Nav } from 'react-bootstrap';
@@ -7,12 +6,68 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
+import { Checkbox } from 'antd';
+import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Menu } from 'antd';
+type MenuItem = Required<MenuProps>['items'][number];
+function getItem(
+    label: React.ReactNode,
+    key?: React.Key | null,
+    icon?: React.ReactNode,
+    children?: MenuItem[],
+    type?: 'group',
+    ): MenuItem {
+    return {
+        key,
+        icon,
+        children,
+        label,
+        type,
+    } as MenuItem;
+};
+const items: MenuItem[] = [
+    getItem('Personal Information', 'sub1', <MailOutlined className='fs-5' />, [
+        getItem('Option 1', '1'),
+        getItem('Option 2', '2'),
+        getItem('Option 3', '3'),
+        getItem('Option 4', '4'),
+    ]),
+    getItem('Education', 'sub2', <AppstoreOutlined className='fs-5' />, [
+        getItem('Option 5', '5'),
+        getItem('Option 6', '6'),
+        getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')]),
+    ]),
+    getItem('Work Experience', 'sub4', <SettingOutlined className='fs-5' />, [
+        getItem('Option 9', '9'),
+        getItem('Option 10', '10'),
+        getItem('Option 11', '11'),
+        getItem('Option 12', '12'),
+    ]),
+    getItem('Activity Filter', 'sub5', <SettingOutlined className='fs-5' />, [
+        getItem('Option 13', '13'),
+        getItem('Option 14', '14'),
+        getItem('Option 15', '15'),
+        getItem('Option 16', '16'),
+    ]),
+    getItem('Advanced Filter', 'sub6', <SettingOutlined className='fs-5' />, [
+        getItem('Option 17', '17'),
+        getItem('Option 18', '18'),
+        getItem('Option 19', '19'),
+        getItem('Option 20', '20'),
+    ]),
+];
+const onClick: MenuProps['onClick'] = (e) => {
+    console.log('click', e);
+};
 
 export default function Option1() {
-    const [selectedItem, setSelectedItem] = useState('Opportunity Browsing'); // Here i Initialize with the default text i want
+    const [selectedItem, setSelectedItem] = useState('Opportunity Browsing');
     const handleSelect = (eventKey) => {
         setSelectedItem(eventKey);
-    }
+    };
+    
+
     return (
         <article className='d-flex flex-wrap mx-4 position-absolute'>
             
@@ -43,46 +98,7 @@ export default function Option1() {
                                 <li className=''>0 Selected</li>
                             </article>
                         </ListGroup.Item>
-                        <ListGroup.Item action className='border-0 border-bottom'>
-                            <article className='d-flex list-unstyled p-2'>
-                                <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
-                                    <span className='mx-2 pt-4' >Personal Information</span>
-                                </li>
-                                <li className=''><Unicons.UilAngleDown /></li>
-                            </article>
-                        </ListGroup.Item>
-                        <ListGroup.Item action className='border-0 border-bottom'>
-                            <article className='d-flex list-unstyled p-2'>
-                                <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
-                                    <span className='mx-2 pt-4' >Education</span>
-                                </li>
-                                <li className=''><Unicons.UilAngleDown /></li>
-                            </article>
-                        </ListGroup.Item>
-                        <ListGroup.Item action className='border-0 border-bottom'>
-                            <article className='d-flex list-unstyled p-2'>
-                                <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
-                                    <span className='mx-2 pt-4' >Work Experience</span>
-                                </li>
-                                <li className=''><Unicons.UilAngleDown /></li>
-                            </article>
-                        </ListGroup.Item>
-                        <ListGroup.Item action className='border-0 border-bottom'>
-                            <article className='d-flex list-unstyled p-2'>
-                                <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
-                                    <span className='mx-2 pt-4' >Activity Filter</span>
-                                </li>
-                                <li className=''><Unicons.UilAngleDown /></li>
-                            </article>
-                        </ListGroup.Item>
-                        <ListGroup.Item action className='border-0'>
-                            <article className='d-flex list-unstyled p-2'>
-                                <li className='me-auto fs-5 fw-medium'><Unicons.UilFileAlt />
-                                    <span className='mx-2 pt-4' >Advanced Filter</span>
-                                </li>
-                                <li className=''><Unicons.UilAngleDown /></li>
-                            </article>
-                        </ListGroup.Item>
+                        <Menu onClick={onClick} className='w-100 fw-medium fs-5' mode="inline" items={items} />
                     </ListGroup>
                 </article>
             </article>
@@ -177,7 +193,7 @@ export default function Option1() {
                 <article className='p-3 mt-5'>
                     <article className='card border-0'>
                         <article className={`d-flex p-3 flex-wrap ${Styles.line}`}>
-                            <Form.Check className='m-2' aria-label="option 1" />
+                            <Checkbox className='m-2' />
                             <span className='text-primary fw-bold m-2'>247 candidates</span>
                             <article className='ms-auto d-flex'>
                                 <span className='fw-medium text-primary m-2'>Qualified</span>
@@ -189,8 +205,8 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Form.Check className=' mt-3' aria-label="option 1" />
-                                <article className='mt-3 mx-3'>
+                                <Checkbox className='p-2' />
+                                <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
                             </article>
@@ -208,8 +224,8 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Form.Check className=' mt-3' aria-label="option 1" />
-                                <article className='mt-3 mx-3'>
+                                <Checkbox className='mb-5 p-1' />
+                                <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
                             </article>
@@ -227,8 +243,8 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Form.Check className=' mt-3' aria-label="option 1" />
-                                <article className='mt-3 mx-3'>
+                                <Checkbox className='mb-5 p-1' aria-label="option 1" />
+                                <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
                             </article>
@@ -246,8 +262,8 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Form.Check className=' mt-3' aria-label="option 1" />
-                                <article className='mt-3 mx-3'>
+                                <Checkbox className='mb-5 p-1' />
+                                <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
                             </article>
@@ -265,8 +281,8 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Form.Check className=' mt-3' aria-label="option 1" />
-                                <article className='mt-3 mx-3'>
+                                <Checkbox className='mb-5 p-1' />
+                                <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
                             </article>
@@ -284,8 +300,8 @@ export default function Option1() {
                         </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
-                                <Form.Check className=' mt-3' aria-label="option 1" />
-                                <article className='mt-3 mx-3'>
+                                <Checkbox className='mb-5 p-1' />
+                                <article className='mt-4 mx-3'>
                                     <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
                                 </article>
                             </article>

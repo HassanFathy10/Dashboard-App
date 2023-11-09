@@ -24,6 +24,10 @@
 .info {
     border-radius: 2rem;
     background-color: rgba(0, 255, 255, 0.062);
+    padding: 6px;
+}
+.check{
+    cursor: pointer;
 }
 .user {
     border-radius: 50px;
