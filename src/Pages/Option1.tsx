@@ -4,7 +4,6 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { Nav } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu, Checkbox } from 'antd';
@@ -68,8 +67,8 @@ const CheckboxGroup = Checkbox.Group;
 
 export default function Option1() {
     const [selectedItem, setSelectedItem] = useState('Opportunity Browsing');
-    const handleSelect = (eventKey) => {
-        setSelectedItem(eventKey);
+    const handleSelect = (eventKey: string | null) => {
+        setSelectedItem(eventKey || 'Default Item');
     };
 
     // Ant Design
@@ -189,10 +188,10 @@ export default function Option1() {
                     </Dropdown>
                     <article className='d-flex'>
                         <Nav>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilTagAlt /></Nav.Link>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilUserTimes /></Nav.Link>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilUserCheck /></Nav.Link>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><Unicons.UilEnvelope /></Nav.Link>
+                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"> </Nav.Link>
+                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"> </Nav.Link>
+                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"> </Nav.Link>
+                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"> </Nav.Link>
                         </Nav>
                     </article>
                     <Dropdown as={ButtonGroup} className='mx-2'>
