@@ -75,6 +75,7 @@ export default function Option1() {
     const [candidates, setCandidates] = useState([
         {
             id: 1,
+            user: 'AS',
             name: 'Aaliyah Sanderson',
             location: 'Riyadh, Saudi Arabia',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
@@ -82,6 +83,7 @@ export default function Option1() {
         },
         {
             id: 2,
+            user: 'JD',
             name: 'John Doe',
             location: 'Bostom, USA',
             edu: 'Bachelor - MIT (2023 - 2023)',
@@ -89,6 +91,7 @@ export default function Option1() {
         },
         {
             id: 3,
+            user: 'TM',
             name: 'Thomas Matt',
             location: 'Edinburgh, UK',
             edu: 'Bachelor - Harvard University (2023 - 2023)',
@@ -96,6 +99,7 @@ export default function Option1() {
         },
         {
             id: 4,
+            user: 'JS',
             name: 'Kamilia Smith',
             location: 'London, UK',
             edu: 'Bachelor - Boston University (2023 - 2023)',
@@ -103,6 +107,7 @@ export default function Option1() {
         },
         {
             id: 5,
+            user: 'RJ',
             name: 'Roy Jade',
             location: 'Cambridge, UK',
             edu: 'Bachelor - Yale (2023 - 2023)',
@@ -110,9 +115,26 @@ export default function Option1() {
         },
         {
             id: 6,
+            user: 'AS',
             name: 'Ahmed Salman',
             location: 'New York, USA',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
+            tag: '#top_candidate #top_candidate'
+        },
+        {
+            id: 7,
+            user: 'JP',
+            name: 'Jerry S. Pollock',
+            location: 'Saudi Arabia',
+            edu: 'Bachelor in Marketing (2023 - 2023)',
+            tag: '#top_candidate #top_candidate'
+        },
+        {
+            id: 8,
+            user: 'MD',
+            name: 'Michael D. McKee',
+            location: 'Saudi Arabia',
+            edu: 'Bachelor in Marketing (2023 - 2023)',
             tag: '#top_candidate #top_candidate'
         }
     ]);
