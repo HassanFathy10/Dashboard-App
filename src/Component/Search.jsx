@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 const Search = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
-    const handleSearch = () => {
+    const handleSearch = (e) => {
         // Perform some logic with the search term
-        onSearch(searchTerm);
+        const term = e.target.value;
+        setSearchTerm(term);
+        onSearch(term);
     };
 
     return (
@@ -14,10 +16,9 @@ const Search = ({ onSearch }) => {
                 className="form-control form-control-lg border-0"
                 type="text"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={handleSearch}
                 placeholder="🔍 Search by name, edu, exp, or #tag"
             />
-            <button onClick={handleSearch}>Search</button>
         </article>
     );
 };
