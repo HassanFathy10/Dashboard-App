@@ -121,7 +121,7 @@ export default function Option1() {
     const handleSelect = (eventKey: string | null) => {
         setSelectedItem(eventKey || 'Default Item');
     };
-    console.log(candidates)
+    console.log(setCandidates)
 
     // Ant Design
     const [checkedList, setCheckedList] = useState<CheckboxValueType[]>([]);
