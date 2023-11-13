@@ -78,14 +78,14 @@ export default function Option1() {
             name: 'Aaliyah Sanderson',
             location: 'Riyadh, Saudi Arabia',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
-            tag: '#top_candidate'
+            tag: '#top_candidate #top_candidate'
         },
         {
             id: 2,
             name: 'John Doe',
             location: 'Bostom, USA',
             edu: 'Bachelor - MIT (2023 - 2023)',
-            tag: '#top_candidate'
+            tag: '#top_candidate #top_candidate' 
         },
         {
             id: 3,
@@ -99,21 +99,21 @@ export default function Option1() {
             name: 'Kamilia Smith',
             location: 'London, UK',
             edu: 'Bachelor - Boston University (2023 - 2023)',
-            tag: '#top_candidate'
+            tag: '#top_candidate #top_candidate'
         },
         {
             id: 5,
             name: 'Roy Jade',
             location: 'Cambridge, UK',
             edu: 'Bachelor - Yale (2023 - 2023)',
-            tag: '#top_candidate'
+            tag: '#top_candidate #top_candidate'
         },
         {
             id: 6,
             name: 'Ahmed Salman',
             location: 'New York, USA',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
-            tag: '#top_candidate'
+            tag: '#top_candidate #top_candidate'
         }
     ]);
     const [filteredCandidates, setFilteredCandidates] = useState(candidates);
@@ -147,7 +147,10 @@ export default function Option1() {
         console.log('Search Term:', searchTerm);
         // Perform filtering logic based on the search term
         const filteredResults = candidates.filter(candidate =>
-            candidate.name.toLowerCase().includes(searchTerm.toLowerCase())
+            candidate.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            candidate.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            candidate.edu.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            candidate.tag.toLowerCase().includes(searchTerm.toLowerCase())
         );
         console.log('Filtered Results:', filteredResults);
         // Update the state with filtered results
