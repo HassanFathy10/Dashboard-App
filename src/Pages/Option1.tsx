@@ -10,6 +10,8 @@ import { Menu, Checkbox } from 'antd';
 import type { MenuProps } from 'antd';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
+import Search from '../Component/Search';
+import Candidates from '../Component/Candidates';
 
 // Ant Design
 type MenuItem = Required<MenuProps>['items'][number];
@@ -70,10 +72,56 @@ const CheckboxGroup = Checkbox.Group;
 
 
 export default function Option1() {
+    const [candidates, setCandidates] = useState([
+        {
+            id: 1,
+            name: 'Aaliyah Sanderson',
+            location: 'Riyadh, Saudi Arabia',
+            edu: 'Bachelor - Cambridge University (2023 - 2023)',
+            tag: '#top_candidate'
+        },
+        {
+            id: 2,
+            name: 'John Doe',
+            location: 'Bostom, USA',
+            edu: 'Bachelor - MIT (2023 - 2023)',
+            tag: '#top_candidate'
+        },
+        {
+            id: 3,
+            name: 'Thomas Matt',
+            location: 'Edinburgh, UK',
+            edu: 'Bachelor - Harvard University (2023 - 2023)',
+            tag: '#top_candidate'
+        },
+        {
+            id: 4,
+            name: 'Kamilia Smith',
+            location: 'London, UK',
+            edu: 'Bachelor - Boston University (2023 - 2023)',
+            tag: '#top_candidate'
+        },
+        {
+            id: 5,
+            name: 'Roy Jade',
+            location: 'Cambridge, UK',
+            edu: 'Bachelor - Yale (2023 - 2023)',
+            tag: '#top_candidate'
+        },
+        {
+            id: 6,
+            name: 'Ahmed Salman',
+            location: 'New York, USA',
+            edu: 'Bachelor - Cambridge University (2023 - 2023)',
+            tag: '#top_candidate'
+        }
+    ]);
+    const [filteredCandidates, setFilteredCandidates] = useState(candidates);
     const [selectedItem, setSelectedItem] = useState('Opportunity Browsing');
     const handleSelect = (eventKey: string | null) => {
         setSelectedItem(eventKey || 'Default Item');
     };
+    console.log(candidates)
 
     // Ant Design
     const [checkedList, setCheckedList] = useState<CheckboxValueType[]>([]);
@@ -89,12 +137,22 @@ export default function Option1() {
         setCheckedList(e.target.checked ? plainOptions : []);
     };
     const filteredOptionsForValue1 = getFilteredOptions(['1']);
-    const filteredOptionsForValue2 = getFilteredOptions(['2']);
-    const filteredOptionsForValue3 = getFilteredOptions(['3']);
-    const filteredOptionsForValue4 = getFilteredOptions(['4']);
-    const filteredOptionsForValue5 = getFilteredOptions(['5']);
-    const filteredOptionsForValue6 = getFilteredOptions(['6']);
+    // const filteredOptionsForValue2 = getFilteredOptions(['2']);
+    // const filteredOptionsForValue3 = getFilteredOptions(['3']);
+    // const filteredOptionsForValue4 = getFilteredOptions(['4']);
+    // const filteredOptionsForValue5 = getFilteredOptions(['5']);
+    // const filteredOptionsForValue6 = getFilteredOptions(['6']);
 
+    const handleSearch = (searchTerm: string) => {
+        console.log('Search Term:', searchTerm);
+        // Perform filtering logic based on the search term
+        const filteredResults = candidates.filter(candidate =>
+            candidate.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        console.log('Filtered Results:', filteredResults);
+        // Update the state with filtered results
+        setFilteredCandidates(filteredResults);
+    };
 
     return (
         <article className='d-flex flex-wrap mx-4 position-absolute'>
@@ -112,13 +170,7 @@ export default function Option1() {
                 </article>
                 {/* body section 1 */}
                 <article>
-                    <article className='p-1'>
-                        <input
-                            className="form-control form-control-lg border-0"
-                            type="text"
-                            placeholder="🔍 Search by name, edu, exp, or #tag"
-                        />
-                    </article>
+                    <Search onSearch={handleSearch} />
                     <ListGroup className='mt-2 p-1'>
                         <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
@@ -233,116 +285,8 @@ export default function Option1() {
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
                             <article className='d-flex mt-5'>
                                 <CheckboxGroup className='mb-5' options={filteredOptionsForValue1} value={checkedList} onChange={onChange} />
-                                <article className='mt-4 mx-3'>
-                                    <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
-                                </article>
                             </article>
-                            <ul className='list-unstyled lh-lg'>
-                                <li className='fw-bold'>Aaliyah Sanderson</li>
-                                <li className='fw-normal'>Riyadh, Saudi Arabia</li>
-                                <li className='fw-light'>Bachelor - Cambridge University (2023 - 2023)</li>
-                                <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
-                                <li className='fw-medium text-info'>
-                                    <span className={Styles.info}>New York</span> &nbsp;
-                                    <span className={Styles.info}>Marketing</span> &nbsp;
-                                    <span className={Styles.info}>Londan</span>
-                                </li>
-                            </ul>
-                        </article>
-                        <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
-                            <article className='d-flex mt-5'>
-                                <CheckboxGroup className='mb-5' options={filteredOptionsForValue2} value={checkedList} onChange={onChange} />
-                                <article className='mt-4 mx-3'>
-                                    <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
-                                </article>
-                            </article>
-                            <ul className='list-unstyled lh-lg'>
-                                <li className='fw-bold'>John Doe</li>
-                                <li className='fw-normal'>Bostom, USA</li>
-                                <li className='fw-light'>Bachelor - MIT (2023 - 2023)</li>
-                                <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
-                                <li className='fw-medium text-info'>
-                                    <span className={Styles.info}>New York</span> &nbsp;
-                                    <span className={Styles.info}>Marketing</span> &nbsp;
-                                    <span className={Styles.info}>Londan</span>
-                                </li>
-                            </ul>
-                        </article>
-                        <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
-                            <article className='d-flex mt-5'>
-                                <CheckboxGroup className='mb-5' options={filteredOptionsForValue3} value={checkedList} onChange={onChange} />
-                                <article className='mt-4 mx-3'>
-                                    <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
-                                </article>
-                            </article>
-                            <ul className='list-unstyled lh-lg'>
-                                <li className='fw-bold'>Thomas Matt</li>
-                                <li className='fw-normal'>Edinburgh, UK</li>
-                                <li className='fw-light'>Bachelor - Harvard University (2023 - 2023)</li>
-                                <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
-                                <li className='fw-medium text-info'>
-                                    <span className={Styles.info}>New York</span> &nbsp;
-                                    <span className={Styles.info}>Marketing</span> &nbsp;
-                                    <span className={Styles.info}>Londan</span>
-                                </li>
-                            </ul>
-                        </article>
-                        <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
-                            <article className='d-flex mt-5'>
-                                <CheckboxGroup className='mb-5' options={filteredOptionsForValue4} value={checkedList} onChange={onChange} />
-                                <article className='mt-4 mx-3'>
-                                    <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
-                                </article>
-                            </article>
-                            <ul className='list-unstyled lh-lg'>
-                                <li className='fw-bold'>Kamilia Smith</li>
-                                <li className='fw-normal'>London, UK</li>
-                                <li className='fw-light'>Bachelor - Boston University (2023 - 2023)</li>
-                                <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
-                                <li className='fw-medium text-info'>
-                                    <span className={Styles.info}>New York</span> &nbsp;
-                                    <span className={Styles.info}>Marketing</span> &nbsp;
-                                    <span className={Styles.info}>Londan</span>
-                                </li>
-                            </ul>
-                        </article>
-                        <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
-                            <article className='d-flex mt-5'>
-                                <CheckboxGroup className='mb-5' options={filteredOptionsForValue5} value={checkedList} onChange={onChange} />
-                                <article className='mt-4 mx-3'>
-                                    <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
-                                </article>
-                            </article>
-                            <ul className='list-unstyled lh-lg'>
-                                <li className='fw-bold'>Roy Jade</li>
-                                <li className='fw-normal'>Cambridge,  UK</li>
-                                <li className='fw-light'>Bachelor - Yale (2023 - 2023)</li>
-                                <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
-                                <li className='fw-medium text-info'>
-                                    <span className={Styles.info}>New York</span> &nbsp;
-                                    <span className={Styles.info}>Marketing</span> &nbsp;
-                                    <span className={Styles.info}>Londan</span>
-                                </li>
-                            </ul>
-                        </article>
-                        <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
-                            <article className='d-flex mt-5'>
-                                <CheckboxGroup className='mb-5' options={filteredOptionsForValue6} value={checkedList} onChange={onChange} />
-                                <article className='mt-4 mx-3'>
-                                    <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>AS</span>
-                                </article>
-                            </article>
-                            <ul className='list-unstyled lh-lg'>
-                                <li className='fw-bold'>Ahmed Salman</li>
-                                <li className='fw-normal'>New York, USA</li>
-                                <li className='fw-light'>Bachelor - Cambridge University (2023 - 2023)</li>
-                                <li className='fw-light text-primary'>#top_candidate &nbsp; &nbsp; &nbsp;  #top_candidate</li>
-                                <li className='fw-medium text-info'>
-                                    <span className={Styles.info}>New York</span> &nbsp;
-                                    <span className={Styles.info}>Marketing</span> &nbsp;
-                                    <span className={Styles.info}>Londan</span>
-                                </li>
-                            </ul>
+                            <Candidates candidates={filteredCandidates} />
                         </article>
                     </article>
                 </article>

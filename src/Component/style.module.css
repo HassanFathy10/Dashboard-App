@@ -10,3 +10,8 @@
     color: rgba(72, 155, 161, 0.438);
     background-color: rgba(0, 255, 255, 0.116);
 }
+.info {
+    border-radius: 2rem;
+    background-color: rgba(0, 255, 255, 0.062);
+    padding: 6px;
+}
