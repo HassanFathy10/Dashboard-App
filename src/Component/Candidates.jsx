@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './style.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Candidates({ candidates }) {
     return (
@@ -8,7 +9,7 @@ export default function Candidates({ candidates }) {
                 <article className={`${Styles.line}`} key={candidate.id}>
                     <article className='d-flex align-items-center mt-5 gap-5'>
                         <article className='mx-3'>
-                            <span className={`p-3 fw-bolder fs-5 ${Styles.user}`}>{candidate.user}</span>
+                            <Link to='/candidate' className={`p-3 fw-bolder fs-5 ${Styles.user}`}>{candidate.user}</Link>
                         </article>
                         <ul className='list-unstyled lh-lg'>
                             <li className='fw-bold'>{candidate.name}</li>
