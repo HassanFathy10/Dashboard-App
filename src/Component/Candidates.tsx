@@ -12,13 +12,13 @@ export default function Candidates({ candidates }: { candidates: any }) {
     // Ant Design
     useEffect(() => {
         // Check if all candidates are checked
-        const allChecked = Object.values(checkedList).every((list) => list.length > 0);
+        const allChecked = Object.values(checkedList).some((list) => list.length > 0);
         // Check if some, but not all, candidates are checked
-        const someChecked = Object.values(checkedList).some((list) => list.length > 0);
+        const someChecked = Object.values(checkedList).every((list) => list.length > 0);
         setCheckAll(allChecked);
         // If some, but not all, candidates are checked, set indeterminate to true
         // Otherwise, set indeterminate to false
-        setIndeterminate(someChecked && !allChecked);
+        setIndeterminate(someChecked && allChecked);
     }, [checkedList]);
 
     const onCheckChange = (candidateId: number, list: CheckboxValueType[]) => {
@@ -41,7 +41,7 @@ export default function Candidates({ candidates }: { candidates: any }) {
     return (
         <article>
             <article className={`d-flex p-3 flex-wrap ${Styles.line}`}>
-            <Checkbox className='m-2' indeterminate={indeterminate} checked={checkAll} onChange={onCheckAllChange} />
+            <Checkbox className='m-2' indeterminate={!indeterminate} checked={checkAll} onChange={onCheckAllChange} />
                 <span className='text-primary fw-bold m-2'>247 candidates</span>
                 <article className='ms-auto d-flex'>
                     <span className='fw-medium text-primary m-2'>Qualified</span>
