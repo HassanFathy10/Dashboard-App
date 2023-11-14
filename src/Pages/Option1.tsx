@@ -6,12 +6,11 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Styles from './style.module.css';
 import { AppstoreOutlined, MailOutlined, SettingOutlined, TagOutlined, UserDeleteOutlined, UserAddOutlined, UserOutlined } from '@ant-design/icons';
-import { Menu, Checkbox } from 'antd';
+import { Menu } from 'antd';
 import type { MenuProps } from 'antd';
-import type { CheckboxChangeEvent } from 'antd/es/checkbox';
-import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 import Search from '../Component/Search';
 import Candidates from '../Component/Candidates';
+
 
 // Ant Design
 type MenuItem = Required<MenuProps>['items'][number];
@@ -61,15 +60,6 @@ const items: MenuItem[] = [
         getItem('Option 20', '20'),
     ]),
 ];
-
-const plainOptions = ['1', '2', '3', '4', '5', '6'];
-const getFilteredOptions = (values: string[]) => {
-    return plainOptions
-        .filter(option => values.includes(option))
-        .map(option => ({ label: '', value: option }));
-};
-const CheckboxGroup = Checkbox.Group;
-
 
 export default function Option1() {
     const [candidates, setCandidates] = useState([
@@ -138,32 +128,13 @@ export default function Option1() {
             tag: '#top_candidate #top_candidate'
         }
     ]);
+    
     const [filteredCandidates, setFilteredCandidates] = useState(candidates);
     const [selectedItem, setSelectedItem] = useState('Opportunity Browsing');
     const handleSelect = (eventKey: string | null) => {
         setSelectedItem(eventKey || 'Default Item');
     };
     console.log(setCandidates)
-
-    // Ant Design
-    const [checkedList, setCheckedList] = useState<CheckboxValueType[]>([]);
-
-    const checkAll = plainOptions.length === checkedList.length;
-    const indeterminate = checkedList.length > 0 && checkedList.length < plainOptions.length;
-    
-    const onChange = (list: CheckboxValueType[]) => {
-        setCheckedList(list);
-    };
-
-    const onCheckAllChange = (e: CheckboxChangeEvent) => {
-        setCheckedList(e.target.checked ? plainOptions : []);
-    };
-    const filteredOptionsForValue1 = getFilteredOptions(['1']);
-    // const filteredOptionsForValue2 = getFilteredOptions(['2']);
-    // const filteredOptionsForValue3 = getFilteredOptions(['3']);
-    // const filteredOptionsForValue4 = getFilteredOptions(['4']);
-    // const filteredOptionsForValue5 = getFilteredOptions(['5']);
-    // const filteredOptionsForValue6 = getFilteredOptions(['6']);
 
     const handleSearch = (searchTerm: string) => {
         console.log('Search Term:', searchTerm);
@@ -292,25 +263,10 @@ export default function Option1() {
                         </Dropdown.Menu>
                     </Dropdown>
                 </article>
-
                 {/* body section 2 */}
                 <article className='p-3 mt-5'>
                     <article className='card border-0'>
-                        <article className={`d-flex p-3 flex-wrap ${Styles.line}`}>
-                            <Checkbox indeterminate={indeterminate} onChange={onCheckAllChange} checked={checkAll} />
-                            <span className='text-primary fw-bold m-2'>247 candidates</span>
-                            <article className='ms-auto d-flex'>
-                                <span className='fw-medium text-primary m-2'>Qualified</span>
-                                <span className={Styles.span}></span>
-                                <span className='text-black fw-medium m-2'>Task <span className={Styles.number}>25</span></span>
-                                <span className={Styles.span}></span>
-                                <span className='text-black fw-medium m-2'>Disqualified <span className={Styles.number}>78</span></span>
-                            </article>
-                        </article>
                         <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
-                            <article className='d-flex mt-5'>
-                                <CheckboxGroup className='mb-5' options={filteredOptionsForValue1} value={checkedList} onChange={onChange} />
-                            </article>
                             <Candidates candidates={filteredCandidates} />
                         </article>
                     </article>
