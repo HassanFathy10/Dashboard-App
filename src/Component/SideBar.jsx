@@ -1,22 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Nav, Navbar } from 'react-bootstrap';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
 
 
 export default function SideBar() {
     return (
-        <Navbar className='bg-white shadow'>
-            <Nav className='col-lg-2 col-md-2 col-sm-2 pt-4'>
+        <article className='bg-white shadow'>
+            <article className='col-lg-2 col-md-2 col-sm-2 pt-4'>
                 <article className='row'>
                     <article className='d-flex min-vh-100'>
                         <article className=' p-4 list-group'>
-                            <span className='p-2  mb-5'><Unicons.UilUser color='#161BD2' /></span>
-                            <ul className='list-group list-unstyled'>
+                            <span className={`p-2 mb-5 ${Styles.link}`}><Unicons.UilUser color='#161BD2' /></span>
+                            <ul className='list-group list-unstyled nav-tabs'>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/'><Unicons.UilUsersAlt color='#161BD2' /></Link></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilCalendarAlt color='#161BD2' /></li>
-                                <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/Candidates'><Unicons.UilShareAlt color='#161BD2' /></Link></li>
+                                <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/Candidate/:UserId'><Unicons.UilShareAlt color='#161BD2' /></Link></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/Option2'><Unicons.UilFileAlt color='#161BD2' /></Link></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilDiaryAlt color='#161BD2' /></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilHeart color='#161BD2' /></li>
@@ -29,7 +28,7 @@ export default function SideBar() {
                         </article>
                     </article>
                 </article>
-            </Nav>
-        </Navbar>
+            </article>
+        </article>
     );
 };

@@ -62,7 +62,7 @@ export default function Candidates({ candidates }: { candidates: any }) {
                             />
                         </article>
                         <article className='mx-3'>
-                            <Link to='/candidate' className={`text-decoration-none p-3 fw-bolder fs-5 ${Styles.user}`}>{candidate.user}</Link>
+                            <Link to={`/Candidate/${candidate.id}`} className={`text-decoration-none p-3 fw-bolder fs-5 ${Styles.user}`}>{candidate.user}</Link>
                         </article>
                         <ul className='list-unstyled lh-lg'>
                             <li className='fw-bold'>{candidate.name}</li>

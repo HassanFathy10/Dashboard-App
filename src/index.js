@@ -7,7 +7,7 @@ import Option1 from './Pages/Option1.tsx';
 import Option2 from './Pages/Option2';
 import ProgramOverview from './Pages/ProgramOverview';
 import reportWebVitals from './reportWebVitals';
-import CandidatesProfile from './Pages/CandidatesProfile.tsx';
+import CandidatesProfile from './Pages/CandidateProfile.tsx';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -26,7 +26,8 @@ const router = createBrowserRouter([
         path: '/Option2', element: <Option2 />
       },
       {
-        path: '/Candidate', element: <CandidatesProfile />
+        path: '/Candidate/:UserId',
+        element: <CandidatesProfile />,
       },
       {
         path: '/ProgramOverview', element: <ProgramOverview />
