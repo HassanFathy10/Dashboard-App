@@ -15,7 +15,7 @@ export default function SideBar() {
                             <ul className='list-group list-unstyled nav-tabs'>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/'><Unicons.UilUsersAlt color='#161BD2' /></Link></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilCalendarAlt color='#161BD2' /></li>
-                                <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/Candidate/:UserId'><Unicons.UilShareAlt color='#161BD2' /></Link></li>
+                                <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/Candidate/1'><Unicons.UilShareAlt color='#161BD2' /></Link></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Link to='/Option2'><Unicons.UilFileAlt color='#161BD2' /></Link></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilDiaryAlt color='#161BD2' /></li>
                                 <li className={`p-2 mb-2 ${Styles.link}`}><Unicons.UilHeart color='#161BD2' /></li>
