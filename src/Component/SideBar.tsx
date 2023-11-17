@@ -23,7 +23,7 @@ export default function SideBar() {
     const [collapsed, setCollapsed] = useState(false);
     return (
         <article>
-            <Layout className=' min-vh-100 '>
+            <Layout className='min-vh-100'>
                 <Sider trigger={null} collapsible collapsed={collapsed}>
                     <Menu
                         theme="dark"
