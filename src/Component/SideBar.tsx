@@ -26,7 +26,7 @@ export default function SideBar() {
                         theme="dark"
                         mode="inline"
                         defaultSelectedKeys={['1']}
-                        className='min-vh-100 '
+                        className='min-vh-100'
                     >
                         <Menu.Item key="1" className='mb-5' icon={<FaRegUserCircle className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>Hassan Fathy</Link>

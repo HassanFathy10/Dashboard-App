@@ -8,6 +8,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Table from 'react-bootstrap/Table';
 import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import { DatePicker, Space } from 'antd';
+
+dayjs.extend(customParseFormat);
+const { RangePicker } = DatePicker;
+const dateFormat = 'YYYY/MM/DD';
 
 ChartJS.register(
   CategoryScale,
@@ -141,19 +148,21 @@ export default function Option2() {
               {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
+              <Dropdown.Item eventKey="London Internship Program" href="#/action-1">
                 London Internship Program
               </Dropdown.Item>
-              <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
+              <Dropdown.Item eventKey="Opportunity Overview" href="#/action-2">
                 Opportunity Overview
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Dropdown>
-            <Dropdown.Toggle variant="white" className='fw-bolder bg-white rounded-5' id="dropdown-basic">
-              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;01 Jan 2023 - 31 July 2023 &nbsp; &nbsp; &nbsp; &nbsp;
-            </Dropdown.Toggle>
-          </Dropdown>
+          <Space direction="vertical" size={12}>
+            <RangePicker
+              defaultValue={[dayjs('2015/01/01', dateFormat), dayjs('2015/01/01', dateFormat)]}
+              format={dateFormat}
+              className='p-2 rounded-5'
+            />
+          </Space>
         </article>
         {/* body section 2 */}
         <article className='mx-0 w-100 pb-5'>
@@ -239,11 +248,6 @@ export default function Option2() {
           </article>
         </article>
         <article className='d-flex'>
-          <input
-            className="form-control form-control-lg border-0 w-50"
-            type="text"
-            placeholder="🔍 Search by employer name"
-          />
           <article className='d-flex ms-auto gap-5'>
             <Dropdown>
               <Dropdown.Toggle variant="white" className='fw-bolder bg-white' id="dropdown-basic">
@@ -373,7 +377,7 @@ export default function Option2() {
               <span className='fw-bold'>Microsoft</span>
               <article className='d-flex ms-auto gap-5'>
                 {/* page ProgramOverview */}
-              <span><Link to='/ProgramOverview'><Unicons.UilChartPie /></Link></span>
+                <span><Link to='/ProgramOverview'><Unicons.UilChartPie /></Link></span>
                 <span><Unicons.UilFileDownload /></span>
               </article>
             </article>

@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Input, Tooltip } from 'antd';
+import { InfoCircleOutlined, SearchOutlined } from '@ant-design/icons';
+
 
 const Search = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -12,12 +15,17 @@ const Search = ({ onSearch }) => {
 
     return (
         <article className='p-1'>
-            <input
-                className="form-control form-control-lg border-0"
-                type="text"
+            <Input
+                placeholder="Serach by name, edu, exp or #tag"
+                prefix={<SearchOutlined className="site-form-item-icon me-3" />}
+                suffix={
+                    <Tooltip title="Extra information">
+                        <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                    </Tooltip>
+                }
+                className='fs-5'
                 value={searchTerm}
                 onChange={handleSearch}
-                placeholder="🔍 Search by name, edu, exp, or #tag"
             />
         </article>
     );
