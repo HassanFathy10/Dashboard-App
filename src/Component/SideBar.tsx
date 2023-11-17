@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Styles from './style.module.css';
+// import Styles from './style.module.css';
 import {
     FaUsers,
     FaHome,
@@ -8,27 +8,25 @@ import {
     FaShareAlt,
     FaRegUserCircle,
     FaRegFileAlt,
-    FaHeart
+    FaHeart,
+    FaArrowAltCircleLeft,
+    FaArrowAltCircleRight
 } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
-
-import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-} from '@ant-design/icons';
-import { Layout, Menu, Button } from 'antd';
-const { Header, Sider } = Layout;
+import { Layout, Menu } from 'antd';
+const { Sider } = Layout;
 
 export default function SideBar() {
     const [collapsed, setCollapsed] = useState(false);
     return (
         <article>
-            <Layout className='min-vh-100'>
-                <Sider trigger={null} collapsible collapsed={collapsed}>
+            <Layout>
+                <Sider trigger={null} collapsible collapsed={collapsed} className='d-flex justify-content-center'>
                     <Menu
                         theme="dark"
                         mode="inline"
                         defaultSelectedKeys={['1']}
+                        className='min-vh-100 '
                     >
                         <Menu.Item key="1" className='mb-5' icon={<FaRegUserCircle className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>Hassan Fathy</Link>
@@ -54,20 +52,15 @@ export default function SideBar() {
                         <Menu.Item key="8" icon={<IoMdSettings className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>nav 3</Link>
                         </Menu.Item>
+                        <Menu.Item
+                            icon={collapsed ? <FaArrowAltCircleRight className='fs-4' /> : <FaArrowAltCircleLeft className='fs-4' />}
+                            onClick={() => setCollapsed(!collapsed)}>
+                        </Menu.Item>
                         <Menu.Item key="9" className='position-absolute bottom-0 mb-5' icon={<FaRegUserCircle className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>nav 3</Link>
                         </Menu.Item>
                     </Menu>
                 </Sider>
-                <Layout>
-                    <Header className={`p-0 position-fixed  ${Styles.link}`}>
-                        <Button
-                            icon={collapsed ? <MenuUnfoldOutlined className='fs-5' /> : <MenuFoldOutlined className='fs-5' />}
-                            onClick={() => setCollapsed(!collapsed)}
-                            className='btn'
-                        />
-                    </Header>
-                </Layout>
             </Layout>
         </article>
     );

@@ -60,7 +60,7 @@ export default function Option2() {
   }
 
   return (
-    <article className='d-flex flex-wrap mx-3 position-absolute flex-wrap'>
+    <article className='d-flex flex-wrap mx-5 position-absolute flex-wrap'>
       <article className='col-lg-5 col-md-10 col-sm-10 pb-5'>
         {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5">
