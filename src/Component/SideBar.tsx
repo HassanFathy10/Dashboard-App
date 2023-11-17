@@ -54,7 +54,7 @@ export default function SideBar() {
                         <Menu.Item key="8" icon={<IoMdSettings className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>nav 3</Link>
                         </Menu.Item>
-                        <Menu.Item key="9" icon={<FaRegUserCircle className='fs-4' />}>
+                        <Menu.Item key="9" className='position-absolute bottom-0 mb-5' icon={<FaRegUserCircle className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>nav 3</Link>
                         </Menu.Item>
                     </Menu>
