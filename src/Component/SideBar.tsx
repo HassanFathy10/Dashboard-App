@@ -35,7 +35,7 @@ export default function SideBar() {
                             <Link to="/" className='text-decoration-none'>Home</Link>
                         </Menu.Item>
                         <Menu.Item key="3" icon={<FaUsers className='fs-4' />}>
-                            <Link to="/Option2" className='text-decoration-none'>nav 2</Link>
+                            <Link to="/Option2" className='text-decoration-none'>DashBoard</Link>
                         </Menu.Item>
                         <Menu.Item key="4" icon={<FaRegCalendarCheck className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>nav 3</Link>

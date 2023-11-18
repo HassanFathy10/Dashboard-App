@@ -67,6 +67,7 @@ export default function Option1() {
             id: 1,
             user: 'AS',
             name: 'Aaliyah Sanderson',
+            email: 'AaliyahSanderson.@gmail.com',
             location: 'Riyadh, Saudi Arabia',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
             tag: '#top_candidate #top_candidate'
@@ -75,6 +76,7 @@ export default function Option1() {
             id: 2,
             user: 'JD',
             name: 'John Doe',
+            email: 'JohnDoe.@gmail.com',
             location: 'Bostom, USA',
             edu: 'Bachelor - MIT (2023 - 2023)',
             tag: '#top_candidate #top_candidate' 
@@ -83,6 +85,7 @@ export default function Option1() {
             id: 3,
             user: 'TM',
             name: 'Thomas Matt',
+            email: 'ThomasMatt.@gmail.com',
             location: 'Edinburgh, UK',
             edu: 'Bachelor - Harvard University (2023 - 2023)',
             tag: '#top_candidate'
@@ -91,6 +94,7 @@ export default function Option1() {
             id: 4,
             user: 'JS',
             name: 'Kamilia Smith',
+            email: 'KamiliaSmith.@gmail.com',
             location: 'London, UK',
             edu: 'Bachelor - Boston University (2023 - 2023)',
             tag: '#top_candidate #top_candidate'
@@ -99,6 +103,7 @@ export default function Option1() {
             id: 5,
             user: 'RJ',
             name: 'Roy Jade',
+            email: 'RoyJade.@gmail.com',
             location: 'Cambridge, UK',
             edu: 'Bachelor - Yale (2023 - 2023)',
             tag: '#top_candidate #top_candidate'
@@ -107,6 +112,7 @@ export default function Option1() {
             id: 6,
             user: 'AS',
             name: 'Ahmed Salman',
+            email: 'AhmedSalman.@gmail.com',
             location: 'New York, USA',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
             tag: '#top_candidate #top_candidate'
@@ -115,6 +121,7 @@ export default function Option1() {
             id: 7,
             user: 'JP',
             name: 'Jerry S. Pollock',
+            email: 'JerryS.Pollock.@gmail.com',
             location: 'Saudi Arabia',
             edu: 'Bachelor in Marketing (2023 - 2023)',
             tag: '#top_candidate #top_candidate'
@@ -123,6 +130,7 @@ export default function Option1() {
             id: 8,
             user: 'MD',
             name: 'Michael D. McKee',
+            email: 'MichaelD.McKee.@gmail.com',
             location: 'Saudi Arabia',
             edu: 'Bachelor in Marketing (2023 - 2023)',
             tag: '#top_candidate #top_candidate'
