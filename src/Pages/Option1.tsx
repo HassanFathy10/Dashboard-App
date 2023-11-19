@@ -188,7 +188,7 @@ export default function Option1() {
             </article>
 
             {/* Section2 */}
-            <article className='col-lg-6 col-md-10 col-sm-10 '>
+            <article className='col-lg-6 col-md-10 col-sm-10'>
                 {/* head section 2 */}
                 <article className='d-flex mt-5 pt-3 pb-3 flex-wrap'>
                     {/* Handle selected value in drop down */}

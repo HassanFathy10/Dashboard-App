@@ -38,19 +38,19 @@ export default function SideBar() {
                             <Link to="/Option2" className='text-decoration-none'>DashBoard</Link>
                         </Menu.Item>
                         <Menu.Item key="4" icon={<FaRegCalendarCheck className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>nav 3</Link>
+                            <Link to="/" className='text-decoration-none'>Calendar</Link>
                         </Menu.Item>
                         <Menu.Item key="5" icon={<FaShareAlt className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>nav 3</Link>
+                            <Link to="/" className='text-decoration-none'>Candidate</Link>
                         </Menu.Item>
                         <Menu.Item key="6" icon={<FaRegFileAlt className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>nav 3</Link>
+                            <Link to="/" className='text-decoration-none'>Reports</Link>
                         </Menu.Item>
                         <Menu.Item key="7" icon={<FaHeart className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>nav 3</Link>
+                            <Link to="/" className='text-decoration-none'>Favourite</Link>
                         </Menu.Item>
                         <Menu.Item key="8" icon={<IoMdSettings className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>nav 3</Link>
+                            <Link to="/" className='text-decoration-none'>Setting</Link>
                         </Menu.Item>
                         <Menu.Item
                             icon={collapsed ? <FaArrowAltCircleRight className='fs-4' /> : <FaArrowAltCircleLeft className='fs-4' />}
