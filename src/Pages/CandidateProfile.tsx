@@ -6,12 +6,14 @@ export default function CandidatesProfile() {
     return (
         <article className='container'>
             <article className='row'>
-                <article className=''>
-                    <img src='' alt='' className=' bg-black rounded-5' />
+                <article className='col-lg-10 card m-5 border-0 shadow'>
+                    <article>
+                        <img src='' alt='' className=' bg-black rounded-5' />
+                    </article>
                     <article className='d-flex gap-5'>
                         <h4>Aaliyah Sanderson</h4>
                         <article className='mt-1'>
-                            <ul className='d-flex list-unstyled gap-3'>
+                            <ul className='d-flex list-unstyled gap-5'>
                                 <li>New York</li>
                                 <li>Marketing</li>
                                 <li>London</li>
@@ -31,7 +33,9 @@ export default function CandidatesProfile() {
                         </ul>
                     </article>
                     <article className='d-flex'>
+                        <article className='col-8'>
                         <TagCandidate />
+                        </article>
                         <article className=' mx-auto'>
                             <p className='text-black-50'>Applied on 12 June 2023</p>
                         </article>
