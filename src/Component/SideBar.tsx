@@ -38,10 +38,10 @@ export default function SideBar() {
                             <Link to="/Option2" className='text-decoration-none'>DashBoard</Link>
                         </Menu.Item>
                         <Menu.Item key="4" icon={<FaRegCalendarCheck className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>Calendar</Link>
+                            <Link to="/Events" className='text-decoration-none'>Calendar</Link>
                         </Menu.Item>
                         <Menu.Item key="5" icon={<FaShareAlt className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>Candidate</Link>
+                            <Link to="/Candidate/1" className='text-decoration-none'>Candidate</Link>
                         </Menu.Item>
                         <Menu.Item key="6" icon={<FaRegFileAlt className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>Reports</Link>

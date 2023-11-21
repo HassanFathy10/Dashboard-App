@@ -53,7 +53,7 @@ export default function CandidatesProfile() {
                     <article className='pb-5'>
                         <NavBar />
                     </article>
-                    <article className='card p-3 border-0 shadow rounded-5'>
+                    <article className='card p-4 border-0 shadow rounded-5'>
                         <h5 className='pb-5'>Personal Information</h5>
                         <article className='row'>
                             <article className='d-flex pb-4 col'>

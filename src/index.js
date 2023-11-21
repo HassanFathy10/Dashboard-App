@@ -8,6 +8,7 @@ import Option2 from './Pages/Option2';
 import ProgramOverview from './Pages/ProgramOverview';
 import reportWebVitals from './reportWebVitals';
 import CandidatesProfile from './Pages/CandidateProfile.tsx';
+import Events from './Pages/Events.tsx'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -24,6 +25,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/Option2', element: <Option2 />
+      },
+      {
+        path: '/Events', element: <Events />
       },
       {
         path: '/Candidate/:UserId',
