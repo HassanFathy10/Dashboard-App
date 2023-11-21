@@ -172,13 +172,84 @@ export default function CandidatesProfile() {
                     </article>
                     <article className='card p-4 border-0 shadow mt-5'>
                         <h5 className='pb-5'>Additional Questions</h5>
-                        <article>
+                        <article className='pb-2'>
                             <article className='border-bottom p-3'>
                                 <span className={`text-warning p-2 fw-bold ${Styles.shortanswer}`}>Short Answer</span>
                             </article>
                             <article className='pt-4 d-flex gap-4'>
                                 <article>
                                     <FaCircle className='text-warning' />
+                                </article>
+                                <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
+                            </article>
+                            <article className='p-4'>
+                                <p className={`p-3 ${Styles.answer}`}>Dorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </article>
+                        </article>
+                        <article className='pb-5'>
+                            <article className='border-bottom p-3'>
+                                <span className={`p-2 fw-bold ${Styles.video}`}>Video Upload</span>
+                            </article>
+                            <article className='pt-4 d-flex gap-4'>
+                                <article>
+                                    <FaCircle color='#9EB8FF' />
+                                </article>
+                                <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
+                            </article>
+                            <video src="..." className="object-fit-contain" controls></video>
+                        </article>
+                        <article className='pb-5'>
+                            <article className='border-bottom p-3'>
+                                <span className={`p-2 fw-bold ${Styles.number}`}>Number</span>
+                            </article>
+                            <article className='pt-4 d-flex gap-4'>
+                                <article>
+                                    <FaCircle color='#E48A8F' />
+                                </article>
+                                <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
+                            </article>
+                            <article className='p-4'>
+                                <p className={`p-3 ${Styles.answer}`}>Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
+                            </article>
+                        </article>
+                        <article className='pb-5'>
+                            <article className='border-bottom p-3'>
+                                <span className={`p-2 fw-bold ${Styles.video}`}>Video Upload</span>
+                            </article>
+                            <article className='pt-4 d-flex gap-4'>
+                                <article>
+                                    <FaCircle color='#9EB8FF' />
+                                </article>
+                                <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
+                            </article>
+                            <video src="..." className="object-fit-contain" controls></video>
+                        </article>
+                        <article className='pb-4'>
+                            <article className='border-bottom p-3'>
+                                <span className={`p-2 fw-bold ${Styles.multiple}`}>Multiple Choice</span>
+                            </article>
+                            <article className='pt-4 d-flex gap-4'>
+                                <article>
+                                    <FaCircle color='#75ca5e6a' />
+                                </article>
+                                <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
+                            </article>
+                            <article className='p-4'>
+                                <ul className='list-unstyled d-flex gap-5'>
+                                    <li className={`p-2 ${Styles.li}`}>New York</li>
+                                    <li className={`p-2 ${Styles.li}`}>New York</li>
+                                    <li className={`p-2 ${Styles.li}`}>New York</li>
+                                    <li className={`p-2 ${Styles.li}`}>New York</li>
+                                </ul>
+                            </article>
+                        </article>
+                        <article className='pb-2'>
+                            <article className='border-bottom p-3'>
+                                <span className={`p-2 fw-bold ${Styles.drop}`}>Dropdown</span>
+                            </article>
+                            <article className='pt-4 d-flex gap-4'>
+                                <article>
+                                    <FaCircle color='#82E0FF' />
                                 </article>
                                 <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
                             </article>
