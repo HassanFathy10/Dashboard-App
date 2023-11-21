@@ -117,7 +117,19 @@
     color: #9EB8FF;
 }
 .drop {
-    background-color: #82e0ff50;
+    background-color: #82e0ff71;
     border-radius: 50px;
     color: #73cae7;
+}
+.active {
+    background-color: #087b2e28;
+    border-radius: 50px;
+    border: 1px solid #00000031;
+    color: #087B2F;
+}
+.disqualified {
+    background-color: #fc402b44;
+    border-radius: 50px;
+    border: 1px solid #00000031;
+    color: #FC402B;
 }

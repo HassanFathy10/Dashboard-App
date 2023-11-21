@@ -2,7 +2,7 @@ import React from 'react';
 import Styles from './style.module.css';
 import TagCandidate from 'Component/TagCandidate';
 import NavBar from 'Component/NavBar';
-import { FaUserCircle, FaUser, FaUserEdit, FaCalendarAlt, FaCircle } from "react-icons/fa";
+import { FaUserCircle, FaUser, FaUserEdit, FaCalendarAlt, FaCircle, FaTags } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { PiBagSimpleFill } from "react-icons/pi";
 
@@ -10,7 +10,7 @@ export default function CandidatesProfile() {
     return (
         <article className='container'>
             <article className='row m-5'>
-                <article className='card p-4 border-0 shadow'>
+                <article className='card p-4 border-0 shadow rounded-5'>
                     <article className='row'>
                         <article className='col'>
                             <article>
@@ -53,7 +53,7 @@ export default function CandidatesProfile() {
                     <article className='pb-5'>
                         <NavBar />
                     </article>
-                    <article className='card p-3 border-0 shadow'>
+                    <article className='card p-3 border-0 shadow rounded-5'>
                         <h5 className='pb-5'>Personal Information</h5>
                         <article className='row'>
                             <article className='d-flex pb-4 col'>
@@ -96,7 +96,7 @@ export default function CandidatesProfile() {
                             </article>
                         </article>
                     </article>
-                    <article className='card p-4 border-0 shadow mt-5'>
+                    <article className='card p-4 border-0 shadow mt-5 rounded-5'>
                         <h5 className='pb-5'>Education</h5>
                         <article className='d-flex col pb-2 border-bottom'>
                             <article className='m-4'>
@@ -133,7 +133,7 @@ export default function CandidatesProfile() {
                             </ul>
                         </article>
                     </article>
-                    <article className='card p-4 border-0 shadow mt-5'>
+                    <article className='card p-4 border-0 shadow mt-5 rounded-5'>
                         <h5 className='pb-5'>Work Experience</h5>
                         <article className='d-flex col pb-2 border-bottom'>
                             <article className='m-4'>
@@ -170,7 +170,7 @@ export default function CandidatesProfile() {
                             </ul>
                         </article>
                     </article>
-                    <article className='card p-4 border-0 shadow mt-5'>
+                    <article className='card p-4 border-0 shadow mt-5 rounded-5'>
                         <h5 className='pb-5'>Additional Questions</h5>
                         <article className='pb-2'>
                             <article className='border-bottom p-3'>
@@ -255,6 +255,73 @@ export default function CandidatesProfile() {
                             </article>
                             <article className='p-4'>
                                 <p className={`p-3 ${Styles.answer}`}>Dorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </article>
+                        </article>
+                    </article>
+                    <article className='card p-4 border-0 mt-5 shadow rounded-5'>
+                        <h5 className='pb-3'>Enrolled Other Programs</h5>
+                        <article className='d-flex col pt-4 border-bottom'>
+                            <article className='m-4'>
+                                <FaTags className='fs-5' />
+                            </article>
+                            <article className='row w-100'>
+                                <article className='col'>
+                                    <ul className='list-unstyled fs-6 fw-medium'>
+                                        <li className='text-black pb-4'>Misk Traineeship</li>
+                                        <li className='text-black-50'>Currently At Video Task</li>
+                                    </ul>
+                                </article>
+                                <article className='text-end col mt-4'>
+                                    <span className={`p-2 fw-medium ${Styles.active}`}>Active</span>
+                                </article>
+                            </article>
+                        </article>
+                        <article className='d-flex col pt-4 border-bottom'>
+                            <article className='m-4'>
+                                <FaTags className='fs-5' />
+                            </article>
+                            <article className='row w-100'>
+                                <article className='col'>
+                                    <ul className='list-unstyled fs-6 fw-medium'>
+                                        <li className='text-black pb-4'>Summer Internship</li>
+                                        <li className='text-black-50'>Currently At Video Task</li>
+                                    </ul>
+                                </article>
+                                <article className='text-end col mt-4'>
+                                    <span className={`p-2 fw-medium ${Styles.disqualified}`}>Disqualified</span>
+                                </article>
+                            </article>
+                        </article>
+                        <article className='d-flex col pt-4 border-bottom'>
+                            <article className='m-4'>
+                                <FaTags className='fs-5' />
+                            </article>
+                            <article className='row w-100'>
+                                <article className='col'>
+                                    <ul className='list-unstyled fs-6 fw-medium'>
+                                        <li className='text-black pb-4'>XYZ Traineeship</li>
+                                        <li className='text-black-50'>Currently At Video Task</li>
+                                    </ul>
+                                </article>
+                                <article className='text-end col mt-4'>
+                                    <span className={`p-2 fw-medium ${Styles.disqualified}`}>Disqualified</span>
+                                </article>
+                            </article>
+                        </article>
+                        <article className='d-flex col pt-4'>
+                            <article className='m-4'>
+                                <FaTags className='fs-5' />
+                            </article>
+                            <article className='row w-100'>
+                                <article className='col'>
+                                    <ul className='list-unstyled fs-6 fw-medium'>
+                                        <li className='text-black pb-4'>London Internship</li>
+                                        <li className='text-black-50'>Currently At Video Task</li>
+                                    </ul>
+                                </article>
+                                <article className='text-end col mt-4'>
+                                    <span className={`p-2 fw-medium ${Styles.active}`}>Active</span>
+                                </article>
                             </article>
                         </article>
                     </article>
