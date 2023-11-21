@@ -2,7 +2,9 @@ import React from 'react';
 import Styles from './style.module.css';
 import TagCandidate from 'Component/TagCandidate';
 import NavBar from 'Component/NavBar';
-import { FaUserCircle, FaUser, FaUserEdit, FaCalendarAlt } from "react-icons/fa";
+import { FaUserCircle, FaUser, FaUserEdit, FaCalendarAlt, FaCircle } from "react-icons/fa";
+import { HiBuildingOffice2 } from "react-icons/hi2";
+import { PiBagSimpleFill } from "react-icons/pi";
 
 export default function CandidatesProfile() {
     return (
@@ -14,7 +16,7 @@ export default function CandidatesProfile() {
                             <article>
                                 <img src='' alt='' className='bg-black rounded-5' />
                             </article>
-                            <article className='d-flex '>
+                            <article className='d-flex gap-4'>
                                 <h4>Aaliyah Sanderson</h4>
                                 <article className='mt-1'>
                                     <ul className='d-flex list-unstyled gap-5'>
@@ -33,7 +35,7 @@ export default function CandidatesProfile() {
                                     <li>+00 000 000 0000</li>
                                 </ul>
                             </article>
-                                <TagCandidate />
+                            <TagCandidate />
                         </article>
                         <article className='text-end col mt-5'>
                             <article>
@@ -91,6 +93,97 @@ export default function CandidatesProfile() {
                                     <li className='text-black-50 pb-4'>Date of Birth</li>
                                     <li>00-00-0000</li>
                                 </ul>
+                            </article>
+                        </article>
+                    </article>
+                    <article className='card p-4 border-0 shadow mt-5'>
+                        <h5 className='pb-5'>Education</h5>
+                        <article className='d-flex col pb-2 border-bottom'>
+                            <article className='m-4'>
+                                <HiBuildingOffice2 className='fs-5' />
+                            </article>
+                            <ul className='list-unstyled fs-6 fw-medium'>
+                                <li className='text-black pb-4'>Bachelor in Biochemistry</li>
+                                <li>
+                                    <ul className='d-flex list-unstyled gap-2 text-black-50'>
+                                        <li className='text-black'>King Saud University</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Saudi Arabia</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Jan 2022 - Jan 2023</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
+                        <article className='d-flex col pt-4'>
+                            <article className='m-4'>
+                                <HiBuildingOffice2 className='fs-5' />
+                            </article>
+                            <ul className='list-unstyled fs-6 fw-medium'>
+                                <li className='text-black pb-4'>Bachelor in Biochemistry</li>
+                                <li>
+                                    <ul className='d-flex list-unstyled gap-2 text-black-50'>
+                                        <li className='text-black'>King Saud University</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Saudi Arabia</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Jan 2022 - Jan 2023</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
+                    </article>
+                    <article className='card p-4 border-0 shadow mt-5'>
+                        <h5 className='pb-5'>Work Experience</h5>
+                        <article className='d-flex col pb-2 border-bottom'>
+                            <article className='m-4'>
+                                <PiBagSimpleFill className='fs-5' />
+                            </article>
+                            <ul className='list-unstyled fs-6 fw-medium'>
+                                <li className='text-black pb-4'>Cyber Security Intern</li>
+                                <li>
+                                    <ul className='d-flex list-unstyled gap-2 text-black-50'>
+                                        <li className='text-black'>Coop Training</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Saudi Arabia</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Jan 2022 - Jan 2023</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
+                        <article className='d-flex col pt-4'>
+                            <article className='m-4'>
+                                <PiBagSimpleFill className='fs-5' />
+                            </article>
+                            <ul className='list-unstyled fs-6 fw-medium'>
+                                <li className='text-black pb-4'>Cyber Security Intern</li>
+                                <li>
+                                    <ul className='d-flex list-unstyled gap-2 text-black-50'>
+                                        <li className='text-black'>Coop Training</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Saudi Arabia</li>
+                                        <li className={`${Styles.list}`}></li>
+                                        <li>Jan 2022 - Jan 2023</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </article>
+                    </article>
+                    <article className='card p-4 border-0 shadow mt-5'>
+                        <h5 className='pb-5'>Additional Questions</h5>
+                        <article>
+                            <article className='border-bottom p-3'>
+                                <span className={`text-warning p-2 fw-bold ${Styles.shortanswer}`}>Short Answer</span>
+                            </article>
+                            <article className='pt-4 d-flex gap-4'>
+                                <article>
+                                    <FaCircle className='text-warning' />
+                                </article>
+                                <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
+                            </article>
+                            <article className='p-4'>
+                                <p className={`p-3 ${Styles.answer}`}>Dorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </article>
                         </article>
                     </article>

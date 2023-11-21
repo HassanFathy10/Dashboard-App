@@ -85,3 +85,15 @@
     border-radius: 1rem;
     background-color: #da9a2233;
 }
+
+
+/* Candidate pofile page */
+.shortanswer {
+    background-color: rgba(241, 205, 4, 0.226);
+    border-radius: 50px;
+}
+
+.answer {
+    background-color: #2262da27;
+    color: #2262dac2;
+}
