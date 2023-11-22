@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';
+import Profile from './Profile'
 
 const onChange = (key: string) => {
     console.log(key);
@@ -10,7 +11,7 @@ const items: TabsProps['items'] = [
     {
         key: '1',
         label: 'Profile',
-        children: 'Content of Tab Pane 1',
+        children: <Profile />,
     },
     {
         key: '2',
