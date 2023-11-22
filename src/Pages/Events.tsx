@@ -24,11 +24,13 @@ const Events = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [eventTitle, setEventTitle] = useState('');
-  const [eventId] = useState<number | null>(null);
+  const [eventId, setEventId] = useState<number | null>(null);
 
   const handleDateClick = (date: Date) => {
     setSelectedDate(date);
     setDialogOpen(true);
+    // Clear eventId when a new date is selected
+    setEventId(null);
   };
 
   const handleEventAdd = () => {
@@ -51,6 +53,8 @@ const Events = () => {
       );
       setEvents(updatedEvents);
       setDialogOpen(false);
+      // Clear eventId after editing
+      setEventId(null);
     }
   };
 
@@ -59,6 +63,8 @@ const Events = () => {
       const updatedEvents = events.filter((event) => event.id !== eventId);
       setEvents(updatedEvents);
       setDialogOpen(false);
+      // Clear eventId after deletion
+      setEventId(null);
     }
   };
 
@@ -85,6 +91,12 @@ const Events = () => {
         selectable
         onSelectSlot={(slotInfo: any) => handleDateClick(slotInfo.start as Date)}
         eventPropGetter={eventStyleGetter}
+        onSelectEvent={(event: Event) => {
+          setSelectedDate(event.start);
+          setEventTitle(event.title);
+          setEventId(event.id);
+          setDialogOpen(true);
+        }}
       />
       <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
         <DialogTitle>{eventId !== null ? 'Edit Event' : 'Add Event'}</DialogTitle>
@@ -115,4 +127,5 @@ const Events = () => {
 };
 
 export default Events;
+
 
