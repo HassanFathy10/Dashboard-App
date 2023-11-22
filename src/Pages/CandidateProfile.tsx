@@ -2,6 +2,8 @@ import React from 'react';
 import Styles from './style.module.css';
 import TagCandidate from 'Component/TagCandidate';
 import NavBar from 'Component/NavBar';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 export default function CandidatesProfile() {
     return (
@@ -10,21 +12,21 @@ export default function CandidatesProfile() {
                 <article className='card p-4 border-0 shadow rounded-5'>
                     <article className='row'>
                         <article className='col'>
-                            <article>
-                                <img src='' alt='' className='bg-black rounded-5' />
+                            <article className='d-flex gap-3'>
+                                <Stack direction="row" spacing={2}>
+                                    <Avatar alt="Remy Sharp" src='' />
+                                </Stack>
+                                <h5 className='p-2'>Aaliyah Sanderson</h5>
+                                <article>
+                                <ul className='d-flex fw-medium list-unstyled p-1 gap-2'>
+                                    <li className={`p-1 ${Styles.answer}`}>New York</li>
+                                    <li className={`p-1 ${Styles.answer}`}>Marketing</li>
+                                    <li className={`p-1 ${Styles.answer}`}>London</li>
+                                </ul>
                             </article>
-                            <article className='d-flex gap-4'>
-                                <h4>Aaliyah Sanderson</h4>
-                                <article className='mt-1'>
-                                    <ul className='d-flex list-unstyled gap-5'>
-                                        <li>New York</li>
-                                        <li>Marketing</li>
-                                        <li>London</li>
-                                    </ul>
-                                </article>
                             </article>
                             <article>
-                                <ul className='d-flex list-unstyled gap-2'>
+                                <ul className='d-flex list-unstyled gap-4'>
                                     <li >Saudi Arabia</li>
                                     <li className={`${Styles.list}`}></li>
                                     <li>aaliyahs@gmail.com</li>
@@ -34,7 +36,7 @@ export default function CandidatesProfile() {
                             </article>
                             <TagCandidate />
                         </article>
-                        <article className='text-end col mt-5'>
+                        <article className='text-end col mt-4'>
                             <article>
                                 <p className='fs-5 fw-bold'>Overall Score <span>7</span></p>
                             </article>

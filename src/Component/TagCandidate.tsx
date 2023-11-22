@@ -6,7 +6,7 @@ import { Input, Space, Tag, theme, Tooltip } from 'antd';
 
 export default function TagCandidate() {
   const { token } = theme.useToken();
-  const [tags, setTags] = useState(['Unremovable', 'Tag 2', 'Tag 3']);
+  const [tags, setTags] = useState(['#top_candidate', '#marketing_june', 'New York']);
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [editInputIndex, setEditInputIndex] = useState(-1);
@@ -95,6 +95,7 @@ export default function TagCandidate() {
             closable={index !== 0}
             style={{ userSelect: 'none' }}
             onClose={() => handleClose(tag)}
+            className='bg-info text-white rounded-5 fw-medium'
           >
             <span
               onDoubleClick={(e) => {
