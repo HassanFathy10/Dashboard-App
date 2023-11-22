@@ -1,69 +1,118 @@
 import React, { useState } from 'react';
-import { Calendar, Modal, Form, Input, Button} from 'antd';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { Button, Dialog, DialogTitle, DialogContent, TextField, DialogActions } from '@mui/material';
+import moment from 'moment';
 
-const { TextArea } = Input;
+interface Event {
+  id: number;
+  title: string;
+  start: Date;
+  end: Date;
+}
 
-export default function Events() {
+const localizer = momentLocalizer(moment);
+
+const initialEvents: Event[] = [
+  { id: 1, title: 'Event 1', start: new Date('2023-12-01'), end: new Date('2023-12-01') },
+  { id: 2, title: 'Event 2', start: new Date('2023-12-05'), end: new Date('2023-12-05') },
+  // Add more initial events as needed
+];
+
+const Events = () => {
+  const [events, setEvents] = useState<Event[]>(initialEvents);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [eventTitle, setEventTitle] = useState('');
+  const [eventId] = useState<number | null>(null);
 
-  const onPanelChange = (value: any | Date, mode: string) => {
-    console.log(value instanceof Date ? value.toISOString().split('T')[0] : value.format('YYYY-MM-DD'), mode);
+  const handleDateClick = (date: Date) => {
+    setSelectedDate(date);
+    setDialogOpen(true);
   };
 
-  const dateCellRender = (value: any | Date) => {
-    // Your custom date cell render logic
-    return (
-      <div className="custom-date-cell" onClick={() => handleDateClick(value)}>
-        {value instanceof Date ? value.getDate() : value.date()}
-      </div>
-    );
+  const handleEventAdd = () => {
+    if (selectedDate && eventTitle) {
+      const newEvent: Event = {
+        id: events.length + 1,
+        title: eventTitle,
+        start: selectedDate,
+        end: selectedDate,
+      };
+      setEvents([...events, newEvent]);
+      setDialogOpen(false);
+    }
   };
 
-  const handleDateClick = (value: Date) => {
-    setSelectedDate(value);
-    showModal();
+  const handleEventEdit = () => {
+    if (selectedDate && eventTitle && eventId !== null) {
+      const updatedEvents = events.map((event) =>
+        event.id === eventId ? { ...event, title: eventTitle, start: selectedDate, end: selectedDate } : event
+      );
+      setEvents(updatedEvents);
+      setDialogOpen(false);
+    }
   };
 
-  const onSelect = (value: any | Date, selectInfo: any) => {
-    console.log(value instanceof Date ? value.toISOString().split('T')[0] : value.format('YYYY-MM-DD'), selectInfo);
+  const handleEventDelete = () => {
+    if (eventId !== null) {
+      const updatedEvents = events.filter((event) => event.id !== eventId);
+      setEvents(updatedEvents);
+      setDialogOpen(false);
+    }
   };
 
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-    // Handle the event submission logic here
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
+  const eventStyleGetter = (event: Event) => {
+    const style = {
+      backgroundColor: '#3174ad',
+      borderRadius: '5px',
+      color: 'white',
+      border: 'none',
+    };
+    return {
+      style,
+    };
   };
 
   return (
-    <article className='card rounded-5 p-4 m-5 col-lg-10'>
-<Calendar onPanelChange={onPanelChange} dateCellRender={dateCellRender} onSelect={onSelect as any} />
-
-      <Modal title="Add Event" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-        <Form>
-          <Form.Item label="Event Date">
-            <Input value={selectedDate ? selectedDate.toISOString().split('T')[0] : ''} disabled />
-          </Form.Item>
-          <Form.Item label="Event Title" name="eventTitle" rules={[{ required: true, message: 'Please input the event title!' }]}>
-            <Input />
-          </Form.Item>
-          <Form.Item label="Event Description" name="eventDescription">
-            <TextArea />
-          </Form.Item>
-          <Form.Item>
-            <Button type="primary" htmlType="submit" onClick={handleOk}>
-              Add Event
+    <article className='card p-5 m-5 shadow' style={{ height: 800, width: '90%' }}>
+      <Calendar
+        localizer={localizer}
+        events={events}
+        startAccessor="start"
+        endAccessor="end"
+        views={['month', 'week', 'day']}
+        selectable
+        onSelectSlot={(slotInfo: any) => handleDateClick(slotInfo.start as Date)}
+        eventPropGetter={eventStyleGetter}
+      />
+      <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
+        <DialogTitle>{eventId !== null ? 'Edit Event' : 'Add Event'}</DialogTitle>
+        <DialogContent>
+          <TextField
+            autoFocus
+            margin="dense"
+            label="Event Title"
+            fullWidth
+            value={eventTitle}
+            onChange={(e) => setEventTitle(e.target.value)}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setDialogOpen(false)}>Cancel</Button>
+          <Button onClick={eventId !== null ? handleEventEdit : handleEventAdd} variant="contained">
+            {eventId !== null ? 'Edit' : 'Add'}
+          </Button>
+          {eventId !== null && (
+            <Button onClick={handleEventDelete} color="error">
+              Delete
             </Button>
-          </Form.Item>
-        </Form>
-      </Modal>
+          )}
+        </DialogActions>
+      </Dialog>
     </article>
   );
-}
+};
+
+export default Events;
+
