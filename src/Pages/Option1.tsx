@@ -160,7 +160,6 @@ export default function Option1() {
 
     return (
         <article className='d-flex flex-wrap mx-4 position-absolute'>
-            
             {/* Section1 */}
             <article className='col-lg-4 col-md-10 col-sm-10 pb-4'>
                 {/* head section 1 */}
@@ -188,7 +187,7 @@ export default function Option1() {
             </article>
 
             {/* Section2 */}
-            <article className='col-lg-6 col-md-10 col-sm-10'>
+            <article className=''>
                 {/* head section 2 */}
                 <article className='d-flex mt-5 pt-3 pb-3 flex-wrap'>
                     {/* Handle selected value in drop down */}
@@ -261,7 +260,7 @@ export default function Option1() {
                             <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserOutlined className='fs-4' /> </Nav.Link>
                         </Nav>
                     </article>
-                    <Dropdown as={ButtonGroup} className='mx-2'>
+                    <Dropdown as={ButtonGroup}>
                         <Button variant="primary" className='mx-1'>Move To Video Interview I</Button>
                         <Dropdown.Toggle variant="primary" id="dropdown-split-basic" />
                         <Dropdown.Menu>

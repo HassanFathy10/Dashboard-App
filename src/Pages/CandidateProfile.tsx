@@ -12,12 +12,12 @@ export default function CandidatesProfile() {
                 <article className='card p-4 border-0 shadow rounded-5'>
                     <article className='row'>
                         <article className='col'>
-                            <article className='d-flex gap-3'>
+                            <article className='d-flex gap-3 flex-wrap'>
                                 <Stack direction="row" spacing={2}>
                                     <Avatar alt="Remy Sharp" src='' />
                                 </Stack>
                                 <h5 className='p-2'>Aaliyah Sanderson</h5>
-                                <article>
+                                <article className=''>
                                 <ul className='d-flex fw-medium list-unstyled p-1 gap-2'>
                                     <li className={`p-1 ${Styles.answer}`}>New York</li>
                                     <li className={`p-1 ${Styles.answer}`}>Marketing</li>
@@ -26,7 +26,7 @@ export default function CandidatesProfile() {
                             </article>
                             </article>
                             <article>
-                                <ul className='d-flex list-unstyled gap-4'>
+                                <ul className='d-flex flex-wrap list-unstyled gap-4'>
                                     <li >Saudi Arabia</li>
                                     <li className={`${Styles.list}`}></li>
                                     <li>aaliyahs@gmail.com</li>

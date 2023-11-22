@@ -40,8 +40,8 @@ export const options = {
 };
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-const dataset1Data = [100, 200, 300, 400, 500, 600, 700];
-const dataset2Data = [50, 150, 250, 350, 450, 550, 650];
+const dataset1Data = [500, 200, 550, 900, 350, 700, 750];
+const dataset2Data = [150, 250, 850, 250, 950, 550, 550];
 export const data = {
   labels,
   datasets: [
@@ -67,8 +67,8 @@ export default function Option2() {
   }
 
   return (
-    <article className='d-flex flex-wrap mx-5 position-absolute flex-wrap'>
-      <article className='col-lg-5 col-md-10 col-sm-10 pb-5'>
+    <article className='d-flex flex-wrap gap-3  position-absolute flex-wrap'>
+      <article className='pb-5'>
         {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5">
           <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
@@ -140,7 +140,7 @@ export default function Option2() {
         </article>
       </article>
       {/* section 2 */}
-      <article className='col-lg-5 col-md-10 col-sm-10' >
+      <article className='col-5' >
         {/* head section 2 */}
         <article className="mt-3 pt-5 pb-5 d-flex gap-2">
           <Dropdown onSelect={handleSelect}>

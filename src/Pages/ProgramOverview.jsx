@@ -30,8 +30,8 @@ export const options = {
 };
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-const dataset1Data = [100, 200, 300, 400, 500, 600, 700];
-const dataset2Data = [50, 150, 250, 350, 450, 550, 650];
+const dataset1Data = [150, 250, 750, 250, 950, 550, 550];
+const dataset2Data = [500, 200, 350, 600, 350, 700, 750];
 export const data = {
   labels,
   datasets: [
@@ -55,12 +55,12 @@ export default function ProgramOverview() {
     setSelectedItem(eventKey);
   };
   return (
-    <article className='d-flex flex-wrap mx-5 position-absolute flex-wrap'>
-      <article className='col-lg-5 col-md-10 col-sm-10 pb-5'>
+    <article className='d-flex m-2 flex-wrap gap-3 position-absolute'>
+      <article className=''>
         {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5 d-flex flex-column">
           <span className='fw-bolder fs-5 mb-3'>
-          Program Overview - Google
+            Program Overview - Google
           </span>
           <span className='fw-bold'>UX Internship</span>
         </article>
@@ -128,12 +128,12 @@ export default function ProgramOverview() {
           </article>
         </article>
       </article>
-      <article className='col-lg-5 col-md-10 col-sm-10' >
+      <article className='col-4'>
         {/* head section 1 */}
-        <article className="mt-3 pt-5 pb-5 d-flex gap-2">
+        <article className="mt-3 pt-5 pb-5 d-flex gap-1">
           <Dropdown onSelect={handleSelect}>
             <Dropdown.Toggle variant="white" className='fw-bolder rounded-5' id="dropdown-basic">
-              {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              {selectedItem} &nbsp; &nbsp; &nbsp;
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
@@ -145,14 +145,14 @@ export default function ProgramOverview() {
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
-            <Dropdown.Toggle variant="white" className='fw-bolder bg-white rounded-5' id="dropdown-basic">
-              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;01 Jan 2023 - 31 July 2023 &nbsp; &nbsp; &nbsp; &nbsp;
+            <Dropdown.Toggle variant="white" className='fw-bold bg-white rounded-5' id="dropdown-basic">
+              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;<span className='fs-6'>01 Jan 2023 - 31 July 2023</span>
             </Dropdown.Toggle>
           </Dropdown>
         </article>
         {/* body section 1 */}
-        <article className='mt-5 w-100 pb-5'>
-          <article className='card border-0 rounded-4 m-2'>
+        <article className='mt-5 pb-5'>
+          <article className='card border-0 rounded-4 m-2' style={{ width: '25rem' }}>
             <article className='p-3 d-flex flex-column'>
               <span className='fw-bold mb-4'>Total Candidate Flow</span>
               <span className='fw-bold fs-5'>27</span>
@@ -187,9 +187,9 @@ export default function ProgramOverview() {
             </article>
           </article>
           {/* body section 1 */}
-          <article className='d-flex pt-3 gap-5'>
+          <article className='d-flex pt-3'>
             <article className='p-2'>
-              <article className='card  border-0 rounded-4' style={{ width: '15rem' }}>
+              <article className='card border-0 rounded-4' style={{ width: '12rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Recommended</span>
@@ -204,7 +204,7 @@ export default function ProgramOverview() {
               </article>
             </article>
             <article className='p-1 ms-auto'>
-              <article className='card  border-0 rounded-4' style={{ width: '16rem' }}>
+              <article className='card  border-0 rounded-4' style={{ width: '12rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Interview</span>
@@ -221,15 +221,15 @@ export default function ProgramOverview() {
           </article>
         </article>
       </article>
-      <article className='col-lg-5 col-md-10 col-sm-10 pb-5'>
-        {/* head section 2 */}
-        <article className="mt-3 pt-5 pb-5">
-          <span className='fw-bolder fs-6'>
-          Art Internship
+      <article className=''>
+        {/* head section 1 */}
+        <article className="mt-3 pt-5 pb-5 d-flex flex-column">
+          <span className='fw-bolder fs-5 mb-3'>
+            Art Internship
           </span>
         </article>
-        {/* body section 2 */}
-        <article className='d-flex mt-3'>
+        {/* body section 1 */}
+        <article className='d-flex mt-2'>
           <article className='p-1'>
             <article className='card  border-0 rounded-4' style={{ width: '11rem' }}>
               <article className=' card-body d-flex flex-column pb-4'>
@@ -292,12 +292,12 @@ export default function ProgramOverview() {
           </article>
         </article>
       </article>
-      <article className='col-lg-5 col-md-10 col-sm-10' >
-        {/* head section 2 */}
-        <article className="mt-3 pt-5 pb-5 d-flex gap-2">
+      <article className='col-4'>
+        {/* head section 1 */}
+        <article className="mt-3 pt-5 pb-5 d-flex gap-1">
           <Dropdown onSelect={handleSelect}>
             <Dropdown.Toggle variant="white" className='fw-bolder rounded-5' id="dropdown-basic">
-              {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              {selectedItem} &nbsp; &nbsp; &nbsp;
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
@@ -309,14 +309,14 @@ export default function ProgramOverview() {
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown>
-            <Dropdown.Toggle variant="white" className='fw-bolder bg-white rounded-5' id="dropdown-basic">
-              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;01 Jan 2023 - 31 July 2023 &nbsp; &nbsp; &nbsp; &nbsp;
+            <Dropdown.Toggle variant="white" className='fw-bold bg-white rounded-5' id="dropdown-basic">
+              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;<span className='fs-6'>01 Jan 2023 - 31 July 2023</span>
             </Dropdown.Toggle>
           </Dropdown>
         </article>
-        {/* body section 2 */}
-        <article className='mx-0 w-100 pb-5'>
-          <article className='card border-0 rounded-4 m-2'>
+        {/* body section 1 */}
+        <article className='mt-5 pb-5'>
+          <article className='card border-0 rounded-4 m-2' style={{ width: '25rem' }}>
             <article className='p-3 d-flex flex-column'>
               <span className='fw-bold mb-4'>Total Candidate Flow</span>
               <span className='fw-bold fs-5'>27</span>
@@ -350,10 +350,10 @@ export default function ProgramOverview() {
               </article>
             </article>
           </article>
-          {/* body section 2 */}
-          <article className='d-flex pt-3 gap-5'>
+          {/* body section 1 */}
+          <article className='d-flex pt-3'>
             <article className='p-2'>
-              <article className='card  border-0 rounded-4' style={{ width: '15rem' }}>
+              <article className='card border-0 rounded-4' style={{ width: '12rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Recommended</span>
@@ -368,7 +368,7 @@ export default function ProgramOverview() {
               </article>
             </article>
             <article className='p-1 ms-auto'>
-              <article className='card  border-0 rounded-4' style={{ width: '16rem' }}>
+              <article className='card  border-0 rounded-4' style={{ width: '12rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Interview</span>
