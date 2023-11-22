@@ -23,8 +23,10 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.css"
-, "src/Component/Candidates.tsx", "src/Pages/Option2.jsx", "src/Pages/Option2.jsx"  ],
+    "src/**/*.css", 
+    "src/Component/Candidates.tsx",
+    "src/Pages/Option2.jsx" 
+  ],
   "exclude": [
     "node_modules",
     "build",
