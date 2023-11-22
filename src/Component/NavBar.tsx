@@ -1,37 +1,41 @@
-import React, { useState } from 'react';
-import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
-const items: MenuProps['items'] = [
+import React from 'react';
+import { Tabs } from 'antd';
+import type { TabsProps } from 'antd';
+
+const onChange = (key: string) => {
+    console.log(key);
+};
+
+const items: TabsProps['items'] = [
     {
-        label: 'Profile',
         key: '1',
+        label: 'Profile',
+        children: 'Content of Tab Pane 1',
     },
     {
-        label: 'Evaluation',
         key: '2',
+        label: 'Video',
+        children: 'Content of Tab Pane 2',
     },
     {
-        label: 'Placement',
         key: '3',
+        label: 'Evaluation',
+        children: 'Content of Tab Pane 3',
     },
     {
-        label: 'Compliance',
         key: '4',
+        label: 'Placement',
+        children: 'Content of Tab Pane 4',
     },
     {
-        label: 'Notes',
         key: '5',
+        label: 'Compliance',
+        children: 'Content of Tab Pane 5',
     },
 ];
 export default function NavBar() {
-    const [current, setCurrent] = useState('mail');
-    const onClick: MenuProps['onClick'] = (e) => {
-        console.log('click ', e);
-        setCurrent(e.key);
-    };
     return (
-        <>
-            <Menu className='gap-5 fw-bold' onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
-        </>
+        <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
     );
-}
+};
+
