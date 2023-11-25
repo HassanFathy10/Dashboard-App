@@ -55,7 +55,7 @@ export default function ProgramOverview() {
     setSelectedItem(eventKey);
   };
   return (
-    <article className='d-flex m-2 flex-wrap gap-3 position-absolute'>
+    <article className='d-flex m-5 flex-wrap gap-5 position-absolute'>
       <article className=''>
         {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5 d-flex flex-column">
@@ -152,7 +152,7 @@ export default function ProgramOverview() {
         </article>
         {/* body section 1 */}
         <article className='mt-5 pb-5'>
-          <article className='card border-0 rounded-4 m-2' style={{ width: '25rem' }}>
+          <article className='card border-0 rounded-4 m-2' style={{ width: '28rem' }}>
             <article className='p-3 d-flex flex-column'>
               <span className='fw-bold mb-4'>Total Candidate Flow</span>
               <span className='fw-bold fs-5'>27</span>
@@ -294,7 +294,7 @@ export default function ProgramOverview() {
       </article>
       <article className='col-4'>
         {/* head section 1 */}
-        <article className="mt-3 pt-5 pb-5 d-flex gap-1">
+        <article className="pt-5 pb-5 d-flex gap-1">
           <Dropdown onSelect={handleSelect}>
             <Dropdown.Toggle variant="white" className='fw-bolder rounded-5' id="dropdown-basic">
               {selectedItem} &nbsp; &nbsp; &nbsp;
@@ -315,8 +315,8 @@ export default function ProgramOverview() {
           </Dropdown>
         </article>
         {/* body section 1 */}
-        <article className='mt-5 pb-5'>
-          <article className='card border-0 rounded-4 m-2' style={{ width: '25rem' }}>
+        <article className='pt-4 pb-5'>
+          <article className='card border-0 rounded-4 m-2' style={{ width: '28rem' }}>
             <article className='p-3 d-flex flex-column'>
               <span className='fw-bold mb-4'>Total Candidate Flow</span>
               <span className='fw-bold fs-5'>27</span>
