@@ -9,9 +9,6 @@
 :root {
     --font1-color: #2262da;
 }
-.line {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.082);
-}
 .number {
     padding: 0.2rem;
     border-radius: 1rem;

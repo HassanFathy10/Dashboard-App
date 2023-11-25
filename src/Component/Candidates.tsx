@@ -40,7 +40,7 @@ export default function Candidates({ candidates }: { candidates: any }) {
     const CheckboxGroup = Checkbox.Group;
     return (
         <article>
-            <article className={`d-flex p-3 flex-wrap ${Styles.line}`}>
+            <article className='d-flex p-3 flex-wrap border-bottom'>
             <Checkbox className='m-2' indeterminate={!indeterminate} checked={checkAll} onChange={onCheckAllChange} />
                 <span className='text-primary fw-bold m-2'>247 candidates</span>
                 <article className='ms-auto d-flex'>
@@ -52,7 +52,7 @@ export default function Candidates({ candidates }: { candidates: any }) {
                 </article>
             </article>
             {candidates.map((candidate: any) => (
-                <article className={`${Styles.line}`} key={candidate.id}>
+                <article className='border-bottom' key={candidate.id}>
                     <article className='d-flex align-items-center mt-5 gap-5'>
                         <article className='d-flex m-4'>
                             <CheckboxGroup
