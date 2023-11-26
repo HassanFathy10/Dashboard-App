@@ -159,7 +159,7 @@ export default function Option1() {
     };
 
     return (
-        <article className='d-flex flex-wrap mx-4 position-absolute'>
+        <article className='d-flex flex-wrap m-2 position-absolute'>
             {/* Section1 */}
             <article className='col-lg-4 col-md-10 col-sm-10 pb-4'>
                 {/* head section 1 */}
@@ -189,7 +189,7 @@ export default function Option1() {
             {/* Section2 */}
             <article>
                 {/* head section 2 */}
-                <article className='d-flex mt-5 pt-3 pb-3 flex-wrap'>
+                <article className='d-flex m-5 pt-3 pb-3 flex-wrap'>
                     {/* Handle selected value in drop down */}
                     <Dropdown onSelect={handleSelect}>
                         <Dropdown.Toggle variant="white" className={`fw-bolder bg-white rounded-5 ${Styles.font}`} id="dropdown-basic">
@@ -252,7 +252,7 @@ export default function Option1() {
                             </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
-                    <article className='d-flex'>
+                    <article className='d-flex flex-wrap'>
                         <Nav className='gap-1'>
                             <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><TagOutlined className='fs-4' /> </Nav.Link>
                             <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserDeleteOutlined className='fs-4' /> </Nav.Link>
