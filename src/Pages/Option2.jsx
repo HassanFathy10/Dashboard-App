@@ -235,7 +235,6 @@ export default function Option2() {
           </article>
         </article>
       </article>
-
       {/* body section 3  */}
       <article className='col-lg-10 pt-5 pb-5'>
         <article className='d-flex flex-column'>
@@ -302,7 +301,7 @@ export default function Option2() {
             </article>
             {/* table 1 */}
             <article className='p-5'>
-              <Table className='border-5' striped bordered hover>
+              <Table className='border-5 shadow' striped bordered hover>
                 <thead>
                   <tr>
                     <th>Opportunity Name</th>
@@ -406,7 +405,7 @@ export default function Option2() {
             </article>
             {/* table 1 */}
             <article className='p-5'>
-              <Table className='border-5' striped bordered hover>
+              <Table className='border-5 shadow' striped bordered hover>
                 <thead>
                   <tr>
                     <th>Opportunity Name</th>
@@ -420,7 +419,7 @@ export default function Option2() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td rowSpan="3">UX Internship</td> {/* This cell spans 3 rows */}
+                    <td rowSpan="3">UX Internship</td>
                     <td><span className={Styles.td1}>Active</span></td>
                     <td>20</td>
                     <td>17</td>
@@ -429,7 +428,6 @@ export default function Option2() {
                     <td>1</td>
                   </tr>
                   <tr>
-                    {/* Empty cells for other columns */}
                     <td><span className={Styles.td2}>Disqualified</span></td>
                     <td>7</td>
                     <td>4</td>
@@ -438,7 +436,6 @@ export default function Option2() {
                     <td>1</td>
                   </tr>
                   <tr>
-                    {/* Empty cells for other columns */}
                     <td>Sub - Total</td>
                     <td>27</td>
                     <td>21</td>
@@ -447,7 +444,7 @@ export default function Option2() {
                     <td>2</td>
                   </tr>
                   <tr>
-                    <td rowSpan="3">Art Internship</td> {/* This cell spans 3 rows */}
+                    <td rowSpan="3">Art Internship</td>
                     <td><span className={Styles.td1}>Active</span></td>
                     <td>20</td>
                     <td>17</td>
@@ -456,7 +453,6 @@ export default function Option2() {
                     <td>1</td>
                   </tr>
                   <tr>
-                    {/* Empty cells for other columns */}
                     <td><span className={Styles.td2}>Disqualified</span></td>
                     <td>24</td>
                     <td>4</td>
@@ -465,7 +461,6 @@ export default function Option2() {
                     <td>3</td>
                   </tr>
                   <tr>
-                    {/* Empty cells for other columns */}
                     <td>Sub - Total</td>
                     <td>27</td>
                     <td>21</td>

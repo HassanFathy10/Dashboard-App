@@ -172,7 +172,7 @@ export default function Option1() {
                     </article>
                 </article>
                 {/* body section 1 */}
-                <article>
+                <article className='pt-3'>
                     <Search onSearch={handleSearch} />
                     <ListGroup className='mt-2 p-1'>
                         <ListGroup.Item action className='border-0 border-bottom'>
@@ -189,7 +189,7 @@ export default function Option1() {
             {/* Section2 */}
             <article>
                 {/* head section 2 */}
-                <article className='d-flex m-5 pt-3 pb-3 flex-wrap'>
+                <article className='d-flex gap-3 mt-5 pt-4 pb-4 flex-wrap'>
                     {/* Handle selected value in drop down */}
                     <Dropdown onSelect={handleSelect}>
                         <Dropdown.Toggle variant="white" className={`fw-bolder bg-white rounded-5 ${Styles.font}`} id="dropdown-basic">
@@ -271,10 +271,10 @@ export default function Option1() {
                     </Dropdown>
                 </article>
                 {/* body section 2 */}
-                <article className='p-3 mt-5'>
+                <article className='col-sm-12 p-3 mt-5'>
                     <article className='card border-0'>
                         <article className={`d-flex p-3 gap-0 ${Styles.line}`}>
-                            <Candidates candidates={filteredCandidates} />
+                            <Candidates data={candidates} candidates={filteredCandidates} />
                         </article>
                     </article>
                 </article>

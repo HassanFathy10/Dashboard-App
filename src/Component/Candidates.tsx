@@ -5,8 +5,27 @@ import { Checkbox } from 'antd';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
-
-export default function Candidates({ candidates }: { candidates: any }) {
+interface CandidatesProps {
+    data: {
+        id: number;
+        user: string;
+        name: string;
+        email: string;
+        location: string;
+        edu: string;
+        tag: string;
+    }[];
+    candidates: {
+        id: number;
+        user: string;
+        name: string;
+        email: string;
+        location: string;
+        edu: string;
+        tag: string;
+    }[];
+};
+export default function Candidates({ data, candidates }: CandidatesProps) {
     const [checkedList, setCheckedList] = useState<Record<number, CheckboxValueType[]>>({});
     const [checkAll, setCheckAll] = useState<boolean>(false);
     const [indeterminate, setIndeterminate] = useState<boolean>(false);
@@ -65,7 +84,7 @@ export default function Candidates({ candidates }: { candidates: any }) {
                             />
                         </article>
                         <article className='mx-3'>
-                            <Link to={`/Candidate/${candidate.id}`} className={`text-decoration-none p-3 fw-bolder fs-5 ${Styles.user}`}>{candidate.user}</Link>
+                            <Link to={`/Candidate/${candidate.id}`} state= {{ data: candidate }} className={`text-decoration-none p-3 fw-bolder fs-5 ${Styles.user}`}>{candidate.user}</Link>
                         </article>
                         <ul className='list-unstyled lh-lg'>
                             <li className='fw-bold'>{candidate.name}</li>
