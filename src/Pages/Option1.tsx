@@ -70,7 +70,9 @@ export default function Option1() {
             email: 'AaliyahSanderson.@gmail.com',
             location: 'Riyadh, Saudi Arabia',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
-            tag: '#top_candidate #top_candidate'
+            tag: '#top_candidate #top_candidate',
+            phone: '+00954649849365',
+            gender:'Female'
         },
         {
             id: 2,
@@ -79,7 +81,9 @@ export default function Option1() {
             email: 'JohnDoe.@gmail.com',
             location: 'Bostom, USA',
             edu: 'Bachelor - MIT (2023 - 2023)',
-            tag: '#top_candidate #top_candidate' 
+            tag: '#top_candidate #top_candidate',
+            phone: '+6464811665',
+            gender:'Male'
         },
         {
             id: 3,
@@ -88,7 +92,9 @@ export default function Option1() {
             email: 'ThomasMatt.@gmail.com',
             location: 'Edinburgh, UK',
             edu: 'Bachelor - Harvard University (2023 - 2023)',
-            tag: '#top_candidate'
+            tag: '#top_candidate',
+            phone: '+0095362165',
+            gender:'Male'
         },
         {
             id: 4,
@@ -97,7 +103,9 @@ export default function Option1() {
             email: 'KamiliaSmith.@gmail.com',
             location: 'London, UK',
             edu: 'Bachelor - Boston University (2023 - 2023)',
-            tag: '#top_candidate #top_candidate'
+            tag: '#top_candidate #top_candidate',
+            phone: '+9075362165',
+            gender:'Male'
         },
         {
             id: 5,
@@ -106,7 +114,9 @@ export default function Option1() {
             email: 'RoyJade.@gmail.com',
             location: 'Cambridge, UK',
             edu: 'Bachelor - Yale (2023 - 2023)',
-            tag: '#top_candidate #top_candidate'
+            tag: '#top_candidate #top_candidate',
+            phone: '+5075362165',
+            gender:'Male'
         },
         {
             id: 6,
@@ -115,7 +125,10 @@ export default function Option1() {
             email: 'AhmedSalman.@gmail.com',
             location: 'New York, USA',
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
-            tag: '#top_candidate #top_candidate'
+            tag: '#top_candidate #top_candidate',
+            phone: '+7075362165',
+            gender:'Male'
+
         },
         {
             id: 7,
@@ -124,7 +137,9 @@ export default function Option1() {
             email: 'JerryS.Pollock.@gmail.com',
             location: 'Saudi Arabia',
             edu: 'Bachelor in Marketing (2023 - 2023)',
-            tag: '#top_candidate #top_candidate'
+            tag: '#top_candidate #top_candidate',
+            phone: '+4075362165',
+            gender:'Male'
         },
         {
             id: 8,
@@ -133,7 +148,9 @@ export default function Option1() {
             email: 'MichaelD.McKee.@gmail.com',
             location: 'Saudi Arabia',
             edu: 'Bachelor in Marketing (2023 - 2023)',
-            tag: '#top_candidate #top_candidate'
+            tag: '#top_candidate #top_candidate',
+            phone: '+9075362165',
+            gender:'Male'
         }
     ]);
     

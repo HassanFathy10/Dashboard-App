@@ -35,7 +35,7 @@ export default function CandidatesProfile() {
                                     <li className={`${Styles.list}`}></li>
                                     <li>{data.email}</li>
                                     <li className={`${Styles.list}`}></li>
-                                    <li>+00 000 000 0000</li>
+                                    <li>{data.phone}</li>
                                 </ul>
                             </article>
                             <TagCandidate />
