@@ -72,7 +72,10 @@ export default function Option1() {
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
             tag: '#top_candidate #top_candidate',
             phone: '+00954649849365',
-            gender:'Female'
+            gender: 'Female',
+            nationality: 'KSA',
+            nationalId: '7987963466',
+            dateofbirth: '8-4-1991',
         },
         {
             id: 2,
@@ -83,7 +86,10 @@ export default function Option1() {
             edu: 'Bachelor - MIT (2023 - 2023)',
             tag: '#top_candidate #top_candidate',
             phone: '+6464811665',
-            gender:'Male'
+            gender: 'Male',
+            nationality: 'USA',
+            nationalId: '65464654',
+            dateofbirth: '21-8-1994'
         },
         {
             id: 3,
@@ -94,7 +100,10 @@ export default function Option1() {
             edu: 'Bachelor - Harvard University (2023 - 2023)',
             tag: '#top_candidate',
             phone: '+0095362165',
-            gender:'Male'
+            gender: 'Male',
+            nationality: 'UK',
+            nationalId: '46879613545',
+            dateofbirth: '11-6-1982'
         },
         {
             id: 4,
@@ -105,7 +114,10 @@ export default function Option1() {
             edu: 'Bachelor - Boston University (2023 - 2023)',
             tag: '#top_candidate #top_candidate',
             phone: '+9075362165',
-            gender:'Male'
+            gender: 'Male',
+            nationality: 'UK',
+            nationalId: '489841613',
+            dateofbirth: '30-3-1984'
         },
         {
             id: 5,
@@ -116,7 +128,10 @@ export default function Option1() {
             edu: 'Bachelor - Yale (2023 - 2023)',
             tag: '#top_candidate #top_candidate',
             phone: '+5075362165',
-            gender:'Male'
+            gender: 'Male',
+            nationality: 'USA',
+            nationalId: '9567613136',
+            dateofbirth: '30-7-1986'
         },
         {
             id: 6,
@@ -127,8 +142,10 @@ export default function Option1() {
             edu: 'Bachelor - Cambridge University (2023 - 2023)',
             tag: '#top_candidate #top_candidate',
             phone: '+7075362165',
-            gender:'Male'
-
+            gender: 'Male',
+            nationality: 'KSA',
+            nationalId: '798165465',
+            dateofbirth: '25-2-1994'
         },
         {
             id: 7,
@@ -139,7 +156,10 @@ export default function Option1() {
             edu: 'Bachelor in Marketing (2023 - 2023)',
             tag: '#top_candidate #top_candidate',
             phone: '+4075362165',
-            gender:'Male'
+            gender: 'Male',
+            nationality: 'UK',
+            nationalId: '8313456453',
+            dateofbirth: '1-3-1992'
         },
         {
             id: 8,
@@ -150,7 +170,10 @@ export default function Option1() {
             edu: 'Bachelor in Marketing (2023 - 2023)',
             tag: '#top_candidate #top_candidate',
             phone: '+9075362165',
-            gender:'Male'
+            gender: 'Male',
+            nationality: 'USA',
+            nationalId: '65464654',
+            dateofbirth: '21-8-1996'
         }
     ]);
     

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { PlusOutlined } from '@ant-design/icons';
 import type { InputRef } from 'antd';
 import { Input, Space, Tag, theme, Tooltip } from 'antd';
-
+import { useLocation } from 'react-router-dom';
 
 export default function TagCandidate() {
   const { token } = theme.useToken();

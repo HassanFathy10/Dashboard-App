@@ -3,8 +3,11 @@ import Styles from './style.module.css';
 import { FaUserCircle, FaUser, FaUserEdit, FaCalendarAlt, FaCircle, FaTags } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { PiBagSimpleFill } from "react-icons/pi";
+import { useLocation } from 'react-router-dom';
 
 export default function Profile() {
+    const { state } = useLocation();
+    const { data } = state || {};
     return (
         <article>
             <article className='card p-4 border-0 shadow rounded-5'>
@@ -16,7 +19,7 @@ export default function Profile() {
                         </article>
                         <ul className='list-unstyled fs-6 fw-medium'>
                             <li className='text-black-50 pb-4'>Nationality</li>
-                            <li>Sri Lankan</li>
+                            <li>{data?.nationality || 'Egyption'}</li>
                         </ul>
                     </article>
                     <article className='d-flex col'>
@@ -25,7 +28,7 @@ export default function Profile() {
                         </article>
                         <ul className='list-unstyled fs-6 fw-medium'>
                             <li className='text-black-50 pb-4'>National ID</li>
-                            <li>0000000000</li>
+                            <li>{data?.nationalId || 'NA'}</li>
                         </ul>
                     </article>
                 </article>
@@ -36,7 +39,7 @@ export default function Profile() {
                         </article>
                         <ul className='list-unstyled fs-6 fw-medium'>
                             <li className='text-black-50 pb-4'>Gender</li>
-                            <li>Female</li>
+                            <li>{data?.gender || 'Male'}</li>
                         </ul>
                     </article>
                     <article className='d-flex col'>
@@ -45,43 +48,24 @@ export default function Profile() {
                         </article>
                         <ul className='list-unstyled fs-6 fw-medium'>
                             <li className='text-black-50 pb-4'>Date of Birth</li>
-                            <li>00-00-0000</li>
+                            <li>{data?.dateofbirth || '9-9-1999'}</li>
                         </ul>
                     </article>
                 </article>
             </article>
             <article className='card p-4 border-0 shadow mt-5 rounded-5'>
                 <h5 className='pb-5'>Education</h5>
-                <article className='d-flex col pb-2 border-bottom'>
-                    <article className='m-4'>
-                        <HiBuildingOffice2 className='fs-5' />
-                    </article>
-                    <ul className='list-unstyled fs-6 fw-medium'>
-                        <li className='text-black pb-4'>Bachelor in Biochemistry</li>
-                        <li>
-                            <ul className='d-flex list-unstyled gap-2 text-black-50'>
-                                <li className='text-black'>King Saud University</li>
-                                <li className={`${Styles.list}`}></li>
-                                <li>Saudi Arabia</li>
-                                <li className={`${Styles.list}`}></li>
-                                <li>Jan 2022 - Jan 2023</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </article>
                 <article className='d-flex col pt-4'>
                     <article className='m-4'>
                         <HiBuildingOffice2 className='fs-5' />
                     </article>
                     <ul className='list-unstyled fs-6 fw-medium'>
-                        <li className='text-black pb-4'>Bachelor in Biochemistry</li>
+                        <li className='text-black pb-4'>Bachelor's Degree</li>
                         <li>
                             <ul className='d-flex list-unstyled gap-2 text-black-50'>
-                                <li className='text-black'>King Saud University</li>
-                                <li className={`${Styles.list}`}></li>
-                                <li>Saudi Arabia</li>
-                                <li className={`${Styles.list}`}></li>
-                                <li>Jan 2022 - Jan 2023</li>
+                                <li className='text-black'>
+                                    {data?.edu || 'Agriculture Engineering - Alexandria University (2017 - 2021)'}
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -89,24 +73,7 @@ export default function Profile() {
             </article>
             <article className='card p-4 border-0 shadow mt-5 rounded-5'>
                 <h5 className='pb-5'>Work Experience</h5>
-                <article className='d-flex col pb-2 border-bottom'>
-                    <article className='m-4'>
-                        <PiBagSimpleFill className='fs-5' />
-                    </article>
-                    <ul className='list-unstyled fs-6 fw-medium'>
-                        <li className='text-black pb-4'>Cyber Security Intern</li>
-                        <li>
-                            <ul className='d-flex list-unstyled gap-2 text-black-50'>
-                                <li className='text-black'>Coop Training</li>
-                                <li className={`${Styles.list}`}></li>
-                                <li>Saudi Arabia</li>
-                                <li className={`${Styles.list}`}></li>
-                                <li>Jan 2022 - Jan 2023</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </article>
-                <article className='d-flex col pt-4'>
+                <article className='d-flex col pb-2'>
                     <article className='m-4'>
                         <PiBagSimpleFill className='fs-5' />
                     </article>

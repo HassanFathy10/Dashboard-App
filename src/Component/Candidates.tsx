@@ -25,7 +25,7 @@ interface CandidatesProps {
         tag: string;
     }[];
 };
-export default function Candidates({ data, candidates }: CandidatesProps) {
+export default function Candidates({ candidates }: CandidatesProps) {
     const [checkedList, setCheckedList] = useState<Record<number, CheckboxValueType[]>>({});
     const [checkAll, setCheckAll] = useState<boolean>(false);
     const [indeterminate, setIndeterminate] = useState<boolean>(false);
