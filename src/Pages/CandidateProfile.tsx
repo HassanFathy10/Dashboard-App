@@ -1,11 +1,15 @@
 import React from 'react';
-import Styles from './style.module.css';
+import Styles from '../Pages/style.module.css';
 import TagCandidate from 'Component/TagCandidate';
 import NavBar from 'Component/NavBar';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import { useParams } from 'react-router-dom';
 
 export default function CandidatesProfile() {
+    const params = useParams();
+    console.log(params)
+    
     return (
         <article className='container'>
             <article className='row m-5'>
@@ -16,7 +20,7 @@ export default function CandidatesProfile() {
                                 <Stack direction="row" spacing={2}>
                                     <Avatar alt="Remy Sharp" src='' />
                                 </Stack>
-                                <h5 className='p-2'>Aaliyah Sanderson</h5>
+                                <h5 className='p-2'>{params.id}</h5>
                                 <article className=''>
                                 <ul className='d-flex fw-medium list-unstyled p-1 gap-2'>
                                     <li className={`p-1 ${Styles.answer}`}>New York</li>
@@ -48,7 +52,7 @@ export default function CandidatesProfile() {
                 </article>
             </article>
             <article className='row m-5'>
-                <article className='col-lg-10'>
+                <article className=''>
                     <article className='pb-5'>
                         <NavBar />
                     </article>

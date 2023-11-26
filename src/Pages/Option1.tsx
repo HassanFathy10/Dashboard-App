@@ -178,7 +178,7 @@ export default function Option1() {
                         <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'>Filters</li>
-                                <li className=''>0 Selected</li>
+                                <li className='bg-info p-1 rounded-5 fw-medium'>8 Selected</li>
                             </article>
                         </ListGroup.Item>
                         <Menu className='w-100 fw-medium fs-5' mode="inline" items={items} />
@@ -187,7 +187,7 @@ export default function Option1() {
             </article>
 
             {/* Section2 */}
-            <article className=''>
+            <article>
                 {/* head section 2 */}
                 <article className='d-flex mt-5 pt-3 pb-3 flex-wrap'>
                     {/* Handle selected value in drop down */}
@@ -253,7 +253,7 @@ export default function Option1() {
                         </Dropdown.Menu>
                     </Dropdown>
                     <article className='d-flex'>
-                        <Nav>
+                        <Nav className='gap-1'>
                             <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><TagOutlined className='fs-4' /> </Nav.Link>
                             <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserDeleteOutlined className='fs-4' /> </Nav.Link>
                             <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserAddOutlined className='fs-4' /> </Nav.Link>
@@ -273,7 +273,7 @@ export default function Option1() {
                 {/* body section 2 */}
                 <article className='p-3 mt-5'>
                     <article className='card border-0'>
-                        <article className={`d-flex p-3 gap-5 ${Styles.line}`}>
+                        <article className={`d-flex p-3 gap-0 ${Styles.line}`}>
                             <Candidates candidates={filteredCandidates} />
                         </article>
                     </article>

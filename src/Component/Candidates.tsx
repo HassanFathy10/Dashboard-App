@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Styles from './style.module.css';
+import Styles from '../Pages/style.module.css';
 import { Link } from 'react-router-dom';
 import { Checkbox } from 'antd';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
+
 
 export default function Candidates({ candidates }: { candidates: any }) {
     const [checkedList, setCheckedList] = useState<Record<number, CheckboxValueType[]>>({});
@@ -38,6 +39,8 @@ export default function Candidates({ candidates }: { candidates: any }) {
         setCheckedList(updatedCheckedList);
     };
     const CheckboxGroup = Checkbox.Group;
+
+
     return (
         <article>
             <article className='d-flex p-3 flex-wrap border-bottom'>
