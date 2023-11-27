@@ -9,7 +9,6 @@ import { useLocation } from 'react-router-dom';
 export default function CandidatesProfile() {
     const { state } = useLocation();
     const { data } = state || {};
-    console.log(data)
 
     return (
         <article className='container'>

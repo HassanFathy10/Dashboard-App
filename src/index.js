@@ -9,6 +9,8 @@ import ProgramOverview from './Pages/ProgramOverview';
 import reportWebVitals from './reportWebVitals';
 import CandidatesProfile from './Pages/CandidateProfile.tsx';
 import Events from './Pages/Events';
+import Reports from './Pages/Reports';
+import WorldMap from './Pages/WorldMap.jsx';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -26,6 +28,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/Events', element: <Events />
+      },
+      {
+        path: '/Repo', element: <Reports />
+      },
+      {
+        path: '/GeographyChart', element: <WorldMap />
       },
       {
         path: '/Candidate/:UserId',

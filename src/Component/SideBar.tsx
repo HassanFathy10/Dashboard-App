@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import Styles from './style.module.css';
 import {
     FaUsers,
     FaHome,
     FaRegCalendarCheck,
     FaShareAlt,
-    FaRegUserCircle,
     FaRegFileAlt,
-    FaHeart,
     FaArrowAltCircleLeft,
-    FaArrowAltCircleRight
+    FaArrowAltCircleRight,
+    FaMap 
 } from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
 import { Layout, Menu } from 'antd';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+
 const { Sider } = Layout;
 
 export default function SideBar() {
@@ -25,11 +25,14 @@ export default function SideBar() {
                     <Menu
                         theme="dark"
                         mode="inline"
-                        defaultSelectedKeys={['1']}
+                        defaultSelectedKeys={['2']}
                         className='min-vh-100'
                     >
-                        <Menu.Item key="1" className='mb-5' icon={<FaRegUserCircle className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>Hassan Fathy</Link>
+                        <Menu.Item key="1" className='mb-5'>
+                            <Stack direction="row" spacing={2}>
+                                <Avatar alt="Hassan Fathy" src='' />
+                                <span>Hassan Fathy</span>
+                            </Stack>
                         </Menu.Item>
                         <Menu.Item key="2" icon={<FaHome className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>Home</Link>
@@ -44,21 +47,15 @@ export default function SideBar() {
                             <Link to="/Candidate/1" className='text-decoration-none'>Candidate</Link>
                         </Menu.Item>
                         <Menu.Item key="6" icon={<FaRegFileAlt className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>Reports</Link>
+                            <Link to="/Repo" className='text-decoration-none'>Reports</Link>
                         </Menu.Item>
-                        <Menu.Item key="7" icon={<FaHeart className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>Favourite</Link>
-                        </Menu.Item>
-                        <Menu.Item key="8" icon={<IoMdSettings className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>Setting</Link>
+                        <Menu.Item key="8" icon={<FaMap className='fs-4' />}>
+                            <Link to="/GeographyChart" className='text-decoration-none'>Geography Chart</Link>
                         </Menu.Item>
                         <Menu.Item
+                            key="toggle"
                             icon={collapsed ? <FaArrowAltCircleRight className='fs-4' /> : <FaArrowAltCircleLeft className='fs-4' />}
-                            onClick={() => setCollapsed(!collapsed)}>
-                        </Menu.Item>
-                        <Menu.Item key="9" className='position-absolute bottom-0 mb-5' icon={<FaRegUserCircle className='fs-4' />}>
-                            <Link to="/" className='text-decoration-none'>nav 3</Link>
-                        </Menu.Item>
+                            onClick={() => setCollapsed(!collapsed)} />
                     </Menu>
                 </Sider>
             </Layout>
