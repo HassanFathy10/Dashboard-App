@@ -10,7 +10,7 @@ import { Menu } from 'antd';
 import type { MenuProps } from 'antd';
 import Search from '../Component/Search';
 import Candidates from '../Component/Candidates';
-
+import Charts from '../Component/Charts';
 
 // Ant Design
 type MenuItem = Required<MenuProps>['items'][number];
@@ -224,6 +224,7 @@ export default function Option1() {
                         <Menu className='w-100 fw-medium fs-5' mode="inline" items={items} />
                     </ListGroup>
                 </article>
+                    <Charts />
             </article>
 
             {/* Section2 */}
