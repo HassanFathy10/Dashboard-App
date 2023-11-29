@@ -49,7 +49,7 @@ export const data = {
       label: 'Dataset 1',
       data: dataset1Data,
       borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      backgroundColor: 'rgba(255, 59, 12, 0.5)',
     },
     {
       label: 'Dataset 2',
