@@ -199,7 +199,7 @@ export default function Option1() {
     };
 
     return (
-        <article className='d-flex flex-wrap m-2 position-absolute'>
+        <article className='d-flex flex-wrap mx-5 position-absolute'>
             {/* Section1 */}
             <article className='col-lg-4 col-md-10 col-sm-10 pb-4'>
                 {/* head section 1 */}
@@ -312,7 +312,7 @@ export default function Option1() {
                 </article>
                 {/* body section 2 */}
                 <article className='col-sm-12 p-3 mt-5'>
-                    <article className='card border-0'>
+                    <article className='card shadow rounded-5 border-0'>
                         <article className={`d-flex p-3 gap-0 ${Styles.line}`}>
                             <Candidates data={candidates} candidates={filteredCandidates} />
                         </article>

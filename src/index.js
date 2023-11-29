@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import CandidatesProfile from './Pages/CandidateProfile.tsx';
 import Events from './Pages/Events';
 import Reports from './Pages/Reports';
-import WorldMap from './Pages/WorldMap.jsx';
+import GeographyChart from './Pages/GeographyChart';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         path: '/Repo', element: <Reports />
       },
       {
-        path: '/GeographyChart', element: <WorldMap />
+        path: '/GeographyChart', element: <GeographyChart />
       },
       {
         path: '/Candidate/:UserId',

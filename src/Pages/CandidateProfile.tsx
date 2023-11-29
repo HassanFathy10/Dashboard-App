@@ -18,7 +18,7 @@ export default function CandidatesProfile() {
                         <article className='col'>
                             <article className='d-flex gap-3 flex-wrap'>
                                 <Stack direction="row" spacing={2}>
-                                    <Avatar alt="Remy Sharp" src='' />
+                                    <Avatar alt={data?.name || 'Hassan Fathy'} src='../assets/images/01.png' />
                                 </Stack>
                                 <h5 className='p-2'>{data?.name || 'Hassan Fathy'}</h5>
                                 <article className=''>

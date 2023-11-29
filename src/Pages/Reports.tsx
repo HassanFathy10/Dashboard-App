@@ -3,11 +3,11 @@ import { DataGrid, GridColDef  } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 100 },
-    { field: 'fullName', headerName: 'Full Name', width: 150 },
-    { field: 'lastName', headerName: 'Last name', width: 130 },
+    { field: 'fullName', headerName: 'Full Name', width: 160 },
+    { field: 'nationality', headerName: 'Nationality', width: 130 },
     {
-        field: 'edu',
-        headerName: 'Education',
+        field: 'age',
+        headerName: 'Age',
         type: 'number',
         width: 130,
     },
@@ -21,14 +21,14 @@ const columns: GridColDef[] = [
 ];
 
 const rows = [
-    { id: 1, fullName: 'Aaliyah Sanderson', firstName: 'Jon', edu: 35, email: 'AaliyahSanderson@gmail.com'},
-    { id: 2, fullName: 'John Doe', firstName: 'Cersei', edu: 42, email: 'JohnDoe@gmail.com' },
-    { id: 3, fullName: 'Thomas Matt', firstName: 'Jaime', edu: 45, email: 'ThomasMatt@gmail.com' },
-    { id: 4, fullName: 'Kamilia Smith', firstName: 'Arya', edu: 16, email: 'KamiliaSmith@gmail.com' },
-    { id: 5, fullName: 'Roy Jade', firstName: 'Daenerys', edu: 60, email: 'RoyJade@gmail.com' },
-    { id: 6, fullName: 'Ahmed Salman', firstName: 'Meli', edu: 150, email: 'AhmedSalman@gmail.com' },
-    { id: 7, fullName: 'Jerry S. Pollock', firstName: 'Ferrara', edu: 44, email: 'JerryS.Pollock@gmail.com' },
-    { id: 8, fullName: 'Michael D. McKee', firstName: 'Rossini', edu: 36, email: 'MichaelD.McKee@gmail.com' },
+    { id: 1, fullName: 'Aaliyah Sanderson', nationality: 'KSA', age: 35, email: 'AaliyahSanderson@gmail.com'},
+    { id: 2, fullName: 'John Doe', nationality: 'USA', age: 42, email: 'JohnDoe@gmail.com' },
+    { id: 3, fullName: 'Thomas Matt', nationality: 'UK', age: 45, email: 'ThomasMatt@gmail.com' },
+    { id: 4, fullName: 'Kamilia Smith', nationality: 'UK', age: 16, email: 'KamiliaSmith@gmail.com' },
+    { id: 5, fullName: 'Roy Jade', nationality: 'USA', age: 60, email: 'RoyJade@gmail.com' },
+    { id: 6, fullName: 'Ahmed Salman', nationality: 'KSA', age: 40, email: 'AhmedSalman@gmail.com' },
+    { id: 7, fullName: 'Jerry S. Pollock', nationality: 'UK', age: 44, email: 'JerryS.Pollock@gmail.com' },
+    { id: 8, fullName: 'Michael D. McKee', nationality: 'USA', age: 36, email: 'MichaelD.McKee@gmail.com' },
 ];
 export default function Reports() {
     return (

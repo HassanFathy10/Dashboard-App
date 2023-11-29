@@ -30,7 +30,7 @@ export default function SideBar() {
                     >
                         <Menu.Item key="1" className='mb-5'>
                             <Stack direction="row" spacing={2}>
-                                <Avatar alt="Hassan Fathy" src='' />
+                                <Avatar alt="" src={process.env.PUBLIC_URL + '/assets/images/01.png'} />
                                 <span>Hassan Fathy</span>
                             </Stack>
                         </Menu.Item>

@@ -67,7 +67,7 @@ export default function Option2() {
   }
 
   return (
-    <article className='d-flex flex-wrap gap-3  position-absolute flex-wrap'>
+    <article className='d-flex flex-wrap gap-3 mx-5 position-absolute flex-wrap'>
       <article className='pb-5'>
         {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5">
@@ -78,7 +78,7 @@ export default function Option2() {
         {/* body section 1 */}
         <article className='d-flex mt-2'>
           <article className='p-1'>
-            <article className='card  border-0 rounded-4' style={{ width: '11rem' }}>
+            <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
               <article className=' card-body d-flex flex-column pb-4'>
                 <span className='fw-bold fs-6 pb-4'>Applied</span>
                 <span className='fw-bold fs-5'>3,122</span>
@@ -91,7 +91,7 @@ export default function Option2() {
             </article>
           </article>
           <article className='p-1'>
-            <article className='card border-0 rounded-4' style={{ width: '11rem' }}>
+            <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
               <article className='card-body d-flex flex-column pb-4 '>
                 <span className='fw-bold fs-6 pb-4'>Offer</span>
                 <span className='fw-bold fs-5'>183</span>
@@ -104,7 +104,7 @@ export default function Option2() {
             </article>
           </article>
           <article className='p-1'>
-            <article className='card  border-0 rounded-4' style={{ width: '11rem' }}>
+            <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
               <article className=' card-body d-flex flex-column pb-4'>
                 <span className='fw-bold fs-6 pb-4'>Hired</span>
                 <span className='fw-bold fs-5'>98</span>
@@ -119,7 +119,7 @@ export default function Option2() {
         </article>
         {/* chart */}
         <article className='mt-3'>
-          <article className='card border-0 rounded-4' style={{ width: '34.5rem' }}>
+          <article className='card border-0 rounded-4 shadow bg-info-subtle' style={{ width: '34.5rem' }}>
             <article className=' card-body d-flex flex-column pb-4'>
               <NavDropdown id="nav-dropdown-dark-example" className='fw-bold fs-6 pb-4' title="Recommended">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -166,7 +166,7 @@ export default function Option2() {
         </article>
         {/* body section 2 */}
         <article className='mx-0 w-100 pb-5'>
-          <article className='card border-0 rounded-4 m-2'>
+          <article className='card shadow border-0 rounded-4 m-2'>
             <article className='p-3 d-flex flex-column'>
               <span className='fw-bold mb-4'>Total Candidate Flow</span>
               <span className='fw-bold fs-5'>4,567</span>
@@ -203,7 +203,7 @@ export default function Option2() {
           {/* body section 2 */}
           <article className='d-flex pt-3 gap-5'>
             <article className='p-2'>
-              <article className='card  border-0 rounded-4' style={{ width: '15rem' }}>
+              <article className='card shadow border-0 rounded-4' style={{ width: '15rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Recommended</span>
@@ -218,7 +218,7 @@ export default function Option2() {
               </article>
             </article>
             <article className='p-1 ms-auto'>
-              <article className='card  border-0 rounded-4' style={{ width: '16rem' }}>
+              <article className='card shadow border-0 rounded-4' style={{ width: '16rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Interview</span>
@@ -267,9 +267,9 @@ export default function Option2() {
         </article>
         {/* card */}
         <article className='pt-5'>
-          <article className='card border-0 rounded-4 pb-5'>
+          <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5'>
             <article className='d-flex p-4'>
-              <span className='fw-bold'>Google</span>
+              <span className='fw-bold fs-5'>Google</span>
               <article className='d-flex ms-auto gap-5'>
                 {/* page ProgramOverview */}
                 <span><Link to='/ProgramOverview'><Unicons.UilChartPie /></Link></span>
@@ -277,7 +277,7 @@ export default function Option2() {
               </article>
             </article>
             {/* cards */}
-            <article className='d-flex justify-content-center p-5 gap-5'>
+            <article className='d-flex justify-content-center p-5 gap-4'>
               <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
                 <span className='mb-2'>Applied</span>
                 <span className='fw-bold'>95</span>
@@ -300,7 +300,7 @@ export default function Option2() {
               </article>
             </article>
             {/* table 1 */}
-            <article className='p-5'>
+            <article className='p-5 card shadow rounded-5 border-0'>
               <Table className='border-5 shadow' striped bordered hover>
                 <thead>
                   <tr>
@@ -371,7 +371,7 @@ export default function Option2() {
         </article>
         {/* card 2 */}
         <article className='pt-5'>
-          <article className='card border-0 rounded-4 pb-5'>
+          <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5 pb-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold'>Microsoft</span>
               <article className='d-flex ms-auto gap-5'>
@@ -381,7 +381,7 @@ export default function Option2() {
               </article>
             </article>
             {/* cards */}
-            <article className='d-flex justify-content-center p-5 gap-5'>
+            <article className='d-flex justify-content-center p-5 gap-4'>
               <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
                 <span className='mb-2'>Applied</span>
                 <span className='fw-bold'>34</span>
@@ -404,7 +404,7 @@ export default function Option2() {
               </article>
             </article>
             {/* table 1 */}
-            <article className='p-5'>
+            <article className='p-5 card rounded-5 border-0 shadow'>
               <Table className='border-5 shadow' striped bordered hover>
                 <thead>
                   <tr>

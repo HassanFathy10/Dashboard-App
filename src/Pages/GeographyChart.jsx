@@ -3,9 +3,8 @@ import { ResponsiveChoropleth } from '@nivo/geo';
 import { mockGeographyData } from '../data/mockGeographyData ';
 import { mockDataCandidate as data } from '../data/mockData';
 
-export default function WorldMap() {
+export default function GeographyChart() {
     return (
-        <article className=''>
             <ResponsiveChoropleth
                 data={data}
                 features={mockGeographyData.features}
@@ -15,6 +14,7 @@ export default function WorldMap() {
                 unknownColor="#666666"
                 label="properties.name"
                 valueFormat=".2s"
+                projectionScale={40}
                 projectionTranslation={[0.5, 0.5]}
                 projectionRotation={[0, 0, 0]}
                 enableGraticule={true}
@@ -101,7 +101,6 @@ export default function WorldMap() {
                     }
                 ]}
             />
-        </article>
     );
 }
 
