@@ -1,37 +1,34 @@
 import React from 'react';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef  } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
-    { field: 'id', headerName: 'ID', width: 130 },
-    { field: 'firstName', headerName: 'First name', width: 130 },
+    { field: 'id', headerName: 'ID', width: 100 },
+    { field: 'fullName', headerName: 'Full Name', width: 150 },
     { field: 'lastName', headerName: 'Last name', width: 130 },
     {
-        field: 'age',
-        headerName: 'Age',
+        field: 'edu',
+        headerName: 'Education',
         type: 'number',
         width: 130,
     },
     {
-        field: 'fullName',
-        headerName: 'Full name',
+        field: 'email',
+        headerName: 'Email',
         description: 'This column has a value getter and is not sortable.',
         sortable: false,
-        width: 150,
-        valueGetter: (params: GridValueGetterParams) =>
-            `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-    },
+        width: 220,
+    }
 ];
 
 const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: 60 },
-    { id: 6, lastName: 'Melisandre', firstName: 'Meli', age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+    { id: 1, fullName: 'Aaliyah Sanderson', firstName: 'Jon', edu: 35, email: 'AaliyahSanderson@gmail.com'},
+    { id: 2, fullName: 'John Doe', firstName: 'Cersei', edu: 42, email: 'JohnDoe@gmail.com' },
+    { id: 3, fullName: 'Thomas Matt', firstName: 'Jaime', edu: 45, email: 'ThomasMatt@gmail.com' },
+    { id: 4, fullName: 'Kamilia Smith', firstName: 'Arya', edu: 16, email: 'KamiliaSmith@gmail.com' },
+    { id: 5, fullName: 'Roy Jade', firstName: 'Daenerys', edu: 60, email: 'RoyJade@gmail.com' },
+    { id: 6, fullName: 'Ahmed Salman', firstName: 'Meli', edu: 150, email: 'AhmedSalman@gmail.com' },
+    { id: 7, fullName: 'Jerry S. Pollock', firstName: 'Ferrara', edu: 44, email: 'JerryS.Pollock@gmail.com' },
+    { id: 8, fullName: 'Michael D. McKee', firstName: 'Rossini', edu: 36, email: 'MichaelD.McKee@gmail.com' },
 ];
 export default function Reports() {
     return (
