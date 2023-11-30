@@ -4,7 +4,6 @@ import { FaUserCircle, FaUser, FaUserEdit, FaCalendarAlt, FaCircle, FaTags } fro
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { PiBagSimpleFill } from "react-icons/pi";
 import { useLocation } from 'react-router-dom';
-import ReactPlayer from 'react-player/lazy';
 
 export default function Profile() {
     const { state } = useLocation();
@@ -118,7 +117,9 @@ export default function Profile() {
                         </article>
                         <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
                     </article>
-                        <ReactPlayer url='https://www.youtube.com/watch?v=uMQnn8xU7qs&t=124s' controls={true} />
+                    <video>
+                        <source src='' />
+                    </video>
                 </article>
                 <article className='pb-5'>
                     <article className='border-bottom p-3'>
