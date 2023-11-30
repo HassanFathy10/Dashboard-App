@@ -4,6 +4,7 @@ import { FaUserCircle, FaUser, FaUserEdit, FaCalendarAlt, FaCircle, FaTags } fro
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { PiBagSimpleFill } from "react-icons/pi";
 import { useLocation } from 'react-router-dom';
+import ReactPlayer from 'react-player/lazy';
 
 export default function Profile() {
     const { state } = useLocation();
@@ -117,7 +118,7 @@ export default function Profile() {
                         </article>
                         <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
                     </article>
-                    <video src="..." className="object-fit-contain" controls></video>
+                        <ReactPlayer url='https://www.youtube.com/watch?v=uMQnn8xU7qs&t=124s' controls={true} />
                 </article>
                 <article className='pb-5'>
                     <article className='border-bottom p-3'>
@@ -132,18 +133,6 @@ export default function Profile() {
                     <article className='p-4'>
                         <p className={`p-3 ${Styles.answer}`}>Dorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
                     </article>
-                </article>
-                <article className='pb-5'>
-                    <article className='border-bottom p-3'>
-                        <span className={`p-2 fw-bold ${Styles.video}`}>Video Upload</span>
-                    </article>
-                    <article className='pt-4 d-flex gap-4'>
-                        <article>
-                            <FaCircle color='#9EB8FF' />
-                        </article>
-                        <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
-                    </article>
-                    <video src="..." className="object-fit-contain" controls></video>
                 </article>
                 <article className='pb-4'>
                     <article className='border-bottom p-3'>

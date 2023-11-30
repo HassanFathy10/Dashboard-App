@@ -12,6 +12,7 @@ import Events from './Pages/Events';
 import Reports from './Pages/Reports';
 import GeographyChart from './Pages/GeographyChart';
 import "bootstrap/dist/css/bootstrap.min.css";
+import './style.css';
 
 
 const router = createBrowserRouter([

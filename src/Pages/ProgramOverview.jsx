@@ -3,8 +3,9 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import { Line } from 'react-chartjs-2';
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
+import { HiArrowTrendingUp } from "react-icons/hi2";
+import { FaCalendarAlt } from "react-icons/fa";
 
 ChartJS.register(
   CategoryScale,
@@ -74,7 +75,7 @@ export default function ProgramOverview() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>1590 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -87,7 +88,7 @@ export default function ProgramOverview() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>71 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -100,7 +101,7 @@ export default function ProgramOverview() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>167 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -146,7 +147,7 @@ export default function ProgramOverview() {
           </Dropdown>
           <Dropdown>
             <Dropdown.Toggle variant="white" className='fw-bold bg-white rounded-5' id="dropdown-basic">
-              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;<span className='fs-6'>01 Jan 2023 - 31 July 2023</span>
+              <span className='p-1'><FaCalendarAlt size='15px' /></span>&nbsp;<span className='fs-6'>01 Jan 2023 - 31 July 2023</span>
             </Dropdown.Toggle>
           </Dropdown>
         </article>
@@ -198,7 +199,7 @@ export default function ProgramOverview() {
                   <span className='fw-normal fs-6'>Previous Period</span>
                   <article className='fw-light mt-2'>
                     <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                   </article>
                 </article>
               </article>
@@ -213,7 +214,7 @@ export default function ProgramOverview() {
                   <span className='fw-normal fs-6'>Previous Period</span>
                   <article className='fw-light mt-2'>
                     <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                   </article>
                 </article>
               </article>
@@ -238,7 +239,7 @@ export default function ProgramOverview() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>1590 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -251,7 +252,7 @@ export default function ProgramOverview() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>71 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -264,7 +265,7 @@ export default function ProgramOverview() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>167 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -310,7 +311,7 @@ export default function ProgramOverview() {
           </Dropdown>
           <Dropdown>
             <Dropdown.Toggle variant="white" className='fw-bold bg-white rounded-5' id="dropdown-basic">
-              <span className='p-1'><Unicons.UilCalendarAlt size='15px' /></span>&nbsp;<span className='fs-6'>01 Jan 2023 - 31 July 2023</span>
+              <span className='p-1'><FaCalendarAlt size='15px' /></span>&nbsp;<span className='fs-6'>01 Jan 2023 - 31 July 2023</span>
             </Dropdown.Toggle>
           </Dropdown>
         </article>
@@ -362,7 +363,7 @@ export default function ProgramOverview() {
                   <span className='fw-normal fs-6'>Previous Period</span>
                   <article className='fw-light mt-2'>
                     <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                   </article>
                 </article>
               </article>
@@ -377,7 +378,7 @@ export default function ProgramOverview() {
                   <span className='fw-normal fs-6'>Previous Period</span>
                   <article className='fw-light mt-2'>
                     <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                   </article>
                 </article>
               </article>

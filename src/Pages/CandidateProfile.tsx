@@ -11,7 +11,7 @@ export default function CandidatesProfile() {
     const { data } = state || {};
 
     return (
-        <article className='container'>
+        <article className={`container ${Styles.bg}`}>
             <article className='row m-5'>
                 <article className='card p-4 border-0 shadow rounded-5'>
                     <article className='row'>

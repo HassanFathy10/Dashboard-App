@@ -6,11 +6,12 @@ import { Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Table from 'react-bootstrap/Table';
-import * as Unicons from '@iconscout/react-unicons';
 import Styles from './style.module.css';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { DatePicker, Space } from 'antd';
+import { HiArrowTrendingUp } from "react-icons/hi2";
+import { FaFileDownload, FaChartPie, FaSortAmountUp } from "react-icons/fa";
 
 dayjs.extend(customParseFormat);
 const { RangePicker } = DatePicker;
@@ -85,7 +86,7 @@ export default function Option2() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>1590 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -98,7 +99,7 @@ export default function Option2() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>71 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -111,7 +112,7 @@ export default function Option2() {
                 <span className='fw-normal fs-6'>Previous Period</span>
                 <article className='fw-light mt-2'>
                   <span>167 &nbsp;</span>
-                  <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                 </article>
               </article>
             </article>
@@ -212,7 +213,7 @@ export default function Option2() {
                   <span className='fw-normal fs-6'>Previous Period</span>
                   <article className='fw-light mt-2'>
                     <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                   </article>
                 </article>
               </article>
@@ -227,7 +228,7 @@ export default function Option2() {
                   <span className='fw-normal fs-6'>Previous Period</span>
                   <article className='fw-light mt-2'>
                     <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><Unicons.UilArrowGrowth size='15px' /> 15%</span>
+                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
                   </article>
                 </article>
               </article>
@@ -251,7 +252,7 @@ export default function Option2() {
             <Dropdown>
               <Dropdown.Toggle variant="white" className='fw-bolder bg-white' id="dropdown-basic">
                 <span className='p-5'>Sort by</span>
-                <Unicons.UilSortAmountUp size='20px' />
+                <FaSortAmountUp size='20px' />
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Applied</Dropdown.Item>
@@ -272,8 +273,8 @@ export default function Option2() {
               <span className='fw-bold fs-5'>Google</span>
               <article className='d-flex ms-auto gap-5'>
                 {/* page ProgramOverview */}
-                <span><Link to='/ProgramOverview'><Unicons.UilChartPie /></Link></span>
-                <span><Unicons.UilFileDownload /></span>
+                <span><Link to='/ProgramOverview'><FaChartPie /></Link></span>
+                <span><FaFileDownload /></span>
               </article>
             </article>
             {/* cards */}
@@ -376,8 +377,8 @@ export default function Option2() {
               <span className='fw-bold'>Microsoft</span>
               <article className='d-flex ms-auto gap-5'>
                 {/* page ProgramOverview */}
-                <span><Link to='/ProgramOverview'><Unicons.UilChartPie /></Link></span>
-                <span><Unicons.UilFileDownload /></span>
+                <span><Link to='/ProgramOverview'><FaChartPie /></Link></span>
+                <span><FaFileDownload /></span>
               </article>
             </article>
             {/* cards */}

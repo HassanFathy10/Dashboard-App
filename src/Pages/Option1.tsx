@@ -217,7 +217,7 @@ export default function Option1() {
                         <ListGroup.Item action className='border-0 border-bottom'>
                             <article className='d-flex list-unstyled p-2'>
                                 <li className='me-auto fs-5 fw-medium'>Filters</li>
-                                <li className='bg-info p-1 rounded-5 fw-medium'>8 Selected</li>
+                                <li className='bg-info-subtle p-1 rounded-5 fw-medium'>8 Selected</li>
                             </article>
                         </ListGroup.Item>
                         <Menu className='w-100 fw-medium fs-5' mode="inline" items={items} />

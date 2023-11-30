@@ -28,10 +28,10 @@ export default function SideBar() {
                         defaultSelectedKeys={['2']}
                         className='min-vh-100'
                     >
-                        <Menu.Item key="1" className='mb-5'>
+                        <Menu.Item key="1" className='mb-5 d-flex'>
                             <Stack direction="row" spacing={2}>
                                 <Avatar alt="" src={process.env.PUBLIC_URL + '/assets/images/01.png'} />
-                                <span>Hassan Fathy</span>
+                                <span className='fw-medium'>Hassan Fathy</span>
                             </Stack>
                         </Menu.Item>
                         <Menu.Item key="2" icon={<FaHome className='fs-4' />}>
