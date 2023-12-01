@@ -11,8 +11,6 @@ import {
     FaMap 
 } from "react-icons/fa";
 import { Layout, Menu } from 'antd';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 
 const { Sider } = Layout;
 
@@ -28,11 +26,11 @@ export default function SideBar() {
                         defaultSelectedKeys={['2']}
                         className='min-vh-100'
                     >
-                        <Menu.Item key="1" className='mb-5 d-flex'>
-                            <Stack direction="row" spacing={2}>
-                                <Avatar alt="" src={process.env.PUBLIC_URL + '/assets/images/01.png'} />
-                                <span className='fw-medium'>Hassan Fathy</span>
-                            </Stack>
+                        <Menu.Item key="1" style={{ height: '150px' }} className='mb-2 mt-5'>
+                            <ul className='list-unstyled text-center'>
+                               <li><img alt="" height='50' src={process.env.PUBLIC_URL + '/assets/images/01.png'} /></li> 
+                               <li><span className='fw-medium'>Hassan</span></li> 
+                            </ul>
                         </Menu.Item>
                         <Menu.Item key="2" icon={<FaHome className='fs-4' />}>
                             <Link to="/" className='text-decoration-none'>Home</Link>
