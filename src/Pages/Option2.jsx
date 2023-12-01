@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend} from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Table from 'react-bootstrap/Table';
@@ -11,7 +10,7 @@ import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { DatePicker, Space } from 'antd';
 import { HiArrowTrendingUp } from "react-icons/hi2";
-import { FaFileDownload, FaChartPie, FaSortAmountUp } from "react-icons/fa";
+import { FaFileDownload, FaChartPie } from "react-icons/fa";
 
 dayjs.extend(customParseFormat);
 const { RangePicker } = DatePicker;
@@ -141,7 +140,7 @@ export default function Option2() {
         </article>
       </article>
       {/* section 2 */}
-      <article className='col-5' >
+      <article className='' >
         {/* head section 2 */}
         <article className="mt-3 pt-5 pb-5 d-flex gap-2">
           <Dropdown onSelect={handleSelect}>
@@ -166,13 +165,13 @@ export default function Option2() {
           </Space>
         </article>
         {/* body section 2 */}
-        <article className='mx-0 w-100 pb-5'>
+        <article className='pb-5'>
           <article className='card shadow border-0 rounded-4 m-2'>
             <article className='p-3 d-flex flex-column'>
               <span className='fw-bold mb-4'>Total Candidate Flow</span>
               <span className='fw-bold fs-5'>4,567</span>
             </article>
-            <article className='d-flex'>
+            <article className='d-flex flex-wrap'>
               <ul className='list-unstyled p-3 lh-lg'>
                 <li className='fw-bold'>Stage</li>
                 <li>Applied</li>
@@ -181,8 +180,8 @@ export default function Option2() {
                 <li>Offer</li>
                 <li>Hired</li>
               </ul>
-              <article className='ms-auto d-flex '>
-                <ul className='list-unstyled text-end p-3 lh-lg'>
+              <article className='ms-auto d-flex flex-wrap'>
+                <ul className='list-unstyled text-start p-3 lh-lg'>
                   <li className='fw-bold'>Qualified</li>
                   <li>3,122</li>
                   <li>2,164</li>
@@ -190,7 +189,7 @@ export default function Option2() {
                   <li>183</li>
                   <li>118</li>
                 </ul>
-                <ul className='list-unstyled text-end p-3 lh-lg'>
+                <ul className='list-unstyled text-start p-3 lh-lg'>
                   <li className='fw-bold'>Disqualified</li>
                   <li>1,445</li>
                   <li>958</li>
@@ -202,13 +201,13 @@ export default function Option2() {
             </article>
           </article>
           {/* body section 2 */}
-          <article className='d-flex pt-3 gap-5'>
-            <article className='p-2'>
-              <article className='card shadow border-0 rounded-4' style={{ width: '15rem' }}>
+          <article className='d-flex gap-4 ms-auto pt-3 flex-wrap'>
+            <article className='p-1'>
+              <article className='card shadow border-0 rounded-4 bg-warning-subtle' style={{ width: '14rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
-                    <span className='fw-bold fs-6 pb-4'>Recommended</span>
-                    <span className='fw-bold ms-auto fs-6 pb-4'>2,164</span>
+                    <span className='fw-bold fs-6 pb-4'>Recommanded</span>
+                    <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
                   </article>
                   <span className='fw-normal fs-6'>Previous Period</span>
                   <article className='fw-light mt-2'>
@@ -218,8 +217,23 @@ export default function Option2() {
                 </article>
               </article>
             </article>
-            <article className='p-1 ms-auto'>
-              <article className='card shadow border-0 rounded-4' style={{ width: '16rem' }}>
+            <article className='p-1'>
+              <article className='card shadow border-0 rounded-4 bg-danger-subtle' style={{ width: '14rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <article className='d-flex'>
+                    <span className='fw-bold fs-6 pb-4'>Interview</span>
+                    <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
+                  </article>
+                  <span className='fw-normal fs-6'>Previous Period</span>
+                  <article className='fw-light mt-2'>
+                    <span>1590 &nbsp;</span>
+                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                  </article>
+                </article>
+              </article>
+            </article>
+            <article className='p-1'>
+              <article className='card shadow border-0 rounded-4 bg-success-subtle' style={{ width: '14rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <article className='d-flex'>
                     <span className='fw-bold fs-6 pb-4'>Interview</span>
@@ -247,27 +261,8 @@ export default function Option2() {
             </article>
           </article>
         </article>
-        <article className='d-flex'>
-          <article className='d-flex ms-auto gap-5'>
-            <Dropdown>
-              <Dropdown.Toggle variant="white" className='fw-bolder bg-white' id="dropdown-basic">
-                <span className='p-5'>Sort by</span>
-                <FaSortAmountUp size='20px' />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Applied</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Recommended</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Interview</Dropdown.Item>
-                <Dropdown.Item href="#/action-1">Offer</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Hired</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Rejected</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Button className='text-primary fw-bold bg-white border-0'>Export All As CSV</Button>
-          </article>
-        </article>
         {/* card */}
-        <article className='pt-5'>
+        <article className='pt-5 col-lg-10'>
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold fs-5'>Google</span>
@@ -278,7 +273,7 @@ export default function Option2() {
               </article>
             </article>
             {/* cards */}
-            <article className='d-flex justify-content-center p-5 gap-4'>
+            <article className='d-flex justify-content-center p-5 gap-4 flex-wrap'>
               <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
                 <span className='mb-2'>Applied</span>
                 <span className='fw-bold'>95</span>
@@ -371,7 +366,7 @@ export default function Option2() {
           </article>
         </article>
         {/* card 2 */}
-        <article className='pt-5'>
+        <article className='pt-5 col-lg-10'>
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5 pb-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold'>Microsoft</span>
@@ -382,7 +377,7 @@ export default function Option2() {
               </article>
             </article>
             {/* cards */}
-            <article className='d-flex justify-content-center p-5 gap-4'>
+            <article className='d-flex justify-content-center p-5 gap-4 flex-wrap'>
               <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
                 <span className='mb-2'>Applied</span>
                 <span className='fw-bold'>34</span>
