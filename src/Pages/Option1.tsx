@@ -312,7 +312,7 @@ export default function Option1() {
                 {/* body section 2 */}
                 <article className='col-sm-12 p-3 mt-5'>
                     <article className='card shadow rounded-5 border-0'>
-                        <article className={`d-flex p-3 gap-0 ${Styles.line}`}>
+                        <article className='d-flex p-3 gap-0'>
                             <Candidates data={candidates} candidates={filteredCandidates} />
                         </article>
                     </article>

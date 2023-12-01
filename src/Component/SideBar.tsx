@@ -17,9 +17,9 @@ const { Sider } = Layout;
 export default function SideBar() {
     const [collapsed, setCollapsed] = useState(false);
     return (
-        <article>
+        <article className=''>
             <Layout>
-                <Sider trigger={null} collapsible collapsed={collapsed} className='d-flex justify-content-center'>
+                <Sider trigger={null} collapsible collapsed={collapsed} className='d-flex justify-content-center sticky-top sticky-bottom'>
                     <Menu
                         theme="dark"
                         mode="inline"

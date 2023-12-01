@@ -35,6 +35,10 @@ export const options = {
     title: {
       display: true,
       text: 'Chart.js Line Chart',
+      font: {
+        size: 16, // Customize title text size
+        weight: 'bold', // Customize title text weight
+      },
     },
   },
 };
@@ -140,7 +144,7 @@ export default function Option2() {
         </article>
       </article>
       {/* section 2 */}
-      <article className='' >
+      <article className=''>
         {/* head section 2 */}
         <article className="mt-3 pt-5 pb-5 d-flex gap-2">
           <Dropdown onSelect={handleSelect}>

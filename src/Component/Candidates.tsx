@@ -77,7 +77,7 @@ export default function Candidates({ candidates }: CandidatesProps) {
                 </article>
             </article>
             {candidates.map((candidate: any) => (
-                <article className='border-bottom' key={candidate.id}>
+                <article className={`border-bottom ${Styles.line}`} key={candidate.id}>
                     <article className='d-flex align-items-center mt-5 gap-5'>
                         <article className='d-flex m-4'>
                             <Checkbox
