@@ -26,7 +26,7 @@
     "src/**/*.css", 
     "src/Component/Candidates.tsx",
     "src/Pages/Option2.jsx" 
-  ],
+, "src/Pages/Events.jsx", "src/Pages/GeographyChart.jsx"  ],
   "exclude": [
     "node_modules",
     "build",

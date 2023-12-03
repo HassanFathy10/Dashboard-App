@@ -117,9 +117,7 @@ export default function Profile() {
                         </article>
                         <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
                     </article>
-                    <video>
-                        <source src='' />
-                    </video>
+                    <video src='' className="object-fit-contain" controls />
                 </article>
                 <article className='pb-5'>
                     <article className='border-bottom p-3'>

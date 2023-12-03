@@ -17,15 +17,16 @@ const items: TabsProps['items'] = [
     {
         key: '2',
         label: <span className='fs-6 fw-medium'>Video</span>,
-        children: <video src='' className="object-fit-contain" controls />,
+        children: <video src='../../public//assets//video/VID-20190326-WA0121.mp4' className="object-fit-contain" controls />,
     },
     {
         key: '3',
         label: <span className='fs-6 fw-medium'>Evaluation</span>,
         children:
-            <article className='card shadow rounded-5 border-0 m-5'>
-                <Empty className='p-5 fw-medium text-black-50' />
-            </article>,
+        <article className='card p-5 shadow rounded-5 border-0 m-5'>
+            <h4 className='text-decoration-underline text-success pb-3'>Evaluation:</h4>
+            <p className='text-black-50'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>,
     },
     {
         key: '4',
@@ -47,8 +48,9 @@ const items: TabsProps['items'] = [
         key: '6',
         label: <span className='fs-6 fw-medium'>Notes</span>,
         children:
-            <article className='card shadow rounded-5 border-0 m-5'>
-                <Empty className='p-5 fw-medium text-black-50' />
+            <article className='card p-5 shadow rounded-5 border-0 m-5'>
+                <h4 className='text-decoration-underline text-warning pb-3'>Notes:</h4>
+                <p className='text-black-50'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </article>,
     },
     {

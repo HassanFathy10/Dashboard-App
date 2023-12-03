@@ -231,7 +231,7 @@ export default function Option1() {
                 <article className='d-flex gap-3 mt-5 pt-4 pb-4 flex-wrap'>
                     {/* Handle selected value in drop down */}
                     <Dropdown onSelect={handleSelect}>
-                        <Dropdown.Toggle variant="white" className={`fw-bolder bg-white rounded-5 ${Styles.font}`} id="dropdown-basic">
+                        <Dropdown.Toggle variant="white" className= 'fw-bolder bg-white rounded-5' id="dropdown-basic">
                             {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         </Dropdown.Toggle>
                         <Dropdown.Menu>

@@ -41,8 +41,12 @@
     background-color: rgba(0, 255, 255, 0.116);
 }
 
+.link {
+    color: #5cdb13 !important;
+}
+
 .link:hover {
-    background-color: aqua;
+    background-color: rgb(183, 0, 255);
     border-radius: 10px;
 }
 .link:active {
@@ -50,7 +54,7 @@
     border-radius: 10px;
 }
 .font {
-    color: rgb(78, 27, 197) !important;
+    color: rgb(202, 223, 15) !important;
 }
 .number {
     padding: 0.2rem;
