@@ -17,7 +17,7 @@ const items: TabsProps['items'] = [
     {
         key: '2',
         label: <span className='fs-6 fw-medium'>Video</span>,
-        children: <video src='../../public//assets//video/VID-20190326-WA0121.mp4' className="object-fit-contain" controls />,
+        children: <video src='' className="object-fit-contain" controls />,
     },
     {
         key: '3',
