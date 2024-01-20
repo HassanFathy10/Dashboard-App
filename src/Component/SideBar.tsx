@@ -34,7 +34,7 @@ export default function SideBar() {
     }, []);
     
     return (
-        <article>
+        <article className='container-fluid'>
             <Layout>
                 {isMobile ? (
                     <article className=' w-100'>

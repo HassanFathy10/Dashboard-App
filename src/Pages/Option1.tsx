@@ -198,7 +198,7 @@ export default function Option1() {
     };
 
     return (
-        <article className='d-flex flex-wrap gap-5'>
+        <article className='d-flex flex-wrap gap-5 p-4'>
             {/* Section1 */}
             <article className='col-lg-4 col-md-8 col-sm-6 pb-4'>
                 {/* head section 1 */}
