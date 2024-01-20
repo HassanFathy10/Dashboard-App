@@ -23,7 +23,7 @@ export default function SideBar() {
 
     useEffect(() => {
         const handleResize = () => {
-          setIsMobile(window.innerWidth <= 768);
+          setIsMobile(window.innerWidth <= 840);
         };
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -32,12 +32,12 @@ export default function SideBar() {
           window.removeEventListener('resize', handleResize);
         };
     }, []);
-    
     return (
         <article className='position-fixed'>
             <Layout>
                 {isMobile ? (
                     <article className='w-100'>
+                        {/* Mobile Navbar */}
                         <Navbar bg="dark" data-bs-theme="dark">
                             <Container>
                                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>

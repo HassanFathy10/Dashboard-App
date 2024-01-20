@@ -8,10 +8,10 @@ function App() {
     <Fragment>
       <Container fluid>
         <Row>
-          <Col sm={1} className="p-0">
+          <Col sm={2} className="p-0">
             <SideBar />
           </Col>
-          <Col sm={10}>
+          <Col sm={9}>
             <Outlet />
           </Col>
         </Row>
