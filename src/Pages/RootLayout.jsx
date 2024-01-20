@@ -1,19 +1,19 @@
 import React, { Fragment } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import SideBar from "../Component/SideBar";
 import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <Fragment>
-      <article className="d-flex">
-        <SideBar />
-        <Container>
-          <Row>
+        <Row>
+          <Col sm={2}>
+            <SideBar />
+          </Col>
+          <Col sm={10}>
             <Outlet />
-          </Row>
-        </Container>
-      </article>
+          </Col>
+        </Row>
     </Fragment>
   );
 }

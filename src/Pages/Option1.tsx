@@ -198,9 +198,9 @@ export default function Option1() {
     };
 
     return (
-        <article className='d-flex flex-wrap mx-5 position-absolute'>
+        <article className='d-flex flex-wrap gap-5'>
             {/* Section1 */}
-            <article className='col-lg-4 col-md-10 col-sm-10 pb-4'>
+            <article className='col-lg-4 col-md-8 col-sm-6 pb-4'>
                 {/* head section 1 */}
                 <article className="pt-5 mb-5">
                     <article className='d-flex flex-column p-3'>
@@ -300,7 +300,7 @@ export default function Option1() {
                         </Nav>
                     </article>
                     <Dropdown as={ButtonGroup}>
-                        <Button variant="primary" className='mx-1'>Move To Video Interview I</Button>
+                        <Button variant="primary">Move To Video Interview I</Button>
                         <Dropdown.Toggle variant="primary" id="dropdown-split-basic" />
                         <Dropdown.Menu>
                             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
@@ -310,7 +310,7 @@ export default function Option1() {
                     </Dropdown>
                 </article>
                 {/* body section 2 */}
-                <article className='col-sm-12 p-3 mt-5'>
+                <article className='col-lg-12 col-md-10 col-sm-8 p-3 mt-5'>
                     <article className='card shadow rounded-5 border-0'>
                         <article className='d-flex p-3 gap-0'>
                             <Candidates data={candidates} candidates={filteredCandidates} />
