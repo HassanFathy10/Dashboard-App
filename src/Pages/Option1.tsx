@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Styles from './style.module.css';
 import { AppstoreOutlined, MailOutlined, SettingOutlined, TagOutlined, UserDeleteOutlined, UserAddOutlined, UserOutlined } from '@ant-design/icons';
-import { Menu, Row } from 'antd';
+import { Menu } from 'antd';
 import type { MenuProps } from 'antd';
 import Search from '../Component/Search';
 import Candidates from '../Component/Candidates';
