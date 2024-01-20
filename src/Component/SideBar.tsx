@@ -34,10 +34,10 @@ export default function SideBar() {
     }, []);
     
     return (
-        <article>
+        <article className='position-fixed'>
             <Layout>
                 {isMobile ? (
-                    <article className=' w-100'>
+                    <article className='w-100'>
                         <Navbar bg="dark" data-bs-theme="dark">
                             <Container>
                                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>
