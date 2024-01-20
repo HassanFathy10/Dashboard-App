@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Styles from './style.module.css';
 import { AppstoreOutlined, MailOutlined, SettingOutlined, TagOutlined, UserDeleteOutlined, UserAddOutlined, UserOutlined } from '@ant-design/icons';
-import { Menu } from 'antd';
+import { Menu, Row } from 'antd';
 import type { MenuProps } from 'antd';
 import Search from '../Component/Search';
 import Candidates from '../Component/Candidates';
@@ -198,119 +198,121 @@ export default function Option1() {
     };
 
     return (
-        <article className='d-flex flex-wrap gap-5 p-4'>
+        <article className='container d-flex flex-wrap gap-5 p-5'>
             {/* Section1 */}
-            <article className='col-lg-4 col-md-8 col-sm-6 pb-4'>
-                {/* head section 1 */}
-                <article className="pt-5 mb-5">
-                    <article className='d-flex flex-column p-3'>
-                        <span className={`fw-bolder fs-5 ${Styles.font}`}>
-                            London Internship Program
-                        </span>
-                        <span className='fw-light'>Londan</span>
+            <article className='row'>
+                <article className='w-100 col-md-8 col-sm-6 pb-4'>
+                    {/* head section 1 */}
+                    <article className="pt-5 mb-5">
+                        <article className='d-flex flex-column p-3'>
+                            <span className={`fw-bolder fs-5 ${Styles.font}`}>
+                                London Internship Program
+                            </span>
+                            <span className='fw-light'>Londan</span>
+                        </article>
                     </article>
-                </article>
-                {/* body section 1 */}
-                <article className='pt-3'>
-                    <Search onSearch={handleSearch} />
-                    <ListGroup className='mt-2 p-1'>
-                        <ListGroup.Item action className='border-0 border-bottom'>
-                            <article className='d-flex list-unstyled p-2'>
-                                <li className='me-auto fs-5 fw-medium'>Filters</li>
-                                <li className='bg-info-subtle p-1 rounded-5 fw-medium'>8 Selected</li>
-                            </article>
-                        </ListGroup.Item>
-                        <Menu className='w-100 fw-medium fs-5' mode="inline" items={items} />
-                    </ListGroup>
+                    {/* body section 1 */}
+                    <article className='pt-3'>
+                        <Search onSearch={handleSearch} />
+                        <ListGroup className='mt-2 p-1'>
+                            <ListGroup.Item action className='border-0 border-bottom'>
+                                <article className='d-flex list-unstyled p-2'>
+                                    <li className='me-auto fs-5 fw-medium'>Filters</li>
+                                    <li className='bg-info-subtle p-1 rounded-5 fw-medium'>8 Selected</li>
+                                </article>
+                            </ListGroup.Item>
+                            <Menu className='w-100 fw-medium fs-5' mode="inline" items={items} />
+                        </ListGroup>
+                    </article>
                 </article>
             </article>
 
             {/* Section2 */}
-            <article>
-                {/* head section 2 */}
-                <article className='d-flex gap-3 mt-5 pt-4 pb-4 flex-wrap'>
-                    {/* Handle selected value in drop down */}
-                    <Dropdown onSelect={handleSelect}>
-                        <Dropdown.Toggle variant="white" className= 'fw-bolder bg-white rounded-5' id="dropdown-basic">
-                            {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
-                                Applied
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>1745</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Shortlisted" className={`d-flex p-3 fw-bolder ${selectedItem === 'Shortlisted' ? Styles.itemdrop : ''}`} href="#/action-2">
-                                Shortlisted
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>453</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Technical Interview" className={`d-flex p-3 fw-bolder ${selectedItem === 'Technical Interview' ? Styles.itemdrop : ''}`} href="#/action-3">
-                                Technical Interview
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>123</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Opportunity Browsing" className={`d-flex p-3 fw-bolder ${selectedItem === 'Opportunity Browsing' ? Styles.itemdrop : ''}`} href="#/action-3">
-                                Opportunity Browsing &nbsp; &nbsp;
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>243</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Video Interview I" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview I' ? Styles.itemdrop : ''}`} href="#/action-3">
-                                Video Interview I
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>25</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Video Interview II" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview II' ? Styles.itemdrop : ''}`} href="#/action-3">
-                                Video Interview II
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>25</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Video Interview III" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview III' ? Styles.itemdrop : ''}`} href="#/action-3">
-                                Video Interview III
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>25</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Offer" className={`d-flex p-3 fw-bolder ${selectedItem === 'Offer' ? Styles.itemdrop : ''}`} href="#/action-3">
-                                Offer
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>25</span>
-                                </article>
-                            </Dropdown.Item>
-                            <Dropdown.Item eventKey="Withdrawn" className={`d-flex p-3 fw-bolder ${selectedItem === 'Withdrawn' ? Styles.itemdrop : ''}`} href="#/action-3">
-                                Withdrawn
-                                <article className='ms-auto'>
-                                    <span className={`fw-meduim ${Styles.number}`}>25</span>
-                                </article>
-                            </Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                    <article className='d-flex flex-wrap'>
-                        <Nav className='gap-1'>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><TagOutlined className='fs-4' /> </Nav.Link>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserDeleteOutlined className='fs-4' /> </Nav.Link>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserAddOutlined className='fs-4' /> </Nav.Link>
-                            <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserOutlined className='fs-4' /> </Nav.Link>
-                        </Nav>
+            <article className='row'>
+                <article className='w-100 col-md-10 col-sm-8 p-3 mt-5'>
+                    {/* head section 2 */}
+                    <article className='d-flex gap-3 mt-5 pt-4 pb-4 flex-wrap'>
+                        {/* Handle selected value in drop down */}
+                        <Dropdown onSelect={handleSelect}>
+                            <Dropdown.Toggle variant="white" className='fw-bolder bg-white rounded-5' id="dropdown-basic">
+                                {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item eventKey="Applied" className={`d-flex p-3 fw-bolder ${selectedItem === 'Applied' ? Styles.itemdrop : ''}`} href="#/action-1">
+                                    Applied
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>1745</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Shortlisted" className={`d-flex p-3 fw-bolder ${selectedItem === 'Shortlisted' ? Styles.itemdrop : ''}`} href="#/action-2">
+                                    Shortlisted
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>453</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Technical Interview" className={`d-flex p-3 fw-bolder ${selectedItem === 'Technical Interview' ? Styles.itemdrop : ''}`} href="#/action-3">
+                                    Technical Interview
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>123</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Opportunity Browsing" className={`d-flex p-3 fw-bolder ${selectedItem === 'Opportunity Browsing' ? Styles.itemdrop : ''}`} href="#/action-3">
+                                    Opportunity Browsing &nbsp; &nbsp;
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>243</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Video Interview I" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview I' ? Styles.itemdrop : ''}`} href="#/action-3">
+                                    Video Interview I
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>25</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Video Interview II" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview II' ? Styles.itemdrop : ''}`} href="#/action-3">
+                                    Video Interview II
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>25</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Video Interview III" className={`d-flex p-3 fw-bolder ${selectedItem === 'Video Interview III' ? Styles.itemdrop : ''}`} href="#/action-3">
+                                    Video Interview III
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>25</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Offer" className={`d-flex p-3 fw-bolder ${selectedItem === 'Offer' ? Styles.itemdrop : ''}`} href="#/action-3">
+                                    Offer
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>25</span>
+                                    </article>
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="Withdrawn" className={`d-flex p-3 fw-bolder ${selectedItem === 'Withdrawn' ? Styles.itemdrop : ''}`} href="#/action-3">
+                                    Withdrawn
+                                    <article className='ms-auto'>
+                                        <span className={`fw-meduim ${Styles.number}`}>25</span>
+                                    </article>
+                                </Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        <article className='d-flex flex-wrap'>
+                            <Nav className='gap-1'>
+                                <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><TagOutlined className='fs-4' /> </Nav.Link>
+                                <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserDeleteOutlined className='fs-4' /> </Nav.Link>
+                                <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserAddOutlined className='fs-4' /> </Nav.Link>
+                                <Nav.Link className={`p-2 ${Styles.link}`} href="#link"><UserOutlined className='fs-4' /> </Nav.Link>
+                            </Nav>
+                        </article>
+                        <Dropdown as={ButtonGroup}>
+                            <Button variant="primary">Move To Video Interview I</Button>
+                            <Dropdown.Toggle variant="primary" id="dropdown-split-basic" />
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </article>
-                    <Dropdown as={ButtonGroup}>
-                        <Button variant="primary">Move To Video Interview I</Button>
-                        <Dropdown.Toggle variant="primary" id="dropdown-split-basic" />
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                </article>
-                {/* body section 2 */}
-                <article className='col-lg-12 col-md-10 col-sm-8 p-3 mt-5'>
+                    {/* body section 2 */}
                     <article className='card shadow rounded-5 border-0'>
                         <article className='d-flex p-3 gap-0'>
                             <Candidates data={candidates} candidates={filteredCandidates} />

@@ -71,7 +71,7 @@ export default function Option2() {
   }
 
   return (
-    <article className='d-flex flex-wrap gap-3 mx-5 position-absolute flex-wrap'>
+    <article className='d-flex flex-wrap gap-3 mx-5 flex-wrap'>
       <article className='pb-5'>
         {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5">

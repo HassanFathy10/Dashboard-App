@@ -6,14 +6,16 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <Fragment>
-      <Row>
-        <Col sm={1}>
-          <SideBar />
-        </Col>
-        <Col sm={10}>
-          <Outlet />
-        </Col>
-      </Row>
+      <Container fluid>
+        <Row>
+          <Col sm={2} className="p-0">
+            <SideBar />
+          </Col>
+          <Col sm={10}>
+            <Outlet />
+          </Col>
+        </Row>
+      </Container>
     </Fragment>
   );
 }
