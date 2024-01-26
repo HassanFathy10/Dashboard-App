@@ -10,7 +10,7 @@ import { DatePicker, Space } from 'antd';
 import { HiArrowTrendingUp } from "react-icons/hi2";
 import { FaFileDownload, FaChartPie } from "react-icons/fa";
 import LineChart from '../Component/LineChart';
-import Chord from '../Component/Chord'
+import Chord from '../Component/Chord';
 
 dayjs.extend(customParseFormat);
 const { RangePicker } = DatePicker;
@@ -24,7 +24,7 @@ export default function Option2() {
 
   return (
     <article className='container mt-5'>
-      <article className='d-flex flex-wrap p-1 flex-wrap'>
+      <article className='d-flex flex-wrap p-1'>
         {/* section 1 */}
         <article className='col-lg-10 pb-5'>
           {/* head section 1 */}
@@ -126,7 +126,7 @@ export default function Option2() {
           </Space>
         </article>
         {/* body section 2 */}
-        <article className='pb-5'>
+        <article className='pb-5 col-md-10'>
           <article className='card shadow border-0 rounded-4'>
             <article className='p-3 d-flex flex-column'>
               <span className='fw-bold mb-4'>Total Candidate Flow</span>
@@ -227,7 +227,7 @@ export default function Option2() {
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5'>
             <article className='card-body d-flex p-4'>
               <span className='fw-bold fs-5'>Google</span>
-              <article className='d-flex ms-auto gap-5'>
+              <article className='d-flex ms-auto gap-2'>
                 {/* page ProgramOverview */}
                 <span><Link to='/ProgramOverview'><FaChartPie /></Link></span>
                 <span><FaFileDownload /></span>
@@ -341,7 +341,7 @@ export default function Option2() {
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5 pb-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold'>Microsoft</span>
-              <article className='d-flex ms-auto gap-5'>
+              <article className='d-flex ms-auto gap-2'>
                 {/* page ProgramOverview */}
                 <span><Link to='/ProgramOverview'><FaChartPie /></Link></span>
                 <span><FaFileDownload /></span>
