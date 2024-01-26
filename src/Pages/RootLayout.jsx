@@ -8,12 +8,12 @@ function App() {
     <Fragment>
       <Container fluid>
         <Row>
-          <Col sm={2} className="p-0">
+          <article className="p-0 col-lg-2 col-md-2 col-sm-0">
             <SideBar />
-          </Col>
-          <Col sm={10}>
+          </article>
+          <article className="col-lg-10 col-md-10 col-sm-12">
             <Outlet />
-          </Col>
+          </article>
         </Row>
       </Container>
     </Fragment>

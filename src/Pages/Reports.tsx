@@ -35,7 +35,7 @@ export default function Reports() {
         <article className='container'>
             <article className='row'>
                 <article className='pt-5 pb-5'></article>
-                <article className='card shadow m-5 p-5 rounded-5'>
+                <article className='card shadow p-4 rounded-4'>
                     <h3 className='pb-2 text-success text-decoration-underline'>Reports :</h3>
                     <article style={{ height: 380, width: '100%' }}>
                         <DataGrid

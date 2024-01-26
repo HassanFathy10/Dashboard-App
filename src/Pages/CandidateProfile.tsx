@@ -12,35 +12,21 @@ export default function CandidatesProfile() {
 
     return (
         <article className={`container ${Styles.bg}`}>
-            <article className='row m-5'>
-                <article className='card p-4 border-0 shadow rounded-5'>
-                    <article className='row'>
-                        <article className='col'>
-                            <article className='d-flex gap-3 flex-wrap'>
-                                <Stack direction="row" spacing={2}>
-                                    <Avatar alt={data?.name || 'Hassan Fathy'} src='./' />
-                                </Stack>
-                                <h5 className='p-2'>{data?.name || 'Hassan Fathy'}</h5>
-                                <article className=''>
-                                <ul className='d-flex fw-medium list-unstyled p-1 gap-2'>
-                                    <li className={`p-1 ${Styles.answer}`}>New York</li>
-                                    <li className={`p-1 ${Styles.answer}`}>Marketing</li>
-                                    <li className={`p-1 ${Styles.answer}`}>London</li>
-                                </ul>
-                            </article>
-                            </article>
-                            <article>
-                                <ul className='d-flex flex-wrap list-unstyled gap-4'>
-                                    <li >{data?.location || 'Egypt, Alexandira'}</li>
-                                    <li className={`${Styles.list}`}></li>
-                                    <li>{data?.email || 'Hassanfathy@gmail.com'}</li>
-                                    <li className={`${Styles.list}`}></li>
-                                    <li>{data?.phone || '+201143814036'}</li>
-                                </ul>
-                            </article>
-                            <TagCandidate  />
+            <article className='row mt-5'>
+                <article className='card mt-5 p-4 border-0 shadow rounded-5'>
+                    <article className='d-flex gap-3 flex-wrap'>
+                        <Stack direction="row" spacing={2}>
+                            <Avatar alt={data?.name || 'Hassan Fathy'} src='./' />
+                        </Stack>
+                        <h5 className='p-2'>{data?.name || 'Hassan Fathy'}</h5>
+                        <article className=''>
+                            <ul className='d-flex fw-medium list-unstyled p-1 gap-2'>
+                                <li className={`p-1 ${Styles.answer}`}>New York</li>
+                                <li className={`p-1 ${Styles.answer}`}>Marketing</li>
+                                <li className={`p-1 ${Styles.answer}`}>London</li>
+                            </ul>
                         </article>
-                        <article className='text-end col mt-4'>
+                        <article className='text-end ms-auto'>
                             <article>
                                 <p className='fs-5 fw-bold'>Overall Score <span>7</span></p>
                             </article>
@@ -49,11 +35,21 @@ export default function CandidatesProfile() {
                             </article>
                         </article>
                     </article>
+                    <article>
+                        <ul className='d-flex flex-wrap list-unstyled gap-4'>
+                            <li >{data?.location || 'Egypt, Alexandira'}</li>
+                            <li className={`${Styles.list}`}></li>
+                            <li>{data?.email || 'Hassanfathy@gmail.com'}</li>
+                            <li className={`${Styles.list}`}></li>
+                            <li>{data?.phone || '+201143814036'}</li>
+                        </ul>
+                    </article>
+                    <TagCandidate />
                 </article>
             </article>
-            <article className='row m-5'>
-                <article className=''>
-                    <article className='pb-5'>
+            <article className='row'>
+                <article className='mt-5 mb-5'>
+                    <article className='w-100'>
                         <NavBar />
                     </article>
                 </article>

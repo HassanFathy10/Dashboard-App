@@ -3,6 +3,7 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Button, Dialog, DialogTitle, DialogContent, TextField, DialogActions } from '@mui/material';
 import moment from 'moment';
+import {Container, Row } from 'react-bootstrap';
 
 interface Event {
   id: number;
@@ -81,48 +82,53 @@ const Events = () => {
   };
 
   return (
-    <article className='card p-5 m-5 shadow' style={{ height: 800, width: '90%' }}>
-      <Calendar
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        views={['month', 'week', 'day']}
-        selectable
-        onSelectSlot={(slotInfo: any) => handleDateClick(slotInfo.start as Date)}
-        eventPropGetter={eventStyleGetter}
-        onSelectEvent={(event: Event) => {
-          setSelectedDate(event.start);
-          setEventTitle(event.title);
-          setEventId(event.id);
-          setDialogOpen(true);
-        }}
-      />
-      <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
-        <DialogTitle>{eventId !== null ? 'Edit Event' : 'Add Event'}</DialogTitle>
-        <DialogContent>
-          <TextField
-            autoFocus
-            margin="dense"
-            label="Event Title"
-            fullWidth
-            value={eventTitle}
-            onChange={(e) => setEventTitle(e.target.value)}
+    <Container>
+      <Row>
+      <article className='pt-5 pb-5'></article>
+        <article className='card p-3 mt-5 rounded-4 shadow' style={{ height: 500, width: '100%' }}>
+          <Calendar
+            localizer={localizer}
+            events={events}
+            startAccessor="start"
+            endAccessor="end"
+            views={['month', 'week', 'day']}
+            selectable
+            onSelectSlot={(slotInfo: any) => handleDateClick(slotInfo.start as Date)}
+            eventPropGetter={eventStyleGetter}
+            onSelectEvent={(event: Event) => {
+              setSelectedDate(event.start);
+              setEventTitle(event.title);
+              setEventId(event.id);
+              setDialogOpen(true);
+            }}
           />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setDialogOpen(false)}>Cancel</Button>
-          <Button onClick={eventId !== null ? handleEventEdit : handleEventAdd} variant="contained">
-            {eventId !== null ? 'Edit' : 'Add'}
-          </Button>
-          {eventId !== null && (
-            <Button onClick={handleEventDelete} color="error">
-              Delete
-            </Button>
-          )}
-        </DialogActions>
-      </Dialog>
-    </article>
+          <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
+            <DialogTitle>{eventId !== null ? 'Edit Event' : 'Add Event'}</DialogTitle>
+            <DialogContent>
+              <TextField
+                autoFocus
+                margin="dense"
+                label="Event Title"
+                fullWidth
+                value={eventTitle}
+                onChange={(e) => setEventTitle(e.target.value)}
+              />
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={() => setDialogOpen(false)}>Cancel</Button>
+              <Button onClick={eventId !== null ? handleEventEdit : handleEventAdd} variant="contained">
+                {eventId !== null ? 'Edit' : 'Add'}
+              </Button>
+              {eventId !== null && (
+                <Button onClick={handleEventDelete} color="error">
+                  Delete
+                </Button>
+              )}
+            </DialogActions>
+          </Dialog>
+        </article>
+      </Row>
+    </Container>
   );
 };
 

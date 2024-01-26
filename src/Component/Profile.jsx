@@ -108,7 +108,7 @@ export default function Profile() {
                         <p className={`p-3 ${Styles.answer}`}>Dorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </article>
                 </article>
-                <article className='pb-5'>
+                <article className='pb-4'>
                     <article className='border-bottom p-3'>
                         <span className={`p-2 fw-bold ${Styles.video}`}>Video Upload</span>
                     </article>
@@ -118,7 +118,9 @@ export default function Profile() {
                         </article>
                         <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
                     </article>
-                    <video src={videos} width='450px' className="object-fit-contain" controls />
+                    <article className='pt-3'>
+                       <video src={videos} width='220px' controls />
+                    </article>
                 </article>
                 <article className='pb-5'>
                     <article className='border-bottom p-3'>
