@@ -84,7 +84,9 @@ const Events = () => {
   return (
     <Container>
       <Row>
-      <article className='pt-5 pb-5'></article>
+        <article className='mt-5 pt-5 pb-1'>
+          <h2 className='text-warning text-decoration-underline'>Calendar:</h2>
+        </article>
         <article className='card p-3 mt-5 rounded-4 shadow' style={{ height: 500, width: '100%' }}>
           <Calendar
             localizer={localizer}
