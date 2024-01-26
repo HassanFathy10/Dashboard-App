@@ -14,7 +14,7 @@ export default function Profile() {
         <Container>
             <Row>
                 {/* Personal Information */}
-                <article className='card p-4 border-0 shadow rounded-5'>
+                <article className='card p-4 border-0 shadow mt-4 rounded-4'>
                     <h5 className='pb-5'>Personal Information</h5>
                     <article className='row'>
                         <article className='d-flex pb-4 col'>
@@ -58,7 +58,7 @@ export default function Profile() {
                     </article>
                 </article>
                 {/* Education */}
-                <article className='card p-4 border-0 shadow mt-5 rounded-5'>
+                <article className='card p-4 border-0 shadow mt-5 rounded-4'>
                     <h5 className='pb-5'>Education</h5>
                     <article className='d-flex col pt-4'>
                         <article className='m-4'>
@@ -77,7 +77,7 @@ export default function Profile() {
                     </article>
                 </article>
                 {/* Work Experience */}
-                <article className='card p-4 border-0 shadow mt-5 rounded-5'>
+                <article className='card p-4 border-0 shadow mt-5 rounded-4'>
                     <h5 className='pb-5'>Work Experience</h5>
                     <article className='d-flex col pb-2'>
                         <article className='m-4'>
@@ -98,7 +98,7 @@ export default function Profile() {
                     </article>
                 </article>
                 {/* Additional Questions */}
-                <article className='card p-4 border-0 shadow mt-5 rounded-5'>
+                <article className='card p-4 border-0 shadow mt-5 rounded-4'>
                     <h5 className='pb-5'>Additional Questions</h5>
                     <article className='pb-2'>
                         <article className='border-bottom p-3'>
@@ -177,7 +177,7 @@ export default function Profile() {
                     </article>
                 </article>
                 {/* Enrolled Other Programs */}
-                <article className='card p-4 border-0 mt-5 shadow rounded-5'>
+                <article className='card p-4 border-0 shadow mt-5 rounded-4'>
                     <h5 className='pb-3'>Enrolled Other Programs</h5>
                     <article className='d-flex col pt-4 border-bottom'>
                         <article className='m-4'>

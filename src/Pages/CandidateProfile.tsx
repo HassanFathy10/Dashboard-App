@@ -1,18 +1,19 @@
 import React from 'react';
-import Styles from '../Pages/style.module.css';
+import { Container, Row } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 import TagCandidate from 'Component/TagCandidate';
 import NavBar from 'Component/NavBar';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import { useLocation } from 'react-router-dom';
+import Styles from '../Pages/style.module.css';
 
 export default function CandidatesProfile() {
     const { state } = useLocation();
     const { data } = state || {};
 
     return (
-        <article className={`container ${Styles.bg}`}>
-            <article className='row mt-5'>
+        <Container>
+            <Row className='mt-5'>
                 <article className='card mt-5 p-4 border-0 shadow rounded-5'>
                     <article className='d-flex gap-3 flex-wrap'>
                         <Stack direction="row" spacing={2}>
@@ -46,7 +47,7 @@ export default function CandidatesProfile() {
                     </article>
                     <TagCandidate />
                 </article>
-            </article>
+            </Row>
             <article className='row'>
                 <article className='mt-5 mb-5'>
                     <article className='w-100'>
@@ -54,6 +55,6 @@ export default function CandidatesProfile() {
                     </article>
                 </article>
             </article>
-        </article>
+        </Container>
     );
 }
