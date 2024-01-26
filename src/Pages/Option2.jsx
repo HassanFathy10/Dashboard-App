@@ -71,7 +71,7 @@ export default function Option2() {
   }
 
   return (
-    <article className='container'>
+    <article className='container mt-5'>
       <article className='d-flex flex-wrap gap-3 p-1 flex-wrap'>
         {/* section 1 */}
         <article className='pb-5'>
@@ -252,7 +252,7 @@ export default function Option2() {
         </article>
       </article>
       {/* body section 3  */}
-      <article className=''>
+      <article className='col-sm-12'>
         <article className='d-flex flex-column'>
           <article className="mb-3">
             <article className='d-flex flex-column p-3'>
@@ -274,35 +274,35 @@ export default function Option2() {
               </article>
             </article>
             {/* cards */}
-            <article className='d-flex flex-wrap gap-3 mt-3'>
+            <article className='d-flex flex-wrap justify-content-center gap-3 mt-3 mb-3'>
               <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <span className='fw-bold fs-6 pb-4'>Applied</span>
-                  <span className='fw-bold fs-5'>95</span>
+                  <span className='fw-bold'>95</span>
                 </article>
               </article>
               <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <span className='fw-bold fs-6 pb-4'>Recommended</span>
-                  <span className='fw-bold fs-5'>3,122</span>
+                  <span className='fw-bold'>57</span>
                 </article>
               </article>
               <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <span className='fw-bold fs-6 pb-4'>Interview</span>
-                  <span className='fw-bold fs-5'>3,122</span>
+                  <span className='fw-bold'>39</span>
                 </article>
               </article>
               <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <span className='fw-bold fs-6 pb-4'>Hired</span>
-                  <span className='fw-bold fs-5'>3,122</span>
+                  <span className='fw-bold'>33</span>
                 </article>
               </article>
               <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
                 <article className='card-body d-flex flex-column pb-4'>
                   <span className='fw-bold fs-6 pb-4'>Total Rejected</span>
-                  <span className='fw-bold fs-5'>3,122</span>
+                  <span className='fw-bold'>60</span>
                 </article>
               </article>
             </article>
@@ -388,26 +388,36 @@ export default function Option2() {
               </article>
             </article>
             {/* cards */}
-            <article className='d-flex justify-content-center p-5 gap-4 flex-wrap'>
-              <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>34</span>
+            <article className='d-flex flex-wrap justify-content-center gap-3 mt-3 mb-3'>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Applied</span>
+                  <span className='fw-bold'>34</span>
+                </article>
               </article>
-              <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Recommended</span>
-                <span className='fw-bold'>42</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Recommended</span>
+                  <span className='fw-bold'>42</span>
+                </article>
               </article>
-              <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Interview</span>
-                <span className='fw-bold'>22</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Interview</span>
+                  <span className='fw-bold'>22</span>
+                </article>
               </article>
-              <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Hired</span>
-                <span className='fw-bold'>4</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Hired</span>
+                  <span className='fw-bold'>4</span>
+                </article>
               </article>
-              <article className='card text-center p-5 shadow border-0 rounded-4'>
-                <span className='mb-2'>Total Rejected</span>
-                <span className='fw-bold'>19</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Total Rejected</span>
+                  <span className='fw-bold'>19</span>
+                </article>
               </article>
             </article>
             {/* table 1 */}
