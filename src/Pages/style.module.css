@@ -30,7 +30,7 @@
     padding: 6px;
 }
 .line {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.068);
 }
 .check{
     cursor: pointer;

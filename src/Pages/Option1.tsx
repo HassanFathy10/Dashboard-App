@@ -200,7 +200,7 @@ export default function Option1() {
         <article className='container d-flex flex-wrap gap-5 p-1'>
             {/* Section1 */}
             <article className='row mt-5'>
-                <article className='w-100 col-md-8 col-sm-6'>
+                <article className='w-100 col-md-4 col-sm-4'>
                     {/* head section 1 */}
                     <article className="pt-5 mb-5">
                         <article className='d-flex flex-column p-3'>
@@ -228,7 +228,7 @@ export default function Option1() {
 
             {/* Section2 */}
             <article className='row'>
-                <article className='w-100 col-md-10 col-sm-12 mt-5'>
+                <article className='w-100 col-md-8 col-sm-8 mt-5'>
                     {/* head section 2 */}
                     <article className='d-flex gap-3 mt-5 pt-4 pb-4 flex-wrap'>
                         {/* Handle selected value in drop down */}
