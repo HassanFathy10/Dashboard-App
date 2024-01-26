@@ -11,7 +11,7 @@ function App() {
           <Col sm={2} className="p-0">
             <SideBar />
           </Col>
-          <Col sm={9}>
+          <Col sm={10}>
             <Outlet />
           </Col>
         </Row>

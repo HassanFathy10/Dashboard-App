@@ -35,21 +35,42 @@ export default function SideBar() {
     return (
         <article className=''>
             {isMobile ? (
-                <article className='w-100 col-sm-12 position-fixed sticky-top'>
+                <article className=''>
                     {/* Mobile Navbar */}
-                    <Navbar bg="dark" data-bs-theme="dark">
+                    <Navbar fixed="top" bg="dark" expand='lg' data-bs-theme="dark">
                         <Container>
-                            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                            <Nav className="ms-auto">
-                                <Nav.Link href="#home">Home</Nav.Link>
-                                <Nav.Link href="#features">Features</Nav.Link>
-                                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            </Nav>
+                            <Navbar.Brand className='fs-3 fw-bold text-warning' href="#home"><span className='text-primary'>HF</span> Dashboard</Navbar.Brand>
+                            <span className='ms-auto'>
+                                <img alt="" height='50' src={process.env.PUBLIC_URL + '/assets/images/01.png'} />
+                            </span>
+                            <Navbar.Toggle className='ms-4' aria-controls="navbarScroll" />
+                            <Navbar.Collapse id="navbarScroll">
+                                <Nav className="d-flex align-items-center lh-lg">
+                                    <Nav.Item>
+                                        <Link to="/" className='text-decoration-none'>Home</Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Link to="/Option2" className='text-decoration-none'>DashBoard</Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Link to="/Events" className='text-decoration-none'>Calendar</Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Link to="/Candidate/1" className='text-decoration-none'>Candidate</Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Link to="/Repo" className='text-decoration-none'>Reports</Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Link to="/GeographyChart" className='text-decoration-none'>Geography Chart</Link>
+                                    </Nav.Item>
+                                </Nav>
+                            </Navbar.Collapse>
                         </Container>
                     </Navbar>
                 </article>
             ) : (
-                <Layout>
+                <Layout className='position-fixed sticky-top'>
                     <Sider trigger={null} collapsible collapsed={collapsed} className='d-flex justify-content-center'>
                         <Menu
                             theme="dark"
@@ -89,18 +110,6 @@ export default function SideBar() {
                     </Sider>
                 </Layout>
             )}
-            {/* 
-                            <ul className='list-unstyled text-center'>
-                               <li><img alt="" height='50' src={process.env.PUBLIC_URL + '/assets/images/01.png'} /></li> 
-                               <li><span className='fw-medium'>Hassan</span></li> 
-                            </ul>
-                            <Link to="/" className='text-decoration-none'>Home</Link>
-                            <Link to="/Option2" className='text-decoration-none'>DashBoard</Link>
-                            <Link to="/Events" className='text-decoration-none'>Calendar</Link>
-                            <Link to="/Candidate/1" className='text-decoration-none'>Candidate</Link>
-                            <Link to="/Repo" className='text-decoration-none'>Reports</Link>
-                            <Link to="/GeographyChart" className='text-decoration-none'>Geography Chart</Link>
-                     */}
         </article>
     );
 };
