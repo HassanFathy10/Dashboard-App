@@ -198,10 +198,10 @@ export default function Option1() {
     };
 
     return (
-        <article className='container d-flex flex-wrap gap-5 p-5'>
+        <article className='container d-flex flex-wrap gap-5 p-1'>
             {/* Section1 */}
-            <article className='row'>
-                <article className='w-100 col-md-8 col-sm-6 pb-4'>
+            <article className='row p-4'>
+                <article className='w-100 col-md-8 col-sm-6'>
                     {/* head section 1 */}
                     <article className="pt-5 mb-5">
                         <article className='d-flex flex-column p-3'>

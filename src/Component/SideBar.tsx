@@ -33,23 +33,23 @@ export default function SideBar() {
         };
     }, []);
     return (
-        <article className='position-fixed'>
-            <Layout>
-                {isMobile ? (
-                    <article className='w-100'>
-                        {/* Mobile Navbar */}
-                        <Navbar bg="dark" data-bs-theme="dark">
-                            <Container>
-                                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                                <Nav className="me-auto">
-                                    <Nav.Link href="#home">Home</Nav.Link>
-                                    <Nav.Link href="#features">Features</Nav.Link>
-                                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                                </Nav>
-                            </Container>
-                        </Navbar>
-                    </article>
-                ) : (
+        <article className=''>
+            {isMobile ? (
+                <article className='w-100 col-sm-12 position-fixed sticky-top'>
+                    {/* Mobile Navbar */}
+                    <Navbar bg="dark" data-bs-theme="dark">
+                        <Container>
+                            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                            <Nav className="ms-auto">
+                                <Nav.Link href="#home">Home</Nav.Link>
+                                <Nav.Link href="#features">Features</Nav.Link>
+                                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            </Nav>
+                        </Container>
+                    </Navbar>
+                </article>
+            ) : (
+                <Layout>
                     <Sider trigger={null} collapsible collapsed={collapsed} className='d-flex justify-content-center'>
                         <Menu
                             theme="dark"
@@ -87,8 +87,8 @@ export default function SideBar() {
                                 onClick={() => setCollapsed(!collapsed)} />
                         </Menu>
                     </Sider>
-                )}
-            </Layout>
+                </Layout>
+            )}
             {/* 
                             <ul className='list-unstyled text-center'>
                                <li><img alt="" height='50' src={process.env.PUBLIC_URL + '/assets/images/01.png'} /></li> 
