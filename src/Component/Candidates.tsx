@@ -56,7 +56,7 @@ export default function Candidates({ candidates }: CandidatesProps) {
     };
 
     return (
-        <article>
+        <article className='w-100'>
             <article className='d-flex p-3 flex-wrap border-bottom'>
                 <FormControlLabel
                     control={
@@ -77,16 +77,16 @@ export default function Candidates({ candidates }: CandidatesProps) {
                 </article>
             </article>
             {candidates.map((candidate: any) => (
-                <article className={`border-bottom ${Styles.line}`} key={candidate.id}>
-                    <article className='d-flex align-items-center mt-5 gap-5'>
-                        <article className='d-flex m-4'>
+                <article className={`border-bottom w-100 ${Styles.line}`} key={candidate.id}>
+                    <article className='d-flex  align-items-center mt-5 gap-5'>
+                        <article className='d-flex mx-4'>
                             <Checkbox
                                 style={{ height: '10px' }}
                                 checked={checkedList[candidate.id]?.length > 0}
                                 onChange={(e) => onCheckChange(candidate.id, e.target.checked ? [candidate.id] : [])}
                             />
                         </article>
-                        <article className='mx-3'>
+                        <article >
                             <Link to={`/Candidate/${candidate.id}`} state={{ data: candidate }} className={`text-decoration-none p-3 fw-bolder fs-5 ${Styles.user}`}>{candidate.user}</Link>
                         </article>
                         <ul className='list-unstyled lh-lg'>

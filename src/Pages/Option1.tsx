@@ -61,7 +61,7 @@ const items: MenuItem[] = [
 ];
 
 export default function Option1() {
-    const [candidates, setCandidates] = useState([
+    const [candidates] = useState([
         {
             id: 1,
             user: 'AS',
@@ -181,7 +181,6 @@ export default function Option1() {
     const handleSelect = (eventKey: string | null) => {
         setSelectedItem(eventKey || 'Default Item');
     };
-    console.log(setCandidates)
 
     const handleSearch = (searchTerm: string) => {
         console.log('Search Term:', searchTerm);
@@ -200,7 +199,7 @@ export default function Option1() {
     return (
         <article className='container d-flex flex-wrap gap-5 p-1'>
             {/* Section1 */}
-            <article className='row p-4'>
+            <article className='row mt-5'>
                 <article className='w-100 col-md-8 col-sm-6'>
                     {/* head section 1 */}
                     <article className="pt-5 mb-5">
@@ -229,7 +228,7 @@ export default function Option1() {
 
             {/* Section2 */}
             <article className='row'>
-                <article className='w-100 col-md-10 col-sm-8 p-3 mt-5'>
+                <article className='w-100 col-md-10 col-sm-12 mt-5'>
                     {/* head section 2 */}
                     <article className='d-flex gap-3 mt-5 pt-4 pb-4 flex-wrap'>
                         {/* Handle selected value in drop down */}
@@ -313,11 +312,9 @@ export default function Option1() {
                         </Dropdown>
                     </article>
                     {/* body section 2 */}
-                    <article className='card shadow rounded-5 border-0'>
-                        <article className='d-flex p-3 gap-0'>
+                        <article className='d-flex card shadow rounded-4 border-0'>
                             <Candidates data={candidates} candidates={filteredCandidates} />
                         </article>
-                    </article>
                 </article>
             </article>
         </article>
