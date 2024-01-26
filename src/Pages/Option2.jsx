@@ -71,7 +71,7 @@ export default function Option2() {
   }
 
   return (
-    <article className='d-flex flex-wrap gap-3 mx-5 flex-wrap'>
+    <article className='d-flex flex-wrap gap-3 p-1 flex-wrap'>
       <article className='pb-5'>
         {/* head section 1 */}
         <article className="mt-3 pt-5 pb-5">
@@ -80,50 +80,44 @@ export default function Option2() {
           </span>
         </article>
         {/* body section 1 */}
-        <article className='d-flex mt-2'>
-          <article className='p-1'>
-            <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
-              <article className=' card-body d-flex flex-column pb-4'>
-                <span className='fw-bold fs-6 pb-4'>Applied</span>
-                <span className='fw-bold fs-5'>3,122</span>
-                <span className='fw-normal fs-6'>Previous Period</span>
-                <article className='fw-light mt-2'>
-                  <span>1590 &nbsp;</span>
-                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
-                </article>
+        <article className='d-flex flex-wrap gap-3 mt-3'>
+          <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
+            <article className=' card-body d-flex flex-column pb-4'>
+              <span className='fw-bold fs-6 pb-4'>Applied</span>
+              <span className='fw-bold fs-5'>3,122</span>
+              <span className='fw-normal fs-6'>Previous Period</span>
+              <article className='fw-light mt-2'>
+                <span>1590 &nbsp;</span>
+                <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
               </article>
             </article>
           </article>
-          <article className='p-1'>
-            <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
-              <article className='card-body d-flex flex-column pb-4 '>
-                <span className='fw-bold fs-6 pb-4'>Offer</span>
-                <span className='fw-bold fs-5'>183</span>
-                <span className='fw-normal fs-6'>Previous Period</span>
-                <article className='fw-light mt-2'>
-                  <span>71 &nbsp;</span>
-                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
-                </article>
+          <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
+            <article className='card-body d-flex flex-column pb-4 '>
+              <span className='fw-bold fs-6 pb-4'>Offer</span>
+              <span className='fw-bold fs-5'>183</span>
+              <span className='fw-normal fs-6'>Previous Period</span>
+              <article className='fw-light mt-2'>
+                <span>71 &nbsp;</span>
+                <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
               </article>
             </article>
           </article>
-          <article className='p-1'>
-            <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
-              <article className=' card-body d-flex flex-column pb-4'>
-                <span className='fw-bold fs-6 pb-4'>Hired</span>
-                <span className='fw-bold fs-5'>98</span>
-                <span className='fw-normal fs-6'>Previous Period</span>
-                <article className='fw-light mt-2'>
-                  <span>167 &nbsp;</span>
-                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
-                </article>
+          <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
+            <article className=' card-body d-flex flex-column pb-4'>
+              <span className='fw-bold fs-6 pb-4'>Hired</span>
+              <span className='fw-bold fs-5'>98</span>
+              <span className='fw-normal fs-6'>Previous Period</span>
+              <article className='fw-light mt-2'>
+                <span>167 &nbsp;</span>
+                <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
               </article>
             </article>
           </article>
         </article>
         {/* chart */}
         <article className='mt-3'>
-          <article className='card border-0 rounded-4 shadow bg-info-subtle' style={{ width: '34.5rem' }}>
+          <article className='card border-0 rounded-4 shadow bg-info-subtle' >
             <article className=' card-body d-flex flex-column pb-4'>
               <NavDropdown id="nav-dropdown-dark-example" className='fw-bold fs-6 pb-4' title="Recommended">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -255,7 +249,7 @@ export default function Option2() {
         </article>
       </article>
       {/* body section 3  */}
-      <article className='col-lg-10 pt-5 pb-5'>
+      <article className=''>
         <article className='d-flex flex-column'>
           <article className="mb-3">
             <article className='d-flex flex-column p-3'>
@@ -265,8 +259,8 @@ export default function Option2() {
             </article>
           </article>
         </article>
-        {/* card */}
-        <article className='pt-5 col-lg-10'>
+        {/* card 1 */}
+        <article className='pt-5'>
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold fs-5'>Google</span>
@@ -370,7 +364,7 @@ export default function Option2() {
           </article>
         </article>
         {/* card 2 */}
-        <article className='pt-5 col-lg-10'>
+        <article className='pt-5'>
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5 pb-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold'>Microsoft</span>
