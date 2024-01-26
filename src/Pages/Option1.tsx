@@ -120,9 +120,9 @@ export default function Option1() {
         },
         {
             id: 5,
-            user: 'RJ',
-            name: 'Roy Jade',
-            email: 'RoyJade@gmail.com',
+            user: 'TJ',
+            name: 'Tom Jade',
+            email: 'TomJade@gmail.com',
             location: 'Cambridge, UK',
             edu: 'Bachelor - Yale (2023 - 2023)',
             tag: '#top_candidate #top_candidate',

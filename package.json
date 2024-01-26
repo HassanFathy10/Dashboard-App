@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.18",
     "@mui/x-data-grid": "^6.18.1",
+    "@nivo/chord": "^0.84.0",
     "@nivo/geo": "^0.84.0",
     "@nivo/line": "^0.84.0",
     "@testing-library/jest-dom": "^5.17.0",

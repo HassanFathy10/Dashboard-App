@@ -691,31 +691,31 @@ export const chartData = [
       "color": "hsl(47, 70%, 50%)",
       "data": [
         {
-          "x": "plane",
+          "x": "Aaliyah",
           "y": 128
         },
         {
-          "x": "helicopter",
+          "x": "John",
           "y": 25
         },
         {
-          "x": "boat",
+          "x": "Thomas",
           "y": 69
         },
         {
-          "x": "train",
+          "x": "Kamilia",
           "y": 200
         },
         {
-          "x": "subway",
+          "x": "Ahmed",
           "y": 189
         },
         {
-          "x": "bus",
+          "x": "Jerry",
           "y": 31
         },
         {
-          "x": "car",
+          "x": "Michael",
           "y": 206
         },
         {
@@ -729,31 +729,31 @@ export const chartData = [
       "color": "hsl(308, 70%, 50%)",
       "data": [
         {
-          "x": "plane",
+          "x": "Aaliyah",
           "y": 149
         },
         {
-          "x": "helicopter",
+          "x": "John",
           "y": 201
         },
         {
-          "x": "boat",
+          "x": "Thomas",
           "y": 2
         },
         {
-          "x": "train",
+          "x": "Kamilia",
           "y": 40
         },
         {
-          "x": "subway",
+          "x": "Ahmed",
           "y": 100
         },
         {
-          "x": "bus",
+          "x": "Jerry",
           "y": 157
         },
         {
-          "x": "car",
+          "x": "Michael",
           "y": 114
         },
         {
@@ -767,31 +767,31 @@ export const chartData = [
       "color": "hsl(114, 70%, 50%)",
       "data": [
         {
-          "x": "plane",
+          "x": "Aaliyah",
           "y": 173
         },
         {
-          "x": "helicopter",
+          "x": "John",
           "y": 199
         },
         {
-          "x": "boat",
+          "x": "Thomas",
           "y": 282
         },
         {
-          "x": "train",
+          "x": "Kamilia",
           "y": 98
         },
         {
-          "x": "subway",
+          "x": "Ahmed",
           "y": 10
         },
         {
-          "x": "bus",
+          "x": "Jerry",
           "y": 297
         },
         {
-          "x": "car",
+          "x": "Michael",
           "y": 230
         },
         {
@@ -805,31 +805,31 @@ export const chartData = [
       "color": "hsl(102, 70%, 50%)",
       "data": [
         {
-          "x": "plane",
+          "x": "Aaliyah",
           "y": 66
         },
         {
-          "x": "helicopter",
+          "x": "John",
           "y": 178
         },
         {
-          "x": "boat",
+          "x": "Thomas",
           "y": 293
         },
         {
-          "x": "train",
+          "x": "Kamilia",
           "y": 221
         },
         {
-          "x": "subway",
+          "x": "Ahmed",
           "y": 127
         },
         {
-          "x": "bus",
+          "x": "Jerry",
           "y": 259
         },
         {
-          "x": "car",
+          "x": "Michael",
           "y": 155
         },
         {
@@ -843,31 +843,31 @@ export const chartData = [
       "color": "hsl(53, 70%, 50%)",
       "data": [
         {
-          "x": "plane",
+          "x": "Aaliyah",
           "y": 216
         },
         {
-          "x": "helicopter",
+          "x": "John",
           "y": 259
         },
         {
-          "x": "boat",
+          "x": "Thomas",
           "y": 91
         },
         {
-          "x": "train",
+          "x": "Kamilia",
           "y": 245
         },
         {
-          "x": "subway",
+          "x": "Ahmed",
           "y": 236
         },
         {
-          "x": "bus",
+          "x": "Jerry",
           "y": 95
         },
         {
-          "x": "car",
+          "x": "Michael",
           "y": 78
         },
         {
@@ -876,4 +876,42 @@ export const chartData = [
         }
       ]
     }
+]
+  
+export const ChordData = [
+    [
+      452,
+      90,
+      59,
+      313,
+      156
+    ],
+    [
+      217,
+      190,
+      109,
+      369,
+      57
+    ],
+    [
+      135,
+      89,
+      317,
+      1709,
+      458
+    ],
+    [
+      392,
+      190,
+      318,
+      455,
+      375
+    ],
+    [
+      264,
+      1,
+      451,
+      436,
+      232
+    ]
   ]
