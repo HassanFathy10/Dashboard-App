@@ -41,11 +41,11 @@ export default function SideBar() {
                         <Container>
                             <Link to='/' className='fs-3 fw-bold text-warning text-decoration-none'><span className='text-primary'>HF</span> Dashboard</Link>
                             <span className='ms-auto'>
-                                <img alt="" height='50' src={process.env.PUBLIC_URL + '/assets/images/01.png'} />
+                                <img alt="" height='40' src={process.env.PUBLIC_URL + '/assets/images/01.png'} />
                             </span>
                             <Navbar.Toggle className='ms-4' aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
-                                <Nav className="d-flex align-items-center lh-lg">
+                                <Nav typeof='tabs' className="d-flex align-items-center lh-lg">
                                     <Nav.Item>
                                         <Link to="/" className='text-decoration-none'>Home</Link>
                                     </Nav.Item>

@@ -85,8 +85,8 @@ export default function Option2() {
                   </NavDropdown.Item>
                 </NavDropdown>
                 {/* Chart && Chord */}
-                <article className='container'>
-                  <article className='row'>
+                <article className='container overflow-auto'>
+                  <article className='row d-flex flex-wrap'>
                     <article className='col-lg-6 col-md-6 position-relative col-sm-4 mb-4'>
                       <LineChart />
                     </article>
