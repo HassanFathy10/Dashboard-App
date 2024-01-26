@@ -87,7 +87,7 @@ export default function Option2() {
                 {/* Chart && Chord */}
                 <article className='container'>
                   <article className='row'>
-                    <article className='col-lg-6 col-md-6 col-sm-4 mb-4'>
+                    <article className='col-lg-6 col-md-6 position-relative col-sm-4 mb-4'>
                       <LineChart />
                     </article>
                     <article className='col-lg-6 col-md-6 col-sm-4'>
