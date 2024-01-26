@@ -71,176 +71,179 @@ export default function Option2() {
   }
 
   return (
-    <article className='d-flex flex-wrap gap-3 p-1 flex-wrap'>
-      <article className='pb-5'>
-        {/* head section 1 */}
-        <article className="mt-3 pt-5 pb-5">
-          <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
-            Opportunity Overview
-          </span>
-        </article>
-        {/* body section 1 */}
-        <article className='d-flex flex-wrap gap-3 mt-3'>
-          <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
-            <article className=' card-body d-flex flex-column pb-4'>
-              <span className='fw-bold fs-6 pb-4'>Applied</span>
-              <span className='fw-bold fs-5'>3,122</span>
-              <span className='fw-normal fs-6'>Previous Period</span>
-              <article className='fw-light mt-2'>
-                <span>1590 &nbsp;</span>
-                <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
-              </article>
-            </article>
-          </article>
-          <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
-            <article className='card-body d-flex flex-column pb-4 '>
-              <span className='fw-bold fs-6 pb-4'>Offer</span>
-              <span className='fw-bold fs-5'>183</span>
-              <span className='fw-normal fs-6'>Previous Period</span>
-              <article className='fw-light mt-2'>
-                <span>71 &nbsp;</span>
-                <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
-              </article>
-            </article>
-          </article>
-          <article className='card shadow border-0 rounded-4' style={{ width: '11rem' }}>
-            <article className=' card-body d-flex flex-column pb-4'>
-              <span className='fw-bold fs-6 pb-4'>Hired</span>
-              <span className='fw-bold fs-5'>98</span>
-              <span className='fw-normal fs-6'>Previous Period</span>
-              <article className='fw-light mt-2'>
-                <span>167 &nbsp;</span>
-                <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
-              </article>
-            </article>
-          </article>
-        </article>
-        {/* chart */}
-        <article className='mt-3'>
-          <article className='card border-0 rounded-4 shadow bg-info-subtle' >
-            <article className=' card-body d-flex flex-column pb-4'>
-              <NavDropdown id="nav-dropdown-dark-example" className='fw-bold fs-6 pb-4' title="Recommended">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-              <article style={{ width: '500px' }}>
-                <Line options={options} data={data} />
-              </article>
-            </article>
-          </article>
-        </article>
-      </article>
-      {/* section 2 */}
-      <article className=''>
-        {/* head section 2 */}
-        <article className="mt-3 pt-5 pb-5 d-flex gap-2">
-          <Dropdown onSelect={handleSelect}>
-            <Dropdown.Toggle variant="white" className='fw-bolder rounded-5' id="dropdown-basic">
-              {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item eventKey="London Internship Program" href="#/action-1">
-                London Internship Program
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="Opportunity Overview" href="#/action-2">
-                Opportunity Overview
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          <Space direction="vertical" size={12}>
-            <RangePicker
-              defaultValue={[dayjs('2015/01/01', dateFormat), dayjs('2015/01/01', dateFormat)]}
-              format={dateFormat}
-              className='p-2 rounded-5'
-            />
-          </Space>
-        </article>
-        {/* body section 2 */}
+    <article className='container'>
+      <article className='d-flex flex-wrap gap-3 p-1 flex-wrap'>
+        {/* section 1 */}
         <article className='pb-5'>
-          <article className='card shadow border-0 rounded-4 m-2'>
-            <article className='p-3 d-flex flex-column'>
-              <span className='fw-bold mb-4'>Total Candidate Flow</span>
-              <span className='fw-bold fs-5'>4,567</span>
-            </article>
-            <article className='d-flex flex-wrap'>
-              <ul className='list-unstyled p-3 lh-lg'>
-                <li className='fw-bold'>Stage</li>
-                <li>Applied</li>
-                <li>Recommended</li>
-                <li>Interview</li>
-                <li>Offer</li>
-                <li>Hired</li>
-              </ul>
-              <article className='ms-auto d-flex flex-wrap'>
-                <ul className='list-unstyled text-start p-3 lh-lg'>
-                  <li className='fw-bold'>Qualified</li>
-                  <li>3,122</li>
-                  <li>2,164</li>
-                  <li>443</li>
-                  <li>183</li>
-                  <li>118</li>
-                </ul>
-                <ul className='list-unstyled text-start p-3 lh-lg'>
-                  <li className='fw-bold'>Disqualified</li>
-                  <li>1,445</li>
-                  <li>958</li>
-                  <li>1721</li>
-                  <li>260</li>
-                  <li>65</li>
-                </ul>
+          {/* head section 1 */}
+          <article className="mt-3 pt-5 pb-5">
+            <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
+              Opportunity Overview
+            </span>
+          </article>
+          {/* body section 1 */}
+          <article className='d-flex flex-wrap gap-3 mt-3'>
+            <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+              <article className='card-body d-flex flex-column pb-4'>
+                <span className='fw-bold fs-6 pb-4'>Applied</span>
+                <span className='fw-bold fs-5'>3,122</span>
+                <span className='fw-normal fs-6'>Previous Period</span>
+                <article className='fw-light mt-2'>
+                  <span>1590 &nbsp;</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                </article>
               </article>
             </article>
+            <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+              <article className='card-body d-flex flex-column pb-4 '>
+                <span className='fw-bold fs-6 pb-4'>Offer</span>
+                <span className='fw-bold fs-5'>183</span>
+                <span className='fw-normal fs-6'>Previous Period</span>
+                <article className='fw-light mt-2'>
+                  <span>71 &nbsp;</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                </article>
+              </article>
+            </article>
+            <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+              <article className='card-body d-flex flex-column pb-4'>
+                <span className='fw-bold fs-6 pb-4'>Hired</span>
+                <span className='fw-bold fs-5'>98</span>
+                <span className='fw-normal fs-6'>Previous Period</span>
+                <article className='fw-light mt-2'>
+                  <span>167 &nbsp;</span>
+                  <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                </article>
+              </article>
+            </article>
+          </article>
+          {/* chart */}
+          <article className='mt-3'>
+            <article className='card border-0 rounded-4 shadow bg-info-subtle' style={{ width: '32rem' }}>
+              <article className='card-body d-flex flex-column pb-4'>
+                <NavDropdown id="nav-dropdown-dark-example" className='fw-bold fs-6 pb-4' title="Recommended">
+                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">
+                    Another action
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">
+                    Separated link
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <article style={{ width: '460px' }}>
+                  <Line options={options} data={data} />
+                </article>
+              </article>
+            </article>
+          </article>
+        </article>
+        {/* section 2 */}
+        <article className=''>
+          {/* head section 2 */}
+          <article className="mt-3 pt-5 pb-5 d-flex gap-2">
+            <Dropdown onSelect={handleSelect}>
+              <Dropdown.Toggle variant="white" className='fw-bolder rounded-5' id="dropdown-basic">
+                {selectedItem} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item eventKey="London Internship Program" href="#/action-1">
+                  London Internship Program
+                </Dropdown.Item>
+                <Dropdown.Item eventKey="Opportunity Overview" href="#/action-2">
+                  Opportunity Overview
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Space direction="vertical" size={12}>
+              <RangePicker
+                defaultValue={[dayjs('2015/01/01', dateFormat), dayjs('2015/01/01', dateFormat)]}
+                format={dateFormat}
+                className='p-2 rounded-5'
+              />
+            </Space>
           </article>
           {/* body section 2 */}
-          <article className='d-flex gap-4 ms-auto pt-3 flex-wrap'>
-            <article className='p-1'>
-              <article className='card shadow border-0 rounded-4 bg-warning-subtle' style={{ width: '14rem' }}>
-                <article className='card-body d-flex flex-column pb-4'>
-                  <article className='d-flex'>
-                    <span className='fw-bold fs-6 pb-4'>Recommanded</span>
-                    <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
-                  </article>
-                  <span className='fw-normal fs-6'>Previous Period</span>
-                  <article className='fw-light mt-2'>
-                    <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
-                  </article>
+          <article className='pb-5'>
+            <article className='card shadow border-0 rounded-4'>
+              <article className='p-3 d-flex flex-column'>
+                <span className='fw-bold mb-4'>Total Candidate Flow</span>
+                <span className='fw-bold fs-5'>4,567</span>
+              </article>
+              <article className='d-flex flex-wrap'>
+                <ul className='list-unstyled p-3 lh-lg'>
+                  <li className='fw-bold'>Stage</li>
+                  <li>Applied</li>
+                  <li>Recommended</li>
+                  <li>Interview</li>
+                  <li>Offer</li>
+                  <li>Hired</li>
+                </ul>
+                <article className='ms-auto d-flex flex-wrap'>
+                  <ul className='list-unstyled text-start p-3 lh-lg'>
+                    <li className='fw-bold'>Qualified</li>
+                    <li>3,122</li>
+                    <li>2,164</li>
+                    <li>443</li>
+                    <li>183</li>
+                    <li>118</li>
+                  </ul>
+                  <ul className='list-unstyled text-start p-3 lh-lg'>
+                    <li className='fw-bold'>Disqualified</li>
+                    <li>1,445</li>
+                    <li>958</li>
+                    <li>1721</li>
+                    <li>260</li>
+                    <li>65</li>
+                  </ul>
                 </article>
               </article>
             </article>
-            <article className='p-1'>
-              <article className='card shadow border-0 rounded-4 bg-danger-subtle' style={{ width: '14rem' }}>
-                <article className='card-body d-flex flex-column pb-4'>
-                  <article className='d-flex'>
-                    <span className='fw-bold fs-6 pb-4'>Interview</span>
-                    <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
-                  </article>
-                  <span className='fw-normal fs-6'>Previous Period</span>
-                  <article className='fw-light mt-2'>
-                    <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+            {/* body section 2 */}
+            <article className='d-flex gap-4 ms-auto pt-3 flex-wrap'>
+              <article className='p-1'>
+                <article className='card shadow border-0 rounded-4 bg-warning-subtle' style={{ width: '14rem' }}>
+                  <article className='card-body d-flex flex-column pb-4'>
+                    <article className='d-flex'>
+                      <span className='fw-bold fs-6 pb-4'>Recommanded</span>
+                      <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
+                    </article>
+                    <span className='fw-normal fs-6'>Previous Period</span>
+                    <article className='fw-light mt-2'>
+                      <span>1590 &nbsp;</span>
+                      <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                    </article>
                   </article>
                 </article>
               </article>
-            </article>
-            <article className='p-1'>
-              <article className='card shadow border-0 rounded-4 bg-success-subtle' style={{ width: '14rem' }}>
-                <article className='card-body d-flex flex-column pb-4'>
-                  <article className='d-flex'>
-                    <span className='fw-bold fs-6 pb-4'>Interview</span>
-                    <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
+              <article className='p-1'>
+                <article className='card shadow border-0 rounded-4 bg-danger-subtle' style={{ width: '14rem' }}>
+                  <article className='card-body d-flex flex-column pb-4'>
+                    <article className='d-flex'>
+                      <span className='fw-bold fs-6 pb-4'>Interview</span>
+                      <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
+                    </article>
+                    <span className='fw-normal fs-6'>Previous Period</span>
+                    <article className='fw-light mt-2'>
+                      <span>1590 &nbsp;</span>
+                      <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                    </article>
                   </article>
-                  <span className='fw-normal fs-6'>Previous Period</span>
-                  <article className='fw-light mt-2'>
-                    <span>1590 &nbsp;</span>
-                    <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                </article>
+              </article>
+              <article className='p-1'>
+                <article className='card shadow border-0 rounded-4 bg-success-subtle' style={{ width: '14rem' }}>
+                  <article className='card-body d-flex flex-column pb-4'>
+                    <article className='d-flex'>
+                      <span className='fw-bold fs-6 pb-4'>Interview</span>
+                      <span className='fw-bold ms-auto fs-6 pb-4'>443</span>
+                    </article>
+                    <span className='fw-normal fs-6'>Previous Period</span>
+                    <article className='fw-light mt-2'>
+                      <span>1590 &nbsp;</span>
+                      <span className={Styles.number1}><HiArrowTrendingUp size='15px' /> 15%</span>
+                    </article>
                   </article>
                 </article>
               </article>
@@ -262,7 +265,7 @@ export default function Option2() {
         {/* card 1 */}
         <article className='pt-5'>
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5'>
-            <article className='d-flex p-4'>
+            <article className='card-body d-flex p-4'>
               <span className='fw-bold fs-5'>Google</span>
               <article className='d-flex ms-auto gap-5'>
                 {/* page ProgramOverview */}
@@ -271,31 +274,41 @@ export default function Option2() {
               </article>
             </article>
             {/* cards */}
-            <article className='d-flex justify-content-center p-5 gap-4 flex-wrap'>
-              <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
-                <span className='mb-2'>Applied</span>
-                <span className='fw-bold'>95</span>
+            <article className='d-flex flex-wrap gap-3 mt-3'>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Applied</span>
+                  <span className='fw-bold fs-5'>95</span>
+                </article>
               </article>
-              <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Recommended</span>
-                <span className='fw-bold'>57</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Recommended</span>
+                  <span className='fw-bold fs-5'>3,122</span>
+                </article>
               </article>
-              <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Interview</span>
-                <span className='fw-bold'>39</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Interview</span>
+                  <span className='fw-bold fs-5'>3,122</span>
+                </article>
               </article>
-              <article className='card p-5 text-center shadow border-0 rounded-4'>
-                <span className='mb-2'>Hired</span>
-                <span className='fw-bold'>33</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Hired</span>
+                  <span className='fw-bold fs-5'>3,122</span>
+                </article>
               </article>
-              <article className='card text-center p-5 shadow border-0 rounded-4'>
-                <span className='mb-2'>Total Rejected</span>
-                <span className='fw-bold'>60</span>
+              <article className='card shadow border-0 rounded-4' style={{ width: '10rem' }}>
+                <article className='card-body d-flex flex-column pb-4'>
+                  <span className='fw-bold fs-6 pb-4'>Total Rejected</span>
+                  <span className='fw-bold fs-5'>3,122</span>
+                </article>
               </article>
             </article>
             {/* table 1 */}
             <article className='p-5 card shadow rounded-5 border-0'>
-              <Table className='border-5 shadow' striped bordered hover>
+              <Table className='border-5 shadow' striped bordered hover responsive>
                 <thead>
                   <tr>
                     <th>Opportunity Name</th>
@@ -364,7 +377,7 @@ export default function Option2() {
           </article>
         </article>
         {/* card 2 */}
-        <article className='pt-5'>
+        <article className='pt-5 '>
           <article className='card p-5 bg-primary-subtle shadow border-0 rounded-5 pb-5'>
             <article className='d-flex p-4'>
               <span className='fw-bold'>Microsoft</span>
@@ -376,7 +389,7 @@ export default function Option2() {
             </article>
             {/* cards */}
             <article className='d-flex justify-content-center p-5 gap-4 flex-wrap'>
-              <article className='card p-5 text-center shadow border-0 rounded-4 flex-column'>
+              <article className='card p-5 text-center shadow border-0 rounded-4'>
                 <span className='mb-2'>Applied</span>
                 <span className='fw-bold'>34</span>
               </article>
@@ -399,7 +412,7 @@ export default function Option2() {
             </article>
             {/* table 1 */}
             <article className='p-5 card rounded-5 border-0 shadow'>
-              <Table className='border-5 shadow' striped bordered hover>
+              <Table className='border-5 shadow' striped bordered hover responsive>
                 <thead>
                   <tr>
                     <th>Opportunity Name</th>
