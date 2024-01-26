@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend} from 'chart.js';
-import { Line } from 'react-chartjs-2';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -11,58 +9,11 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { DatePicker, Space } from 'antd';
 import { HiArrowTrendingUp } from "react-icons/hi2";
 import { FaFileDownload, FaChartPie } from "react-icons/fa";
+import LineChart from '../Component/LineChart';
 
 dayjs.extend(customParseFormat);
 const { RangePicker } = DatePicker;
 const dateFormat = 'YYYY/MM/DD';
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top'
-      ,
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
-      font: {
-        size: 16, // Customize title text size
-        weight: 'bold', // Customize title text weight
-      },
-    },
-  },
-};
-
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-const dataset1Data = [500, 200, 550, 900, 350, 700, 750];
-const dataset2Data = [150, 250, 850, 250, 950, 550, 550];
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: dataset1Data,
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 59, 12, 0.5)',
-    },
-    {
-      label: 'Dataset 2',
-      data: dataset2Data,
-      borderColor: 'rgb(53, 162, 235)',
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
 
 export default function Option2() {
   const [selectedItem, setSelectedItem] = useState('London Internship Program'); // Here i Initialize with the default text i want
@@ -71,10 +22,10 @@ export default function Option2() {
   }
 
   return (
-    <article className='container mt-5'>
+    <article className='mt-5'>
       <article className='d-flex flex-wrap gap-3 p-1 flex-wrap'>
         {/* section 1 */}
-        <article className='pb-5'>
+        <article className='col-lg-5 pb-5'>
           {/* head section 1 */}
           <article className="mt-3 pt-5 pb-5">
             <span className={`fw-bolder fs-5 ${Styles.font}`} href="#home">
@@ -119,7 +70,7 @@ export default function Option2() {
           </article>
           {/* chart */}
           <article className='mt-3'>
-            <article className='card border-0 rounded-4 shadow bg-info-subtle' style={{ width: '32rem' }}>
+            <article className='card border-0 rounded-4 shadow'>
               <article className='card-body d-flex flex-column pb-4'>
                 <NavDropdown id="nav-dropdown-dark-example" className='fw-bold fs-6 pb-4' title="Recommended">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -132,15 +83,14 @@ export default function Option2() {
                     Separated link
                   </NavDropdown.Item>
                 </NavDropdown>
-                <article style={{ width: '460px' }}>
-                  <Line options={options} data={data} />
-                </article>
+                {/* Chart */}
+                <LineChart />
               </article>
             </article>
           </article>
         </article>
         {/* section 2 */}
-        <article className=''>
+        <article className='col-lg-5'>
           {/* head section 2 */}
           <article className="mt-3 pt-5 pb-5 d-flex gap-2">
             <Dropdown onSelect={handleSelect}>
@@ -252,7 +202,7 @@ export default function Option2() {
         </article>
       </article>
       {/* body section 3  */}
-      <article className='col-sm-12'>
+      <article className='col-lg-10'>
         <article className='d-flex flex-column'>
           <article className="mb-3">
             <article className='d-flex flex-column p-3'>

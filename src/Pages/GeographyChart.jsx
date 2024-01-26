@@ -8,7 +8,7 @@ export default function GeographyChart() {
     return (
         <Container>
             <Row>
-                <article className=' min-vh-100'>
+                <article className='min-vh-100'>
                     <ResponsiveChoropleth
                         data={data}
                         features={mockGeographyData.features}

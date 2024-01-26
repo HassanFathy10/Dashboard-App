@@ -684,3 +684,196 @@ export const mockDataGeo = [
         "value": 3077
     }
 ];
+
+export const chartData = [
+    {
+      "id": "japan",
+      "color": "hsl(47, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 128
+        },
+        {
+          "x": "helicopter",
+          "y": 25
+        },
+        {
+          "x": "boat",
+          "y": 69
+        },
+        {
+          "x": "train",
+          "y": 200
+        },
+        {
+          "x": "subway",
+          "y": 189
+        },
+        {
+          "x": "bus",
+          "y": 31
+        },
+        {
+          "x": "car",
+          "y": 206
+        },
+        {
+          "x": "others",
+          "y": 284
+        }
+      ]
+    },
+    {
+      "id": "france",
+      "color": "hsl(308, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 149
+        },
+        {
+          "x": "helicopter",
+          "y": 201
+        },
+        {
+          "x": "boat",
+          "y": 2
+        },
+        {
+          "x": "train",
+          "y": 40
+        },
+        {
+          "x": "subway",
+          "y": 100
+        },
+        {
+          "x": "bus",
+          "y": 157
+        },
+        {
+          "x": "car",
+          "y": 114
+        },
+        {
+          "x": "others",
+          "y": 186
+        }
+      ]
+    },
+    {
+      "id": "us",
+      "color": "hsl(114, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 173
+        },
+        {
+          "x": "helicopter",
+          "y": 199
+        },
+        {
+          "x": "boat",
+          "y": 282
+        },
+        {
+          "x": "train",
+          "y": 98
+        },
+        {
+          "x": "subway",
+          "y": 10
+        },
+        {
+          "x": "bus",
+          "y": 297
+        },
+        {
+          "x": "car",
+          "y": 230
+        },
+        {
+          "x": "others",
+          "y": 295
+        }
+      ]
+    },
+    {
+      "id": "germany",
+      "color": "hsl(102, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 66
+        },
+        {
+          "x": "helicopter",
+          "y": 178
+        },
+        {
+          "x": "boat",
+          "y": 293
+        },
+        {
+          "x": "train",
+          "y": 221
+        },
+        {
+          "x": "subway",
+          "y": 127
+        },
+        {
+          "x": "bus",
+          "y": 259
+        },
+        {
+          "x": "car",
+          "y": 155
+        },
+        {
+          "x": "others",
+          "y": 103
+        }
+      ]
+    },
+    {
+      "id": "norway",
+      "color": "hsl(53, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 216
+        },
+        {
+          "x": "helicopter",
+          "y": 259
+        },
+        {
+          "x": "boat",
+          "y": 91
+        },
+        {
+          "x": "train",
+          "y": 245
+        },
+        {
+          "x": "subway",
+          "y": 236
+        },
+        {
+          "x": "bus",
+          "y": 95
+        },
+        {
+          "x": "car",
+          "y": 78
+        },
+        {
+          "x": "others",
+          "y": 220
+        }
+      ]
+    }
+  ]
