@@ -153,7 +153,7 @@ export default function Profile() {
                             <p className='fw-medium'>What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply</p>
                         </article>
                         <article className='p-4'>
-                            <ul className='list-unstyled d-flex gap-5'>
+                            <ul className='list-unstyled d-flex flex-wrap gap-2'>
                                 <li className={`p-2 ${Styles.li}`}>New York</li>
                                 <li className={`p-2 ${Styles.li}`}>New York</li>
                                 <li className={`p-2 ${Styles.li}`}>New York</li>

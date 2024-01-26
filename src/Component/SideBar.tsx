@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Styles from './style.module.css';
 import {
     FaUsers,
     FaHome,
@@ -46,23 +47,23 @@ export default function SideBar() {
                             <Navbar.Toggle className='ms-4' aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav className="d-flex align-items-center lh-lg">
-                                    <Nav.Item>
-                                        <Link to="/" className='text-decoration-none'>Home</Link>
+                                    <Nav.Item className='m-1'>
+                                        <Link to="/" className={`text-decoration-none fw-bold ${Styles.navLink}`}>Home</Link>
                                     </Nav.Item>
-                                    <Nav.Item>
-                                        <Link to="/Option2" className='text-decoration-none'>DashBoard</Link>
+                                    <Nav.Item className='m-1'>
+                                        <Link to="/Option2" className={`text-decoration-none fw-bold ${Styles.navLink}`}>DashBoard</Link>
                                     </Nav.Item>
-                                    <Nav.Item>
-                                        <Link to="/Events" className='text-decoration-none'>Calendar</Link>
+                                    <Nav.Item className='m-1'>
+                                        <Link to="/Events" className={`text-decoration-none fw-bold ${Styles.navLink}`}>Calendar</Link>
                                     </Nav.Item>
-                                    <Nav.Item>
-                                        <Link to="/Candidate/1" className='text-decoration-none'>Candidate</Link>
+                                    <Nav.Item className='m-1'>
+                                        <Link to="/Candidate/1" className={`text-decoration-none fw-bold ${Styles.navLink}`}>Candidate</Link>
                                     </Nav.Item>
-                                    <Nav.Item>
-                                        <Link to="/Repo" className='text-decoration-none'>Reports</Link>
+                                    <Nav.Item className='m-1'>
+                                        <Link to="/Repo" className={`text-decoration-none fw-bold ${Styles.navLink}`}>Reports</Link>
                                     </Nav.Item>
-                                    <Nav.Item>
-                                        <Link to="/GeographyChart" className='text-decoration-none'>Geography Chart</Link>
+                                    <Nav.Item className='m-1'>
+                                        <Link to="/GeographyChart" className={`text-decoration-none fw-bold ${Styles.navLink}`}>Geography Chart</Link>
                                     </Nav.Item>
                                 </Nav>
                             </Navbar.Collapse>

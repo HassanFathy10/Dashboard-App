@@ -1,22 +1,15 @@
 .link {
     background-color: rgba(255, 255, 255, 0);
 }
-/* .menu {
-    
-} */
-/* .user {
+
+
+.navLink:hover {
+    background-color: rgba(130, 0, 252, 0.349);
+    padding: 10px;
     border-radius: 50px;
-    color: rgba(72, 155, 161, 0.438);
-    background-color: rgba(0, 255, 255, 0.116);
+    color: rgba(255, 251, 0, 0.966);
 }
-.info {
-    border-radius: 2rem;
-    background-color: rgba(0, 255, 255, 0.062);
-    padding: 6px;
-}
-.line {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.082);
-} */
+
 
 /* Candidate pofile page */
 .shortanswer {
