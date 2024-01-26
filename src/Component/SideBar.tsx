@@ -45,7 +45,7 @@ export default function SideBar() {
                             </span>
                             <Navbar.Toggle className='ms-4' aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
-                                <Nav typeof='tabs' className="d-flex align-items-center lh-lg">
+                                <Nav variant='pills' className="d-flex align-items-center lh-lg">
                                     <Nav.Item>
                                         <Link to="/" className='text-decoration-none'>Home</Link>
                                     </Nav.Item>
