@@ -39,7 +39,7 @@ export default function SideBar() {
                     {/* Mobile Navbar */}
                     <Navbar fixed="top" bg="dark" expand='lg' data-bs-theme="dark">
                         <Container>
-                            <Navbar.Brand className='fs-3 fw-bold text-warning' href="#home"><span className='text-primary'>HF</span> Dashboard</Navbar.Brand>
+                            <Link to='/' className='fs-3 fw-bold text-warning'><span className='text-primary'>HF</span> Dashboard</Link>
                             <span className='ms-auto'>
                                 <img alt="" height='50' src={process.env.PUBLIC_URL + '/assets/images/01.png'} />
                             </span>
