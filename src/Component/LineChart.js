@@ -4,7 +4,7 @@ import { chartData as data } from '../data/mockData';
 
 export default function Chart() {
     return (
-        <article style={{ height: '300px', width: '350px' }}>
+        <article style={{  height: '300px', width: '450px' }}>
             <ResponsiveLine
                 data={data}
                 margin={{ top: 50, right: 110, bottom: 50, left: 60 }}

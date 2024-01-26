@@ -85,12 +85,12 @@ export default function Option2() {
                   </NavDropdown.Item>
                 </NavDropdown>
                 {/* Chart && Chord */}
-                <article className='container-fluid'>
+                <article className='container'>
                   <article className='row'>
-                    <article className='col-lg-6 col-md-12 mb-4'>
+                    <article className='col-lg-6 col-md-6 col-sm-4 mb-4'>
                       <LineChart />
                     </article>
-                    <article className='col-lg-6 col-md-12'>
+                    <article className='col-lg-6 col-md-6 col-sm-4'>
                       <Chord />
                     </article>
                   </article>
@@ -267,7 +267,7 @@ export default function Option2() {
               </article>
             </article>
             {/* table 1 */}
-            <article className='p-5 card shadow rounded-5 border-0'>
+            <article className='p-4 card shadow rounded-4 border-0'>
               <Table className='border-5 shadow' striped bordered hover responsive>
                 <thead>
                   <tr>
@@ -380,8 +380,8 @@ export default function Option2() {
                 </article>
               </article>
             </article>
-            {/* table 1 */}
-            <article className='p-5 card rounded-5 border-0 shadow'>
+            {/* table 2 */}
+            <article className='p-4 card rounded-4 border-0 shadow'>
               <Table className='border-5 shadow' striped bordered hover responsive>
                 <thead>
                   <tr>
