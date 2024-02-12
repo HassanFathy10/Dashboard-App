@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import Styles from './style.module.css';
+import { Nav, Navbar } from 'react-bootstrap';
 import {
     FaUsers,
     FaHome,
